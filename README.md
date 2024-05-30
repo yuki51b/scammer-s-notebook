@@ -79,12 +79,10 @@ MVPリリース
 ・詐欺診断機能について、OpenAI GPT-4 API もしくは GPT-3.5 turbo API
 ・LINE通知機能について、LINE Messaging API,
 
-■ 使用技術スタック
-・データーベース
-：PostgreSQL
-
-・フロント
-：Next.js
-
-・インフラ
-：Render
+■ 開発環境: Docker
+■ サーバサイド: Ruby on Rails 7系
+　　Ruby 3.2.3 Rails 7.1.3.3
+■ CSSフレームワーク: tailwind、daisyUI
+■ インフラ:
+・render
+・ データベース: PostgreSQL
