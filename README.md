@@ -106,3 +106,6 @@ MVPリリース
 ■ インフラ:
 ・render
 ・ データベース: PostgreSQL
+
+ER図
+https://dbdiagram.io/d/665d6f16b65d933879553b65
