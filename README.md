@@ -108,4 +108,4 @@ MVPリリース
 ・ データベース: PostgreSQL
 
 ER図
-https://dbdiagram.io/d/665d6f16b65d933879553b65
+[![Image from Gyazo](https://i.gyazo.com/5ec9ecc3f82df10ad832b0f75da06980.png)](https://gyazo.com/5ec9ecc3f82df10ad832b0f75da06980)
