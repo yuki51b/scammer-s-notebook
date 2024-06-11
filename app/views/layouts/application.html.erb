@@ -10,7 +10,14 @@
     <%= javascript_include_tag "application", "data-turbo-track": "reload", type: "module" %>
   </head>
 
-  <body>
+  <body class="flex flex-col min-h-screen bg-primary">
+    <%= render 'shared/header' %>
     <%= yield %>
+    <%# 画像の配置%>
+        <div class="w-full flex justify-start">
+        <%= image_tag "characttor.jpeg", class: "w-40 h-40 my-10" %>
+        </div>   
+
+    <%= render 'shared/footer' %>
   </body>
 </html>
