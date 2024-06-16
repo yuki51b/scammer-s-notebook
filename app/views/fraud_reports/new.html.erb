@@ -29,7 +29,7 @@
 
         <div class="w-full mb-4">
             <%= f.label :payment_method %>
-            <%= f.select :payment_method, options_for_select(["銀行振込", "ギフトカード", "暗号通貨", "その他"]), 
+            <%= f.select :payment_method, options_for_select(["銀行振込", "クレジットカード", "デビットカード", "モバイル決済(PayPayやApplepayなど)", "現金", "プリペイドカード", "ギフトカード", "暗号通貨", "その他"]), 
             { include_blank: "選択して下さい" }, class: "text-slate-950" %>
         </div>
 
