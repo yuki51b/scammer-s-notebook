@@ -6,55 +6,17 @@ class FraudReportsController < ApplicationController
 
     def create
         @fraud_report = FraudReport.new(fraud_report_params)
-
-        #prompt =
-                contact_method = params[:fraud_report][:contact_method]
-                contact_content = params[:fraud_report][:contact_content]
-                information = params[:fraud_report][:information]
-                urgent_action = params[:fraud_report][:urgent_action]
-                payment_method = params[:fraud_report][:payment_method]
-                company_info = params[:fraud_report][:company_info]
-                additional_details = params[:fraud_report][:additional_details]
-
-        prompt =
-            <<~PROMPT
-            下記はユーザーが入力してくれた情報です
-                連絡手段: #{contact_method}
-                コンタクトの内容: #{contact_content}
-                要求される情報: #{information}
-                急いで行動するように求められましたか: #{urgent_action}
-                支払い方法: #{payment_method}
-                会社などの情報はありますか: #{company_info}
-                その他の詳細: #{additional_details}
-            上記の情報に基づいて、最も可能性の高い詐欺名(悪質商法も含む)を一つだけ日本語で教えてください
-            対話型の返答は省き、詐欺名(悪質商法も含む)のみを返答してください。
-            PROMPT
-
-            response = ChatgptService.call(prompt) # ここで設定したAPIのメソッドを使っている
-            Rails.logger.info "ChatGPT API response: #{response}"
-            @fraud_report.respond = response # respondカラムという保存先を指定
-
-
+        prompt = scam_name_general_prompt(params[:fraud_report])
+            response = ChatgptService.call(prompt)
+            @fraud_report.respond = response # 保存先をrespondカラムに指定
             # まず、詐欺診断処理を行って詐欺情報を確定させる
-            scam = handle_scam_diagnosis(response)
-
-            if scam.nil?
-              redirect_to root_path, alert: '詐欺情報の生成に失敗しました。'
-              return
-            end
-
-            # ここで `FraudReport` に `scam_id` を設定します
-            @fraud_report.scam = scam
-
+                judgmented_scam = handle_scam_diagnosis(response)
+            # ここで `FraudReport`関連するscamレコードを取得
+                @fraud_report.scam = judgmented_scam
 
         begin # エラーが出そうな部分を指定。
-            # response = ChatgptService.call(prompt) # ここで設定したAPIのメソッドを使っている
-            # Rails.logger.info "ChatGPT API response: #{response}"
-            #     @fraud_report.respond = response # respondカラムという保存先を指定
-
                 if @fraud_report.save
-                    # handle_scam_diagnosis(response) # 診断結果をscamテーブルに情報があるかチェック
-                    redirect_to fraud_report_path(@fraud_report), notice: '診断名を受け取りました'
+                    redirect_to fraud_report_path(@fraud_report), notice: '診断結果が出ました'
                 else
                     logger.error "Failed to save fraud_report: #{@fraud_report.errors.full_messages.join(', ')}"
                     redirect_to root_path, alert: '保存に失敗しました。'
@@ -76,28 +38,53 @@ class FraudReportsController < ApplicationController
         params.require(:fraud_report).permit(:contact_method, :contact_content, :information, :urgent_action, :payment_method, :company_info, :additional_details)
     end
 
+    def scam_name_general_prompt(fraud_report_params)
+        #promptに使用するために設定
+        contact_method = fraud_report_params[:contact_method]
+        contact_content = fraud_report_params[:contact_content]
+        information = fraud_report_params[:information]
+        urgent_action = fraud_report_params[:urgent_action]
+        payment_method = fraud_report_params[:payment_method]
+        company_info = fraud_report_params[:company_info]
+        additional_details = fraud_report_params[:additional_details]
+        <<~PROMPT
+            下記はユーザーが入力してくれた情報です
+                連絡手段: #{contact_method}
+                コンタクトの内容: #{contact_content}
+                要求される情報: #{information}
+                急いで行動するように求められましたか: #{urgent_action}
+                支払い方法: #{payment_method}
+                会社などの情報はありますか: #{company_info}
+                その他の詳細: #{additional_details}
+            上記の情報に基づいて、最も可能性の高い詐欺名(悪質商法も含む)を一つだけ日本語で教えてください
+            対話型の返答は省き、詐欺名(悪質商法も含む)のみを返答してください。
+        PROMPT
+    end
+
     def handle_scam_diagnosis(response_name)
-        scam = Scam.find_by(name: response_name)
-        return scam if scam
+        search_scam = Scam.find_by(name: response_name)  #find_byメソッドは値がない場合nilを返す。
+        return search_scam if search_scam
+        #詐欺名がなかった場合(search_scamがnilだった時)の詐欺詳細をAPIに聞く
+            scam_content_prompt = scam_content_general_prompt(response_name)
+            scam_content = ChatgptService.call(scam_content_prompt)
+        #詐欺名がなかった場合(search_scamがnilだった時)の詐欺ポイントをAPIに聞く
 
-        #ここに詐欺名がなかった場合の処理を記載
-        scam_content_prompt =
-                        <<~PROMPT
-                            詐欺名: #{response_name}
-                            上記の詐欺についての詳細を一言で教えてください。
-                            対話型の返答は省き、日本語で詐欺の詳細の1行だけを返答してください。
-                        PROMPT
+            # scamオブジェクトを生成かつcreate_scamに保存
+                create_scam = Scam.new(name: response_name, content: scam_content)
+                    if create_scam.save
+                        Rails.logger.info "ChatGPT API response: #{scam_content}"
+                        return create_scam
+                    else
+                        logger.error "Failed to save scam: #{scam.errors.full_messages.join(', ')}"
+                        return nil
+                    end
+    end
 
-        scam_content = ChatgptService.call(scam_content_prompt)
-        Rails.logger.info "ChatGPT API response: #{scam_content}"
-        scam = Scam.new(name: response_name, content: scam_content)
-
-        if scam.save
-            Rails.logger.info "ChatGPT API response: #{scam_content}"
-            return scam
-        else
-            logger.error "Failed to save scam: #{scam.errors.full_messages.join(', ')}"
-            return nil
-        end
+    def scam_content_general_prompt(response_name)
+        <<~PROMPT
+            詐欺名: #{response_name}
+            上記の詐欺についての詳細を一言で教えてください。
+            対話型の返答は省き、日本語で詐欺の詳細の1行だけを返答してください。
+        PROMPT
     end
 end
