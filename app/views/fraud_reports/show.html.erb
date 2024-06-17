@@ -1,8 +1,20 @@
 <div class="flex-grow container mx-auto  flex flex-col items-center  text-orange">
     <div class="text-slate-950 text-6xl mt-20">
-    <%= @scam.name %>
+            <%= @scam.name %>
     </div>
-    <P class="text-2xl mt-4">の可能性があります！</p>
+        <P class="text-2xl mt-4">の可能性があります！</p>
+    <div class="mt-4 text-slate-950">
+            <%= @scam.content %>
+    </div>
 
-    <%= @scam.content %>
+    <div class="mt-4">
+    <p class="text-2xl ">確認ポイント</p>
+        <div class="text-slate-950">
+            <%= @scam.point_1 %>
+            <br>
+            <%= @scam.point_2 %>
+            <br>
+            <%= @scam.point_3 %>
+        </div>
+    </div>
 </div>
