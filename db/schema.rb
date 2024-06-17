@@ -25,7 +25,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_06_15_144821) do
     t.string "respond"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "scam_id", null: false
+    t.bigint "scam_id"
     t.index ["scam_id"], name: "index_fraud_reports_on_scam_id"
   end
 
