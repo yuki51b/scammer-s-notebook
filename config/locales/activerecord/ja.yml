@@ -1,0 +1,15 @@
+ja:
+  activerecord:
+    models:
+      scam: 詐欺情報
+      fraud_report: 詐欺診断フォーム
+    attributes:
+      fraud_report:
+        contact_method: 連絡手段
+        contact_content: 要求されている内容
+        information: 求められている情報
+        urgent_action: 行動を急かされますか？
+        payment_method: 支払い方法
+        company_info: 会社の情報はありますか？
+        additional_details: 他に特徴があれば記述してください
+

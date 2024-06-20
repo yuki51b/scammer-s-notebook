@@ -79,4 +79,6 @@ end
 
 # gem install httparty
   gem "httparty"
-  
+
+# gem 'rails-i18n', '~> 7.0.0' install
+  gem 'rails-i18n', '~> 7.0.0'
