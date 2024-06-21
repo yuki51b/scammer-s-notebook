@@ -1,4 +1,5 @@
 class FraudReportsController < ApplicationController
+    skip_before_action :require_login, only: [ :new, :create, :show ]
 
     def new
         @fraud_report = FraudReport.new
@@ -56,7 +57,7 @@ class FraudReportsController < ApplicationController
                 急いで行動するように求められましたか: #{urgent_action}
                 支払い方法: #{payment_method}
                 会社などの情報はありますか: #{company_info}
-                その他の詳細: #{additional_details}
+                その他の詳細や特徴: #{additional_details}
             上記の情報に基づいて、最も可能性の高い詐欺名(悪質商法も含む)を一つだけ日本語で教えてください
             対話型の返答は省き、詐欺名(悪質商法も含む)のみを返答してください。
         PROMPT
@@ -129,7 +130,7 @@ class FraudReportsController < ApplicationController
         <<~PROMPT
         詐欺名：#{response_name}
         上記の詐欺についての手口を、詐欺師視点で教えてください。
-        始まりは"僕だったら以下のように戦略を立てるね"でお願いします。
+        始まりは"僕だったらこんな戦略を立てるね"でお願いします。
         できるだけ詐欺師を演じてください。また、100文字以内で日本語でお願いします。
         PROMPT
     end
