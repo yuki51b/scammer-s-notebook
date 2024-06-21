@@ -11,15 +11,19 @@
   </head>
 
   <body class="flex flex-col min-h-screen bg-primary">
-    <%= render 'shared/header' %>
-    <div class="flex-grow">
-    <%= yield %>
-    </div>
-    <%# 画像の配置%>
-        <div class="w-full flex justify-start">
-        <%= image_tag "characttor.jpeg", class: "w-40 h-40 my-10" %>
-        </div>   
+    <% if logged_in? %>
+      <%= render 'shared/header' %>
+    <% else %>
+      <%= render 'shared/before_login_header' %>
+    <% end %>
+      <div class="flex-grow">
+      <%= yield %>
+      </div>
+      <%# 画像の配置%>
+          <div class="w-full flex justify-start">
+          <%= image_tag "characttor.jpeg", class: "w-40 h-40 my-10" %>
+          </div>
 
-    <%= render 'shared/footer' %>
+      <%= render 'shared/footer' %>
   </body>
 </html>

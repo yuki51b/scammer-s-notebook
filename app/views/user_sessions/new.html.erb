@@ -1,0 +1,27 @@
+<div class="flex-grow container mx-auto  flex flex-col items-center  text-orange">
+    <p class="my-8 text-4xl">ログインしてください</p>
+    <%= form_with url: login_path do |f| %>
+      <div class="text-xl">
+
+        <div class="w-full mb-4">
+            <%= f.label :email %>
+            <%= f.email_field :email,  class: "text-slate-950" %>
+        </div>
+        <div class="w-full mb-4">
+            <%= f.label :password %>
+            <%= f.password_field :password,  class: "text-slate-950" %>
+        </div>
+
+        <div class="w-full mb-4 mt-10 text-center btn w-64 rounded-full">
+            <%= f.submit "ログイン" %>
+        </div>
+      </div>
+    <% end %>
+        <div class="w-full mb-4 mt-10 text-center btn w-64 rounded-full">
+            <%= link_to "ユーザー登録", new_user_path %>
+        </div>
+        <div class="w-full mb-4 mt-10 text-center btn w-64 rounded-full">
+            <%= link_to 'パスワードをお忘れの方はこちら', '#' %>
+        </div>
+</div>
+
