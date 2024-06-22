@@ -1,6 +1,6 @@
 <div class="flex-grow container mx-auto  flex flex-col items-center  text-orange">
     <p class="my-8 text-4xl">ユーザー登録</p>
-    <%= form_with model: @user do |f| %>
+    <%= form_with model: @user, data: { turbo: false } do |f| %>
         <div class="text-xl">
             <div class="w-full mb-4">
                 <%= f.label :name %>
