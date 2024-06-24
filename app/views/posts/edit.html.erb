@@ -1,0 +1,22 @@
+<div class="flex-grow container mx-auto  flex flex-col items-center  text-orange">
+    <p class="my-8 text-4xl">編集ページ</p>
+    <%= form_with model: @post, local: true, data: { turbo: false } do |f| %>
+        <div class="text-xl">
+            <div class="w-full mb-4">
+                <%= f.label :title %>
+                <%= f.text_field :title,  class: "text-slate-950" %>
+            </div>
+            <div class="w-full mb-4">
+                <%= f.label :scams %>
+                <%= f.collection_select :scam_id, @scams, :id, :name, { include_blank: "選択してください" }, { class: "text-slate-950" } %>
+            </div>
+            <div class="w-full mb-4">
+                <%= f.label :body %>
+                <%= f.text_area :body,  class: "text-slate-950" %>
+            </div>
+        <div class="w-full mb-4 mt-10 text-center btn w-64 rounded-full">
+                <%= f.submit "更新する" %>
+        </div>
+    <% end %>
+</div>
+
