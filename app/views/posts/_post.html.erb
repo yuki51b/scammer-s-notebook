@@ -6,7 +6,7 @@
       <span class="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full"><%= post.scam.name %></span>
   </td>
   <td class="px-6 py-4 whitespace-nowrap">
-    <%= link_to '投稿の詳細', "#", class: 'btn btn-info' %>
+    <%= link_to '投稿の詳細', post_path(post), class: 'btn btn-info' %>
     <%= link_to '詐欺の詳細', scam_path(post.scam), class: 'btn btn-info' %>
   </td>
 </tr>
