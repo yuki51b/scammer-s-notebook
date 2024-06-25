@@ -3,6 +3,8 @@
 Rails.application.routes.draw do
 
   root 'tops#index'
+  get '/privacy_policy', to: 'tops#privacy_policy'
+  get '/terms', to: 'tops#terms'
 
   resources :fraud_reports, only: [:new, :create, :show]
   resources :scams, only: [:index, :show]
