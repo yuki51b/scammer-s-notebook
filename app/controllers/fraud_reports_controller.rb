@@ -54,7 +54,7 @@ class FraudReportsController < ApplicationController
             下記はユーザーが入力してくれた情報です
                 接触手段はなんですか？: #{contact_method}
                 接触の内容は何ですか？: #{contact_content}
-                相手が要求している情報: #{information}
+                相手が求めている情報や行動: #{information}
                 行動を急ぐように求められましたか？: #{urgent_action}
                 支払い方法: #{payment_method}
                 会社などの情報はありますか: #{company_info}

@@ -17,7 +17,7 @@
 
         <div class="w-full mb-4">
             <%= f.label :information %>
-            <%= f.select :information, options_for_select(["個人情報(名前、住所、電話番号など)", "金融情報(クレジットカード番号、銀行講座情報など)", "身分証明書のコピー", "パスワード", "暗号通貨ウォレットの秘密鍵", "金銭援助", "ギフト送付"]), 
+            <%= f.select :information, options_for_select(["個人情報(名前、住所、電話番号など)", "金融情報(クレジットカード番号、銀行講座情報など)", "URLのやサイトのクリック", "身分証明書のコピー", "パスワード", "暗号通貨ウォレットの秘密鍵", "金銭援助", "ギフト送付", "結婚"]), 
             { include_blank: "選択して下さい" }, class: "text-slate-950" %>
         </div>
 
@@ -29,7 +29,7 @@
 
         <div class="w-full mb-4">
             <%= f.label :payment_method %>
-            <%= f.select :payment_method, options_for_select(["銀行振込", "クレジットカード", "デビットカード", "モバイル決済(PayPayやApplepayなど)", "現金", "プリペイドカード", "ギフトカード", "暗号通貨", "その他"]), 
+            <%= f.select :payment_method, options_for_select(["なし", "銀行振込", "クレジットカード", "デビットカード", "モバイル決済(PayPayやApplepayなど)", "現金", "プリペイドカード", "ギフトカード", "暗号通貨", "その他"]), 
             { include_blank: "選択して下さい" }, class: "text-slate-950" %>
         </div>
 
