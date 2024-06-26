@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_06_23_125535) do
+ActiveRecord::Schema[7.1].define(version: 2024_06_26_064542) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -26,16 +26,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_06_23_125535) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "scam_id"
+    t.string "who_person", default: "怪しい人", null: false
     t.index ["scam_id"], name: "index_fraud_reports_on_scam_id"
-  end
-
-  create_table "post_scams", force: :cascade do |t|
-    t.bigint "post_id", null: false
-    t.bigint "scam_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["post_id"], name: "index_post_scams_on_post_id"
-    t.index ["scam_id"], name: "index_post_scams_on_scam_id"
   end
 
   create_table "posts", force: :cascade do |t|
@@ -61,17 +53,18 @@ ActiveRecord::Schema[7.1].define(version: 2024_06_23_125535) do
   end
 
   create_table "users", force: :cascade do |t|
+    t.string "name"
     t.string "email", null: false
     t.string "crypted_password"
     t.string "salt"
+    t.string "avatar"
+    t.integer "role", default: 0, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
   add_foreign_key "fraud_reports", "scams"
-  add_foreign_key "post_scams", "posts"
-  add_foreign_key "post_scams", "scams"
   add_foreign_key "posts", "scams"
   add_foreign_key "posts", "users"
 end
