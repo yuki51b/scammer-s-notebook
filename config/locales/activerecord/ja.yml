@@ -5,11 +5,12 @@ ja:
       fraud_report: 詐欺診断フォーム
     attributes:
       fraud_report:
-        contact_method: 連絡手段
-        contact_content: 要求されている内容
-        information: 求められている情報
-        urgent_action: 行動を急かされますか？
-        payment_method: 支払い方法
-        company_info: 会社の情報はありますか？
-        additional_details: 他に特徴があれば記述してください
+        contact_method: 接触方法は何でしたか？
+        contact_content: 何について提案されていますか？
+        information: 相手はどんな情報を求めていますか？
+        urgent_action: 行動を急ぐように求められますか?(今がチャンス!や緊急です!など)
+        payment_method: お金の支払いはありますか？
+        company_info: 会社の情報は提示されましたか？(公式サイトなど)
+        who_person: 相手の特徴について教えてください
+        additional_details: 他に特徴があれば記述してください。
 

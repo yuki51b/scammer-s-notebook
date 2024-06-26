@@ -5,13 +5,13 @@
 
         <div class="w-full mb-4">
             <%= f.label :contact_method %>
-            <%= f.select :contact_method, options_for_select(["電話", "メール", "SMS(ショートメッセージ)", "ソーシャルメディアFacebook、Twitterなど", "直接の訪問", "メッセージングアプリ（LINE、WhatsAppなど）"]), 
+            <%= f.select :contact_method, options_for_select(["電話", "メール", "SMS(ショートメッセージ)", "ソーシャルメディア(Facebook、Twitterなど)", "直接の訪問", "メッセージングアプリ（LINE、WhatsAppなど）"]), 
             { include_blank: "選択して下さい" }, class: "text-slate-950" %>
         </div>
 
         <div class="w-full mb-4">
             <%= f.label :contact_content %>
-            <%= f.select :contact_content, options_for_select(["投資の勧誘", "ビジネスセミナーの案内", "賞金や景品の当選通知", "求人情報", "ロマンスやデートの誘い", "技術サポートの提供", "カジノ/ギャンブルの勧誘", "その他"]), 
+            <%= f.select :contact_content, options_for_select(["投資の勧誘", "ビジネスの案内", "賞金や景品の当選通知", "求人情報", "デートなどの誘い", "技術サポートの提供", "カジノ/ギャンブルの勧誘", "その他", "医療費や損害賠償の金銭援助", "更新のお知らせ", "あなたが何かの被害にあっている知らせ"]), 
             { include_blank: "選択して下さい" }, class: "text-slate-950" %>
         </div>
 
@@ -36,6 +36,11 @@
         <div class="w-full mb-4">
             <%= f.label :company_info %>
             <%= f.select :company_info, options_for_select(["はい", "いいえ"]), 
+            { include_blank: "選択して下さい" }, class: "text-slate-950" %>
+        </div>
+        <div class="w-full mb-4">
+            <%= f.label :who_person %>
+            <%= f.select :who_person, options_for_select([ "親族", "警察官や市役所職員と名乗る", "社長や役員", "会社員", "フリーランス", "主婦", "学生", "無職やフリーター", "アニメのキャラなど","具体的にはわからない"]), 
             { include_blank: "選択して下さい" }, class: "text-slate-950" %>
         </div>
 

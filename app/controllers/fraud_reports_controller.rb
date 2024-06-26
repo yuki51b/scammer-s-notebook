@@ -37,7 +37,7 @@ class FraudReportsController < ApplicationController
   private
 
     def fraud_report_params
-        params.require(:fraud_report).permit(:contact_method, :contact_content, :information, :urgent_action, :payment_method, :company_info, :additional_details)
+        params.require(:fraud_report).permit(:contact_method, :contact_content, :information, :urgent_action, :payment_method, :company_info, :who_person, :additional_details)
     end
 
     def scam_name_general_prompt(fraud_report_params)
@@ -48,15 +48,17 @@ class FraudReportsController < ApplicationController
         urgent_action = fraud_report_params[:urgent_action]
         payment_method = fraud_report_params[:payment_method]
         company_info = fraud_report_params[:company_info]
+        who_person = fraud_report_params[:who_person]
         additional_details = fraud_report_params[:additional_details]
         <<~PROMPT
             下記はユーザーが入力してくれた情報です
-                連絡手段: #{contact_method}
-                コンタクトの内容: #{contact_content}
-                要求される情報: #{information}
-                急いで行動するように求められましたか: #{urgent_action}
+                接触手段はなんですか？: #{contact_method}
+                接触の内容は何ですか？: #{contact_content}
+                相手が要求している情報: #{information}
+                行動を急ぐように求められましたか？: #{urgent_action}
                 支払い方法: #{payment_method}
                 会社などの情報はありますか: #{company_info}
+                相手の特徴を教えてください: #{who_person}
                 その他の詳細や特徴: #{additional_details}
             上記の情報に基づいて、最も可能性の高い詐欺名(悪質商法も含む)を一つだけ日本語で教えてください
             対話型の返答は省き、詐欺名(悪質商法も含む)のみを返答してください。
