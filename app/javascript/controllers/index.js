@@ -4,5 +4,9 @@
 
 import { application } from "./application"
 
+import FormController from "./form_controller"
+application.register("form", FormController)
+
+// 他のコントローラーも登録
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)

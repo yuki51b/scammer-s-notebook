@@ -1,47 +1,176 @@
-<div class="flex-grow container mx-auto  flex flex-col items-center  text-orange">
+<div class="flex-grow container mx-auto flex flex-col items-center text-orange" data-controller="form">
     <p class="my-8 text-4xl">選択してください</p>
     <%= form_with model: @fraud_report do |f| %>
       <div class="text-xl">
-
         <div class="w-full mb-4">
             <%= f.label :contact_method %>
-            <%= f.select :contact_method, options_for_select(["電話", "メール", "SMS(ショートメッセージ)", "ソーシャルメディア(Facebook、Twitterなど)", "直接の訪問", "メッセージングアプリ（LINE、WhatsAppなど）"]), 
-            { include_blank: "選択して下さい" }, class: "text-slate-950" %>
+            <div class="flex flex-wrap text-slate-950">
+                <%= f.radio_button :contact_method, "電話", id: "contact_method_phone" %>
+                <%= f.label :contact_method_phone, "電話" %>
+
+                <%= f.radio_button :contact_method, "メール", id: "contact_method_email" %>
+                <%= f.label :contact_method_email, "メール" %>
+
+                <%= f.radio_button :contact_method, "SMS(ショートメッセージ)", id: "contact_method_sms" %>
+                <%= f.label :contact_method_sms, "SMS(ショートメッセージ)" %>
+
+                <%= f.radio_button :contact_method, "ソーシャルメディア(Facebook、Twitterなど)", id: "contact_method_social_media" %>
+                <%= f.label :contact_method_social_media, "ソーシャルメディア(Facebook、Twitterなど)" %>
+
+                <%= f.radio_button :contact_method, "直接・対面で", id: "contact_method_in_person" %>
+                <%= f.label :contact_method_in_person, "直接・対面で" %>
+
+                <%= f.radio_button :contact_method, "メッセージングアプリ（LINE、WhatsAppなど）", id: "contact_method_messaging_app" %>
+                <%= f.label :contact_method_messaging_app, "メッセージングアプリ（LINE、WhatsAppなど）" %>
+            </div>
         </div>
 
         <div class="w-full mb-4">
+          <div data-controller="form">
             <%= f.label :contact_content %>
-            <%= f.select :contact_content, options_for_select(["投資の勧誘", "ビジネスの案内", "賞金や景品の当選通知", "求人情報", "デートなどの誘い", "技術サポートの提供", "カジノ/ギャンブルの勧誘", "その他", "医療費や損害賠償の金銭援助", "更新のお知らせ", "あなたが何かの被害にあっている知らせ"]), 
-            { include_blank: "選択して下さい" }, class: "text-slate-950" %>
+            <div class="flex flex-wrap text-slate-950">
+                <%= f.radio_button :contact_content, "投資の勧誘", id: "contact_content_investment", class: "js-check" %>
+                <%= f.label :contact_content_investment, "投資の勧誘" %>
+
+                <%= f.radio_button :contact_content, "ビジネスの案内", id: "contact_content_business", class: "js-check" %>
+                <%= f.label :contact_content_business, "ビジネスの案内" %>
+
+                <%= f.radio_button :contact_content, "賞金や景品の当選通知", id: "contact_content_prize", class: "js-check" %>
+                <%= f.label :contact_content_prize, "賞金や景品の当選通知" %>
+
+                <%= f.radio_button :contact_content, "求人情報", id: "contact_content_job", class: "js-check" %>
+                <%= f.label :contact_content_job, "求人情報" %>
+
+                <%= f.radio_button :contact_content, "デートなどの誘い", id: "contact_content_date", class: "js-check" %>
+                <%= f.label :contact_content_date, "デートなどの誘い" %>
+
+                <%= f.radio_button :contact_content, "技術サポートの提供", id: "contact_content_tech_support", class: "js-check" %>
+                <%= f.label :contact_content_tech_support, "技術サポートの提供" %>
+
+                <%= f.radio_button :contact_content, "カジノ/ギャンブルの勧誘", id: "contact_content_casino", class: "js-check" %>
+                <%= f.label :contact_content_casino, "カジノ/ギャンブルの勧誘" %>
+
+                <%= f.radio_button :contact_content, "金銭援助", id: "contact_content_money_aid", class: "js-check" %>
+                <%= f.label :contact_content_money_aid, "金銭援助" %>
+
+                <%= f.radio_button :contact_content, "更新のお知らせ", id: "contact_content_update", class: "js-check" %>
+                <%= f.label :contact_content_update, "更新のお知らせ" %>
+
+                <%= f.radio_button :contact_content, "その他", id: "contact_content_other", class: "js-check" %>
+                <%= f.label :contact_content_other, "その他" %>
+
+                <span id="sample"><%= f.text_field :contact_content, id: "contact_content_text", disabled: true, required: true, placeholder: "具体的に表示してください" %></span>
+            </div>
+          </div>
         </div>
+
+
 
         <div class="w-full mb-4">
             <%= f.label :information %>
-            <%= f.select :information, options_for_select(["個人情報(名前、住所、電話番号など)", "金融情報(クレジットカード番号、銀行講座情報など)", "URLのやサイトのクリック", "身分証明書のコピー", "パスワード", "暗号通貨ウォレットの秘密鍵", "金銭援助", "ギフト送付", "結婚"]), 
-            { include_blank: "選択して下さい" }, class: "text-slate-950" %>
+            <div class="flex flex-wrap text-slate-950">
+                <%= f.radio_button :information, "個人情報(名前、住所、電話番号など)", id: "information_personal_info" %>
+                <%= f.label :information_personal_info, "個人情報(名前、住所、電話番号など)" %>
+
+                <%= f.radio_button :information, "金融情報(クレジットカード番号、銀行講座情報など)", id: "information_financial_info" %>
+                <%= f.label :information_financial_info, "金融情報(クレジットカード番号、銀行講座情報など)" %>
+
+                <%= f.radio_button :information, "URLのやサイトのクリック", id: "information_url_click" %>
+                <%= f.label :information_url_click, "URLのやサイトのクリック" %>
+
+                <%= f.radio_button :information, "身分証明書のコピー", id: "information_id_copy" %>
+                <%= f.label :information_id_copy, "身分証明書のコピー" %>
+
+                <%= f.radio_button :information, "高額商品の購入", id: "information_high_value_purchase" %>
+                <%= f.label :information_high_value_purchase, "高額商品の購入" %>
+
+                <%= f.radio_button :information, "暗号通貨ウォレットの秘密鍵", id: "information_crypto_wallet" %>
+                <%= f.label :information_crypto_wallet, "暗号通貨ウォレットの秘密鍵" %>
+
+                <%= f.radio_button :information, "金銭援助", id: "information_money_aid" %>
+                <%= f.label :information_money_aid, "金銭援助" %>
+
+                <%= f.radio_button :information, "会員の勧誘", id: "information_membership" %>
+                <%= f.label :information_membership, "会員の勧誘" %>
+
+                <%= f.radio_button :information, "結婚", id: "information_marriage" %>
+                <%= f.label :information_marriage, "結婚" %>
+            </div>
         </div>
 
         <div class="w-full mb-4">
             <%= f.label :urgent_action %>
-            <%= f.select :urgent_action, options_for_select(["はい", "いいえ"]), 
-            { include_blank: "選択して下さい" }, class: "text-slate-950" %>
+            <div class="flex flex-wrap text-slate-950">
+                <%= f.radio_button :urgent_action, "はい", id: "urgent_action_yes" %>
+                <%= f.label :urgent_action_yes, "はい" %>
+
+                <%= f.radio_button :urgent_action, "いいえ", id: "urgent_action_no" %>
+                <%= f.label :urgent_action_no, "いいえ" %>
+            </div>
         </div>
 
         <div class="w-full mb-4">
             <%= f.label :payment_method %>
-            <%= f.select :payment_method, options_for_select(["なし", "銀行振込", "クレジットカード", "デビットカード", "モバイル決済(PayPayやApplepayなど)", "現金", "プリペイドカード", "ギフトカード", "暗号通貨", "その他"]), 
-            { include_blank: "選択して下さい" }, class: "text-slate-950" %>
+            <div class="flex flex-wrap text-slate-950">
+                <%= f.radio_button :payment_method, "なし", id: "payment_method_none" %>
+                <%= f.label :payment_method_none, "なし" %>
+
+                <%= f.radio_button :payment_method, "銀行振込", id: "payment_method_bank_transfer" %>
+                <%= f.label :payment_method_bank_transfer, "銀行振込" %>
+
+                <%= f.radio_button :payment_method, "モバイル決済(PayPayやApplepayなど)", id: "payment_method_mobile_payment" %>
+                <%= f.label :payment_method_mobile_payment, "モバイル決済(PayPayやApplepayなど)" %>
+
+                <%= f.radio_button :payment_method, "現金", id: "payment_method_cash" %>
+                <%= f.label :payment_method_cash, "現金" %>
+
+                <%= f.radio_button :payment_method, "その他", id: "payment_method_other"%>
+                <%= f.label :payment_method_other, "その他" %>
+
+            </div>
         </div>
 
         <div class="w-full mb-4">
             <%= f.label :company_info %>
-            <%= f.select :company_info, options_for_select(["はい", "いいえ"]), 
-            { include_blank: "選択して下さい" }, class: "text-slate-950" %>
+            <div class="flex flex-wrap text-slate-950">
+                <%= f.radio_button :company_info, "はい", id: "company_info_yes" %>
+                <%= f.label :company_info_yes, "はい" %>
+
+                <%= f.radio_button :company_info, "いいえ", id: "company_info_no" %>
+                <%= f.label :company_info_no, "いいえ" %>
+            </div>
         </div>
+
         <div class="w-full mb-4">
             <%= f.label :who_person %>
-            <%= f.select :who_person, options_for_select([ "親族", "警察官や市役所職員と名乗る", "社長や役員", "会社員", "フリーランス", "主婦", "学生", "無職やフリーター", "アニメのキャラなど","具体的にはわからない"]), 
-            { include_blank: "選択して下さい" }, class: "text-slate-950" %>
+            <div class="flex flex-wrap text-slate-950">
+                <%= f.radio_button :who_person, "親族", id: "who_person_relative" %>
+                <%= f.label :who_person_relative, "親族" %>
+
+                <%= f.radio_button :who_person, "社長や役員", id: "who_person_executive" %>
+                <%= f.label :who_person_executive, "社長や役員" %>
+
+                <%= f.radio_button :who_person, "会社員", id: "who_person_employee" %>
+                <%= f.label :who_person_employee, "会社員" %>
+
+                <%= f.radio_button :who_person, "フリーランス", id: "who_person_freelancer" %>
+                <%= f.label :who_person_freelancer, "フリーランス" %>
+
+                <%= f.radio_button :who_person, "主婦", id: "who_person_housewife" %>
+                <%= f.label :who_person_housewife, "主婦" %>
+
+                <%= f.radio_button :who_person, "学生", id: "who_person_student" %>
+                <%= f.label :who_person_student, "学生" %>
+
+                <%= f.radio_button :who_person, "無職やフリーター", id: "who_person_unemployed" %>
+                <%= f.label :who_person_unemployed, "無職やフリーター" %>
+
+                <%= f.radio_button :who_person, "友人や恋人", id: "who_person_friend" %>
+                <%= f.label :who_person_friend, "友人や恋人" %>
+
+                <%= f.radio_button :who_person, "具体的にはわからない", id: "who_person_unknown" %>
+                <%= f.label :who_person_unknown, "具体的にはわからない" %>
+            </div>
         </div>
 
         <div class="w-full mb-4">
@@ -52,7 +181,6 @@
         <div class="w-full mb-4 mt-10 text-center btn w-64 rounded-full">
             <%= f.submit "診断する" %>
         </div>
-
       </div>
-    <%end%>
+    <% end %>
 </div>
