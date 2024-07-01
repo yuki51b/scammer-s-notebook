@@ -11,6 +11,6 @@ ja:
         urgent_action: 行動を急ぐように求められますか?(今がチャンス!や緊急です!など)
         payment_method: お金の支払いを求められていますか？
         company_info: 会社の情報は提示されましたか？(公式サイトなど)
-        who_person: 相手の特徴について教えてください
+        who_person: 相手の特徴や相手は誰かを教えてください
         additional_details: 他に特徴があれば記述してください。
 
