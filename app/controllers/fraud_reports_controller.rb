@@ -37,7 +37,7 @@ class FraudReportsController < ApplicationController
   private
 
     def fraud_report_params
-        params.require(:fraud_report).permit(:contact_method, :contact_content, :information, :urgent_action, :payment_method, :company_info, :who_person, :additional_details)
+        params.require(:fraud_report).permit(:contact_method, :contact_content, :information, :urgent_action, :payment_method, :company_info, :who_person)
     end
 
     def scam_name_general_prompt(fraud_report_params)
@@ -49,7 +49,6 @@ class FraudReportsController < ApplicationController
         payment_method = fraud_report_params[:payment_method]
         company_info = fraud_report_params[:company_info]
         who_person = fraud_report_params[:who_person]
-        additional_details = fraud_report_params[:additional_details]
         <<~PROMPT
                 ## 指示
                 あなたは、"入力情報"からどんな詐欺の可能性が高いかを診断してくれるとても優秀な詐欺の専門家です。
@@ -62,7 +61,6 @@ class FraudReportsController < ApplicationController
                 支払い方法: #{payment_method}
                 会社などの情報はありますか: #{company_info}
                 相手の特徴や相手は誰かを教えてください: #{who_person}
-                その他の詳細や特徴: #{additional_details}
                 ## 制約条件
                 - 出力の際は"出力の説明"と"例"を十分に理解して、"出力フォーマット"を遵守して出力してください。
                 - "入力情報"を十分理解して、詐欺名または特殊詐欺名または悪質商法名の３つから可能性の高い結果を一つ選んで出力してください。
