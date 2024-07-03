@@ -37,7 +37,7 @@ class FraudReportsController < ApplicationController
   private
 
     def fraud_report_params
-        params.require(:fraud_report).permit(:contact_method, :contact_content, :information, :urgent_action, :payment_method, :company_info, :who_person, :additional_details)
+        params.require(:fraud_report).permit(:contact_method, :contact_content, :information, :urgent_action, :payment_method, :company_info, :who_person)
     end
 
     def scam_name_general_prompt(fraud_report_params)
@@ -49,11 +49,10 @@ class FraudReportsController < ApplicationController
         payment_method = fraud_report_params[:payment_method]
         company_info = fraud_report_params[:company_info]
         who_person = fraud_report_params[:who_person]
-        additional_details = fraud_report_params[:additional_details]
         <<~PROMPT
                 ## 指示
-                あなたは、入力された情報からどんな詐欺の可能性が高いかを診断してくれるとても優秀な詐欺撲滅の専門家です。
-                下記の"入力情報"の情報から、可能性の一番高い詐欺名または悪質商法名を教えてください。
+                あなたは、"入力情報"からどんな詐欺の可能性が高いかを診断してくれるとても優秀な詐欺の専門家です。
+                下記の"入力情報"の情報から、可能性の一番高い詐欺名または特殊詐欺名または悪質商法名を教えてください。
                 ## 入力情報
                 接触手段はなんですか？: #{contact_method}
                 接触の内容は何ですか？: #{contact_content}
@@ -61,16 +60,24 @@ class FraudReportsController < ApplicationController
                 行動を急ぐように求められましたか？: #{urgent_action}
                 支払い方法: #{payment_method}
                 会社などの情報はありますか: #{company_info}
-                相手の特徴を教えてください: #{who_person}
-                その他の詳細や特徴: #{additional_details}
+                相手の特徴や相手は誰かを教えてください: #{who_person}
                 ## 制約条件
-                - 出力の際は"出力フォーマット"を遵守してください。
-                - 入力された情報を理解して、より手口が同じである詐欺名や悪質商法を出力してください
-                - 詐欺名または悪質商法名は可能性の高いどちらか一つでお願いします。
+                - 出力の際は"出力の説明"と"例"を十分に理解して、"出力フォーマット"を遵守して出力してください。
+                - "入力情報"を十分理解して、詐欺名または特殊詐欺名または悪質商法名の３つから可能性の高い結果を一つ選んで出力してください。
                 - 日本語でお願いします
-                対話型の出力はしないでください。
+                - 対話型の出力はしないでください。
+                - 過去の出力と今回の手口がある程度同じである場合は、同じ診断名を出力しても構いません。
+                ## 出力の説明
+                - "出力フォーマット"のnameとplusは出力場所を表しているだけです。その場所に値を出力してくださいという意味です。
+                - 1."入力情報"から考えられる一番可能性の高い詐欺名または特殊詐欺名または悪質商法名を"出力フォーマット"のnameの場所に出力してください。
+                - 2."1"の今回診断されたnameが特殊詐欺名だった場合、今回の特殊詐欺の手口を表す言葉を一語、"出力フォーマット"のplusに出力してください
+                - 3."1"でのnameが特殊詐欺名ではなかった場合、"出力フォーマット"の"& (plus)"は排除して、nameだけを出力してください。
+                ## 例
+                - "1"でのnameがオレオレ詐欺、"2"でのplusが親族であるならば、オレオレ詐欺&(親族)のように
+                - "1"でのnameが不動産詐欺で特殊詐欺ではない時、不動産詐欺
                 ## 出力フォーマット
-                大枠の詐欺名または悪質商法名 & (詐欺や悪質商法の特徴を表す単語を一つ)
+                    name & (plus)
+
         PROMPT
     end
 

@@ -3,63 +3,70 @@
     <%= form_with model: @fraud_report do |f| %>
       <div class="text-xl">
         <div class="w-full mb-4">
+          <div data-controller="form">
             <%= f.label :contact_method %>
             <div class="flex flex-wrap text-slate-950">
-                <%= f.radio_button :contact_method, "電話", id: "contact_method_phone" %>
+                <%= f.radio_button :contact_method, "電話", id: "contact_method_phone", class: "js-check-method" %>
                 <%= f.label :contact_method_phone, "電話" %>
 
-                <%= f.radio_button :contact_method, "メール", id: "contact_method_email" %>
+                <%= f.radio_button :contact_method, "メール", id: "contact_method_email", class: "js-check-method" %>
                 <%= f.label :contact_method_email, "メール" %>
 
-                <%= f.radio_button :contact_method, "SMS(ショートメッセージ)", id: "contact_method_sms" %>
+                <%= f.radio_button :contact_method, "SMS(ショートメッセージ)", id: "contact_method_sms", class: "js-check-method" %>
                 <%= f.label :contact_method_sms, "SMS(ショートメッセージ)" %>
 
-                <%= f.radio_button :contact_method, "ソーシャルメディア(Facebook、Twitterなど)", id: "contact_method_social_media" %>
+                <%= f.radio_button :contact_method, "ソーシャルメディア(Facebook、Twitterなど)", id: "contact_method_social_media", class: "js-check-method" %>
                 <%= f.label :contact_method_social_media, "ソーシャルメディア(Facebook、Twitterなど)" %>
 
-                <%= f.radio_button :contact_method, "直接・対面で", id: "contact_method_in_person" %>
+                <%= f.radio_button :contact_method, "直接・対面で", id: "contact_method_in_person", class: "js-check-method" %>
                 <%= f.label :contact_method_in_person, "直接・対面で" %>
 
-                <%= f.radio_button :contact_method, "メッセージングアプリ（LINE、WhatsAppなど）", id: "contact_method_messaging_app" %>
+                <%= f.radio_button :contact_method, "メッセージングアプリ（LINE、WhatsAppなど）", id: "contact_method_messaging_app", class: "js-check-method" %>
                 <%= f.label :contact_method_messaging_app, "メッセージングアプリ（LINE、WhatsAppなど）" %>
+
+                <%= f.radio_button :contact_method, "その他", id: "contact_method_other", class: "js-check-method" %>
+                <%= f.label :contact_method_other, "その他" %>
+
+                <span id="method"><%= f.text_field :contact_method, id: "contact_method_text", disabled: true, required: true, placeholder: "具体的に表示してください" %></span>
             </div>
+          </div>
         </div>
 
         <div class="w-full mb-4">
           <div data-controller="form">
             <%= f.label :contact_content %>
             <div class="flex flex-wrap text-slate-950">
-                <%= f.radio_button :contact_content, "投資の勧誘", id: "contact_content_investment", class: "js-check" %>
+                <%= f.radio_button :contact_content, "投資の勧誘", id: "contact_content_investment", class: "js-check-content" %>
                 <%= f.label :contact_content_investment, "投資の勧誘" %>
 
-                <%= f.radio_button :contact_content, "ビジネスの案内", id: "contact_content_business", class: "js-check" %>
+                <%= f.radio_button :contact_content, "ビジネスの案内", id: "contact_content_business", class: "js-check-content" %>
                 <%= f.label :contact_content_business, "ビジネスの案内" %>
 
-                <%= f.radio_button :contact_content, "賞金や景品の当選通知", id: "contact_content_prize", class: "js-check" %>
+                <%= f.radio_button :contact_content, "賞金や景品の当選通知", id: "contact_content_prize", class: "js-check-content" %>
                 <%= f.label :contact_content_prize, "賞金や景品の当選通知" %>
 
-                <%= f.radio_button :contact_content, "求人情報", id: "contact_content_job", class: "js-check" %>
+                <%= f.radio_button :contact_content, "求人情報", id: "contact_content_job", class: "js-check-content" %>
                 <%= f.label :contact_content_job, "求人情報" %>
 
-                <%= f.radio_button :contact_content, "デートなどの誘い", id: "contact_content_date", class: "js-check" %>
+                <%= f.radio_button :contact_content, "デートなどの誘い", id: "contact_content_date", class: "js-check-content" %>
                 <%= f.label :contact_content_date, "デートなどの誘い" %>
 
-                <%= f.radio_button :contact_content, "技術サポートの提供", id: "contact_content_tech_support", class: "js-check" %>
+                <%= f.radio_button :contact_content, "技術サポートの提供", id: "contact_content_tech_support", class: "js-check-content" %>
                 <%= f.label :contact_content_tech_support, "技術サポートの提供" %>
 
-                <%= f.radio_button :contact_content, "カジノ/ギャンブルの勧誘", id: "contact_content_casino", class: "js-check" %>
+                <%= f.radio_button :contact_content, "カジノ/ギャンブルの勧誘", id: "contact_content_casino", class: "js-check-content" %>
                 <%= f.label :contact_content_casino, "カジノ/ギャンブルの勧誘" %>
 
-                <%= f.radio_button :contact_content, "金銭援助", id: "contact_content_money_aid", class: "js-check" %>
+                <%= f.radio_button :contact_content, "金銭援助", id: "contact_content_money_aid", class: "js-check-content" %>
                 <%= f.label :contact_content_money_aid, "金銭援助" %>
 
-                <%= f.radio_button :contact_content, "更新のお知らせ", id: "contact_content_update", class: "js-check" %>
+                <%= f.radio_button :contact_content, "更新のお知らせ", id: "contact_content_update", class: "js-check-content" %>
                 <%= f.label :contact_content_update, "更新のお知らせ" %>
 
-                <%= f.radio_button :contact_content, "その他", id: "contact_content_other", class: "js-check" %>
+                <%= f.radio_button :contact_content, "その他", id: "contact_content_other", class: "js-check-content" %>
                 <%= f.label :contact_content_other, "その他" %>
 
-                <span id="sample"><%= f.text_field :contact_content, id: "contact_content_text", disabled: true, required: true, placeholder: "具体的に表示してください" %></span>
+                <span id="content"><%= f.text_field :contact_content, id: "contact_content_text", disabled: true, required: true, placeholder: "具体的に表示してください" %></span>
             </div>
           </div>
         </div>
@@ -67,35 +74,36 @@
 
 
         <div class="w-full mb-4">
+          <div data-controller="form">
             <%= f.label :information %>
             <div class="flex flex-wrap text-slate-950">
-                <%= f.radio_button :information, "個人情報(名前、住所、電話番号など)", id: "information_personal_info" %>
+                <%= f.radio_button :information, "個人情報(名前、住所、電話番号など)", id: "information_personal_info", class: "js-check-information" %>
                 <%= f.label :information_personal_info, "個人情報(名前、住所、電話番号など)" %>
 
-                <%= f.radio_button :information, "金融情報(クレジットカード番号、銀行講座情報など)", id: "information_financial_info" %>
+                <%= f.radio_button :information, "金融情報(クレジットカード番号、銀行講座情報など)", id: "information_financial_info", class: "js-check-information" %>
                 <%= f.label :information_financial_info, "金融情報(クレジットカード番号、銀行講座情報など)" %>
 
-                <%= f.radio_button :information, "URLのやサイトのクリック", id: "information_url_click" %>
-                <%= f.label :information_url_click, "URLのやサイトのクリック" %>
+                <%= f.radio_button :information, "URLのクリック", id: "information_url_click", class: "js-check-information" %>
+                <%= f.label :information_url_click, "URLのクリック" %>
 
-                <%= f.radio_button :information, "身分証明書のコピー", id: "information_id_copy" %>
+                <%= f.radio_button :information, "身分証明書のコピー", id: "information_id_copy", class: "js-check-information" %>
                 <%= f.label :information_id_copy, "身分証明書のコピー" %>
 
-                <%= f.radio_button :information, "高額商品の購入", id: "information_high_value_purchase" %>
+                <%= f.radio_button :information, "高額商品の購入", id: "information_high_value_purchase", class: "js-check-information" %>
                 <%= f.label :information_high_value_purchase, "高額商品の購入" %>
 
-                <%= f.radio_button :information, "暗号通貨ウォレットの秘密鍵", id: "information_crypto_wallet" %>
-                <%= f.label :information_crypto_wallet, "暗号通貨ウォレットの秘密鍵" %>
-
-                <%= f.radio_button :information, "金銭援助", id: "information_money_aid" %>
+                <%= f.radio_button :information, "金銭援助", id: "information_money_aid", class: "js-check-information" %>
                 <%= f.label :information_money_aid, "金銭援助" %>
 
-                <%= f.radio_button :information, "会員の勧誘", id: "information_membership" %>
+                <%= f.radio_button :information, "会員の勧誘", id: "information_membership", class: "js-check-information" %>
                 <%= f.label :information_membership, "会員の勧誘" %>
 
-                <%= f.radio_button :information, "結婚", id: "information_marriage" %>
-                <%= f.label :information_marriage, "結婚" %>
+                <%= f.radio_button :information, "その他", id: "information_other", class: "js-check-information" %>
+                <%= f.label :information_other, "その他" %>
+
+                <span id="information"><%= f.text_field :information, id: "information_text", disabled: true, required: true, placeholder: "具体的に表示してください" %></span>
             </div>
+          </div>
         </div>
 
         <div class="w-full mb-4">
@@ -110,24 +118,27 @@
         </div>
 
         <div class="w-full mb-4">
+          <div data-controller="form">
             <%= f.label :payment_method %>
             <div class="flex flex-wrap text-slate-950">
-                <%= f.radio_button :payment_method, "なし", id: "payment_method_none" %>
+                <%= f.radio_button :payment_method, "なし", id: "payment_method_none", class: "js-check-payment" %>
                 <%= f.label :payment_method_none, "なし" %>
 
-                <%= f.radio_button :payment_method, "銀行振込", id: "payment_method_bank_transfer" %>
+                <%= f.radio_button :payment_method, "銀行振込", id: "payment_method_bank_transfer", class: "js-check-payment" %>
                 <%= f.label :payment_method_bank_transfer, "銀行振込" %>
 
-                <%= f.radio_button :payment_method, "モバイル決済(PayPayやApplepayなど)", id: "payment_method_mobile_payment" %>
+                <%= f.radio_button :payment_method, "モバイル決済(PayPayやApplepayなど)", id: "payment_method_mobile_payment", class: "js-check-payment" %>
                 <%= f.label :payment_method_mobile_payment, "モバイル決済(PayPayやApplepayなど)" %>
 
-                <%= f.radio_button :payment_method, "現金", id: "payment_method_cash" %>
+                <%= f.radio_button :payment_method, "現金", id: "payment_method_cash", class: "js-check-payment" %>
                 <%= f.label :payment_method_cash, "現金" %>
 
-                <%= f.radio_button :payment_method, "その他", id: "payment_method_other"%>
+                <%= f.radio_button :payment_method, "その他", id: "payment_method_other", class: "js-check-payment"%>
                 <%= f.label :payment_method_other, "その他" %>
 
+                <span id="payment"><%= f.text_field :information, id: "payment_text", disabled: true, required: true, placeholder: "具体的に表示してください" %></span>
             </div>
+          </div>
         </div>
 
         <div class="w-full mb-4">
@@ -171,11 +182,6 @@
                 <%= f.radio_button :who_person, "具体的にはわからない", id: "who_person_unknown" %>
                 <%= f.label :who_person_unknown, "具体的にはわからない" %>
             </div>
-        </div>
-
-        <div class="w-full mb-4">
-            <%= f.label :additional_details %>
-            <%= f.text_field :additional_details, class: "text-slate-950" %>
         </div>
 
         <div class="w-full mb-4 mt-10 text-center btn w-64 rounded-full">

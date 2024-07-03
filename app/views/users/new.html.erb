@@ -1,30 +1,30 @@
 <div class="flex-grow container mx-auto  flex flex-col items-center  text-orange">
-    <p class="my-8 text-4xl">ユーザー登録</p>
-    <%= form_with model: @user, data: { turbo: false } do |f| %>
-        <div class="text-xl">
-            <div class="w-full mb-4">
-                <%= f.label :name %>
-                <%= f.text_field :name,  class: "text-slate-950" %>
-            </div>
+	<p class="my-8 text-4xl">ユーザー登録</p>
+	<%= form_with model: @user, data: { turbo: false } do |f| %>
+		<div class="text-xl">
+			<div class="w-full mb-4">
+				<%= f.label :name %>
+				<%= f.text_field :name,  class: "text-slate-950" %>
+			</div>
 
-            <div class="w-full mb-4">
-                <%= f.label :email %>
-                <%= f.email_field :email,  class: "text-slate-950" %>
-            </div>
+			<div class="w-full mb-4">
+				<%= f.label :email %>
+				<%= f.email_field :email,  class: "text-slate-950" %>
+			</div>
 
-            <div class="w-full mb-4">
-                <%= f.label :password %>
-                <%= f.password_field :password,  class: "text-slate-950" %>
-            </div>
+			<div class="w-full mb-4">
+				<%= f.label :password %>
+				<%= f.password_field :password,  class: "text-slate-950" %>
+			</div>
 
-            <div class="w-full mb-4">
-                <%= f.label :password_confirmation %>
-                <%= f.password_field :password_confirmation,  class: "text-slate-950" %>
-            </div>
+			<div class="w-full mb-4">
+				<%= f.label :password_confirmation %>
+				<%= f.password_field :password_confirmation,  class: "text-slate-950" %>
+			</div>
 
-            <div class="w-full mb-4 mt-10 text-center btn w-64 rounded-full">
-                <%= f.submit "登録する" %>
-        </div>
+			<div class="w-full mb-4 mt-10 text-center btn w-64 rounded-full">
+				<%= f.submit "登録する" %>
+		</div>
 
-    <% end %>
+	<% end %>
 </div>
