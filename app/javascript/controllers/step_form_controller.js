@@ -18,13 +18,31 @@ export default class extends Controller {
     });
   }
 
-  nextStep() {
-    if (this.currentStep < this.stepTargets.length) {
-      this.currentStep++;
-      this.showCurrentStep();
-    }
+  validateCurrentStep() {
+    const currentStepElement = this.stepTargets[this.currentStep - 1];
+    const radioGroups = currentStepElement.querySelectorAll('input[type="radio"]');
+    let isValid = false;
+
+    radioGroups.forEach((radio) => {
+      if (radio.checked) {
+        isValid = true;
+      }
+    });
+
+    return isValid;
   }
 
+  nextStep() {
+    if (this.validateCurrentStep()) {
+      if (this.currentStep < this.stepTargets.length) {
+        this.currentStep++;
+        this.showCurrentStep();
+      }
+    } else {
+      alert("選択してください");
+    }
+  }
+  
   prevStep() {
     if (this.currentStep > 1) {
       this.currentStep--;
