@@ -3,7 +3,6 @@
     <%= form_with model: @fraud_report do |f| %>
       <div class="text-xl">
         <div class="w-full mb-4">
-          <div data-controller="form">
             <%= f.label :contact_method %>
             <div class="flex flex-wrap text-slate-950">
                 <%= f.radio_button :contact_method, "電話", id: "contact_method_phone", class: "js-check-method" %>
@@ -29,11 +28,9 @@
 
                 <span id="method"><%= f.text_field :contact_method, id: "contact_method_text", disabled: true, required: true, placeholder: "具体的に表示してください" %></span>
             </div>
-          </div>
         </div>
 
         <div class="w-full mb-4">
-          <div data-controller="form">
             <%= f.label :contact_content %>
             <div class="flex flex-wrap text-slate-950">
                 <%= f.radio_button :contact_content, "投資の勧誘", id: "contact_content_investment", class: "js-check-content" %>
@@ -68,13 +65,11 @@
 
                 <span id="content"><%= f.text_field :contact_content, id: "contact_content_text", disabled: true, required: true, placeholder: "具体的に表示してください" %></span>
             </div>
-          </div>
         </div>
 
 
 
         <div class="w-full mb-4">
-          <div data-controller="form">
             <%= f.label :information %>
             <div class="flex flex-wrap text-slate-950">
                 <%= f.radio_button :information, "個人情報(名前、住所、電話番号など)", id: "information_personal_info", class: "js-check-information" %>
@@ -103,7 +98,6 @@
 
                 <span id="information"><%= f.text_field :information, id: "information_text", disabled: true, required: true, placeholder: "具体的に表示してください" %></span>
             </div>
-          </div>
         </div>
 
         <div class="w-full mb-4">
@@ -118,7 +112,6 @@
         </div>
 
         <div class="w-full mb-4">
-          <div data-controller="form">
             <%= f.label :payment_method %>
             <div class="flex flex-wrap text-slate-950">
                 <%= f.radio_button :payment_method, "なし", id: "payment_method_none", class: "js-check-payment" %>
@@ -138,7 +131,6 @@
 
                 <span id="payment"><%= f.text_field :information, id: "payment_text", disabled: true, required: true, placeholder: "具体的に表示してください" %></span>
             </div>
-          </div>
         </div>
 
         <div class="w-full mb-4">
