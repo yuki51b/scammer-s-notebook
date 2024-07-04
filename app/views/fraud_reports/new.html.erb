@@ -1,9 +1,10 @@
 <div class="flex-grow container mx-auto flex flex-col items-center text-orange" data-controller="form">
     <p class="my-8 text-4xl">選択してください</p>
+  <div data-controller="step-form">
     <%= form_with model: @fraud_report do |f| %>
       <div class="text-xl">
-        <div class="w-full mb-4">
-          <div data-controller="form">
+        <div id="step1" style="display: block;" data-step-form-target="step">
+          <div class="w-full mb-4">
             <%= f.label :contact_method %>
             <div class="flex flex-wrap text-slate-950">
                 <%= f.radio_button :contact_method, "電話", id: "contact_method_phone", class: "js-check-method" %>
@@ -29,11 +30,12 @@
 
                 <span id="method"><%= f.text_field :contact_method, id: "contact_method_text", disabled: true, required: true, placeholder: "具体的に表示してください" %></span>
             </div>
-          </div>
+          <button type="button" data-action="step-form#nextStep" class="text-blue">次へ</button>
         </div>
+    </div>
 
+      <div id="step2" style="display: none;" data-step-form-target="step" >
         <div class="w-full mb-4">
-          <div data-controller="form">
             <%= f.label :contact_content %>
             <div class="flex flex-wrap text-slate-950">
                 <%= f.radio_button :contact_content, "投資の勧誘", id: "contact_content_investment", class: "js-check-content" %>
@@ -67,14 +69,14 @@
                 <%= f.label :contact_content_other, "その他" %>
 
                 <span id="content"><%= f.text_field :contact_content, id: "contact_content_text", disabled: true, required: true, placeholder: "具体的に表示してください" %></span>
-            </div>
+              </div>
+                <button type="button" data-action="step-form#prevStep">戻る</button>
+                <button type="button" data-action="step-form#nextStep">次へ</button>
           </div>
-        </div>
+      </div>
 
-
-
-        <div class="w-full mb-4">
-          <div data-controller="form">
+      <div id="step3" style="display: none;" data-step-form-target="step">
+          <div class="w-full mb-4">
             <%= f.label :information %>
             <div class="flex flex-wrap text-slate-950">
                 <%= f.radio_button :information, "個人情報(名前、住所、電話番号など)", id: "information_personal_info", class: "js-check-information" %>
@@ -103,9 +105,12 @@
 
                 <span id="information"><%= f.text_field :information, id: "information_text", disabled: true, required: true, placeholder: "具体的に表示してください" %></span>
             </div>
+                <button type="button" data-action="step-form#prevStep">戻る</button>
+                <button type="button" data-action="step-form#nextStep">次へ</button>
           </div>
-        </div>
+      </div>
 
+      <div id="step4" style="display: none;" data-step-form-target="step">
         <div class="w-full mb-4">
             <%= f.label :urgent_action %>
             <div class="flex flex-wrap text-slate-950">
@@ -115,10 +120,13 @@
                 <%= f.radio_button :urgent_action, "いいえ", id: "urgent_action_no" %>
                 <%= f.label :urgent_action_no, "いいえ" %>
             </div>
+              <button type="button" data-action="step-form#prevStep">戻る</button>
+              <button type="button" data-action="step-form#nextStep">次へ</button>
         </div>
+      </div>
 
+      <div id="step5" style="display: none;" data-step-form-target="step">
         <div class="w-full mb-4">
-          <div data-controller="form">
             <%= f.label :payment_method %>
             <div class="flex flex-wrap text-slate-950">
                 <%= f.radio_button :payment_method, "なし", id: "payment_method_none", class: "js-check-payment" %>
@@ -138,9 +146,12 @@
 
                 <span id="payment"><%= f.text_field :information, id: "payment_text", disabled: true, required: true, placeholder: "具体的に表示してください" %></span>
             </div>
-          </div>
+            <button type="button" data-action="step-form#prevStep">戻る</button>
+            <button type="button" data-action="step-form#nextStep">次へ</button>
         </div>
+      </div>
 
+      <div id="step6" style="display: none;" data-step-form-target="step">
         <div class="w-full mb-4">
             <%= f.label :company_info %>
             <div class="flex flex-wrap text-slate-950">
@@ -150,8 +161,12 @@
                 <%= f.radio_button :company_info, "いいえ", id: "company_info_no" %>
                 <%= f.label :company_info_no, "いいえ" %>
             </div>
+            <button type="button" data-action="step-form#prevStep">戻る</button>
+            <button type="button" data-action="step-form#nextStep">次へ</button>
         </div>
+      </div>
 
+      <div id="step7" style="display: none;" data-step-form-target="step">
         <div class="w-full mb-4">
             <%= f.label :who_person %>
             <div class="flex flex-wrap text-slate-950">
@@ -183,10 +198,12 @@
                 <%= f.label :who_person_unknown, "具体的にはわからない" %>
             </div>
         </div>
-
-        <div class="w-full mb-4 mt-10 text-center btn w-64 rounded-full">
-            <%= f.submit "診断する" %>
+            <button type="button" data-action="step-form#prevStep">戻る</button>
+          <div class="w-full mb-4 mt-10 text-center btn w-64 rounded-full">
+              <%= f.submit "診断する" %>
+          </div>
         </div>
       </div>
     <% end %>
+  </div>
 </div>
