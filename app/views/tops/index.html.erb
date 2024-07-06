@@ -1,11 +1,5 @@
 <div class="flex-grow container mx-auto  flex flex-col items-center  text-orange">
     <p class="mt-20 text-6xl "><%= t('.title') %></p>
-    <P class="mt-20 text-4xl">「これって詐欺？」</P>
-    <p class="mt-5 text-2xl tracking-wide">手帳を使って診断してみよう</p>
-
-    <div class="text-slate-950 mt-20">
-        <P>さっそくやってみる!</p>
-    </div>
     <%= link_to new_fraud_report_path, class: "btn w-64 rounded-full mt-2 text-center" do %>
         診断スタート！
     <% end %>

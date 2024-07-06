@@ -1,11 +1,53 @@
-<header class="flex justify-between items-center bg-accent text-white w-full h-16 ">
-    <div class="ml-2">
-        <%= link_to t('header.title'),root_path %>
-    </div>
-    <div class="mr-4">
-        <%= link_to "ログアウト", logout_path, data: { turbo_method: :delete } %>
-        <%= link_to "詐欺一覧", scams_path %>
-        <%= link_to "投稿一覧", posts_path %>
-    </div>
+<header>
+	<div class="flex flex-row justify-between items-center bg-accent text-white w-full h-16 ">
+			<div class="">
+					<%= link_to t('header.title'),root_path %>
+			</div>
+			<div class="">
+					<%= link_to "ログアウト", logout_path, data: { turbo_method: :delete } %>
+					<%= link_to "投稿一覧", posts_path %>
+			</div>
+	</div>
 
+		<div class="fixed inset-x-0 bottom-0 bg-accent text-white ">
+			<div class="flex flex-row justify-between items-center py-4">
+				<div class="grid"><!-- 左端の透明なスペース --></div>
+				<% if current_page?(scams_path) %>
+					<i class="fa-solid fa-book-journal-whills text-orange"></i>
+				<% else %>
+					<%= link_to scams_path do %>
+						<i class="fa-solid fa-book-journal-whills"></i>
+					<% end %>
+				<% end %>
+				<% if current_page?(new_post_path) %>
+					<i class="fa-solid fa-pen-to-square text-orange"></i>
+				<% else %>
+					<%= link_to new_post_path do %>
+						<i class="fa-solid fa-pen-to-square"></i>
+					<% end %>
+				<% end %>
+				<% if current_page?(root_path) %>
+					<i class="fa-solid fa-house-chimney text-orange"></i>
+				<% else %>
+					<%= link_to root_path do %>
+						<i class="fa-solid fa-house-chimney"></i>
+					<% end %>
+				<% end %>
+				<% if current_page?("#") %>
+					<i class="fa-solid fa-bell text-orange"></i>
+				<% else %>
+					<%= link_to "#" do%>
+						<i class="fa-solid fa-bell"></i>
+					<% end %>
+				<% end %>
+				<% if current_page?("#") %>
+					<i class="fa-solid fa-square-phone-flip text-orange"></i>
+				<% else %>
+					<%= link_to "#" do%>
+						<i class="fa-solid fa-square-phone-flip"></i>
+					<% end %>
+				<% end %>
+				<div class="grid"><!-- 右端の透明なスペース --></div>
+			</div>
+		</div>
 </header>
