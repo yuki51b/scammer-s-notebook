@@ -1,24 +1,32 @@
-<div class="flex-grow container mx-auto  flex flex-col items-center  text-orange">
-    <div class="text-slate-950 text-6xl mt-20">
-            <%= @scam.name %>
-    </div>
-        <P class="text-2xl mt-4">の可能性があります！</p>
-    <div class="mt-4 text-slate-950">
-            <%= @scam.content %>
-    </div>
-
-    <div class="mt-4">
-        <p class="text-2xl ">確認ポイント</p>
-            <div class="text-slate-950">
-                <%= @scam.point_1 %>
-                <br>
-                <%= @scam.point_2 %>
-                <br>
-                <%= @scam.point_3 %>
-            </div>
-    </div>
-    <div class="w-full flex justify-between mt-10 px-40">
-        <%= link_to "詐欺の詳細", scam_path(@scam), class: "btn w-32 rounded-full mt-2" %>
-        <%= link_to "投稿する", new_post_path, class: "btn w-32 rounded-full mt-2" %>
-    </div>
+<div class="flex flex-col m-4">
+	<div class="card bg-gray-50 shadow-xl">
+		<div class="card-body">
+				<div class="flex justify-center text-4xl text-orange border-dashed border-b">
+					<%= @scam.name %>
+				</div>
+				<div class="flex justify-center my-4 text-sm divider divider-info">
+						<%= @scam.content %>
+				</div>
+			<div class="flex  flex-col p-4 border">
+				<p class="mb-2 badge badge-secondary">確認するポイントだぞ!</p>
+				<div class="border-dashed border-b">
+				<i class="fa-regular fa-square-check"></i>
+				<%= @scam.point_1 %>
+				</div>
+				<div class="border-dashed border-b">
+				<i class="fa-regular fa-square-check"></i>
+					<%= @scam.point_2 %>
+				</div>
+				<div class="border-dashed border-b">
+				<i class="fa-regular fa-square-check"></i>
+					<%= @scam.point_3 %>
+				</div>
+			</div>
+			<div class="flex flex-row justify-between mt-10">
+				<%= link_to "詐欺の詳細", scam_path(@scam), class: "btn  btn-success w-32 rounded-full" %>
+				<div class="divider divider-horizontal">OR</div>
+				<%= link_to "投稿する", new_post_path, class: "btn btn-warning w-32 rounded-full" %>
+			</div>
+		</div>
+	</div>
 </div>
