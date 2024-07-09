@@ -1,171 +1,311 @@
 <div class="flex flex-col items-center text-orange text-xl" data-controller="form">
   <div data-controller="step-form">
     <%= form_with model: @fraud_report do |f| %>
-        <div id="step1" style="display: block; "data-step-form-target="step">
-          <div class="card bg-white shadow-xl m-4 w-full">
-            <div class="card-body">
-              <div class="flex flex-col text-slate-950">
-                <%= f.label :contact_method, class:"card-title text-orange justify-center "%>
-                  <div class="form-control border-dashed border-b flex flex-row">
-                    <%= f.radio_button :contact_method, "電話", id: "contact_method_phone", class: "js-check-method" %>
-                    <%= f.label :contact_method_phone, "電話", for: "contact_method_phone", class: "ml-2 w-full"%>
-                  </div>
-                  <div class="form-control border-dashed border-b flex  flex-row">
-                    <%= f.radio_button :contact_method, "メール", id: "contact_method_email", class: "js-check-method"%>
-                    <%= f.label :contact_method_email, "メール", for: "contact_method_email", class: "ml-2 w-full" %>
-                  </div>
-                  <div class="form-control border-dashed border-b flex flex-row">
-                    <%= f.radio_button :contact_method, "SMS(ショートメッセージ)", id: "contact_method_sms", class: "js-check-method"%>
-                    <%= f.label :contact_method_sms, "SMS(ショートメッセージ)", for: "contact_method_sms", class: "ml-2 w-full" %>
-                  </div>
-                  <div class="form-control border-dashed border-b flex flex-row">
-                    <%= f.radio_button :contact_method, "ソーシャルメディア(Facebook、Twitterなど)", id: "contact_method_social_media", class: "js-check-method"%>
-                    <%= f.label :contact_method_social_media, "ソーシャルメディア(Facebook、Twitterなど)", for: "contact_method_social_media", class: "ml-2 w-full"%>
-                  </div>
-                  <div class="form-control border-dashed border-b flex flex-row">
-                    <%= f.radio_button :contact_method, "直接・対面で", id: "contact_method_in_person", class: "js-check-method"%>
-                    <%= f.label :contact_method_in_person, "直接・対面で", for: "contact_method_in_person", class: "ml-2 w-full"%>
-                  </div>
-                  <div class="form-control border-dashed border-b flex flex-row">
-                    <%= f.radio_button :contact_method, "メッセージングアプリ（LINE、WhatsAppなど）", id: "contact_method_messaging_app", class: "js-check-method"%>
-                    <%= f.label :contact_method_messaging_app, "メッセージングアプリ（LINE、WhatsAppなど)", for: "contact_method_messaging_app", class: "ml-2 w-full" %>
-                  </div>
-                  <div class="form-control border-dashed border-b flex flex-row">
-                    <%= f.radio_button :contact_method, "その他", id: "contact_method_other", class: "js-check-method"%>
-                    <%= f.label :contact_method_other, "その他", for: "contact_method_other", class: "ml-2 w-full"%>
-                  </div>
-                  <span id="method"><%= f.text_field :contact_method, id: "contact_method_text", disabled: true, required: true, placeholder: "具体的に入力してください", class:"w-full h-24 border-b border-dashed" %></span>
+      <div id="step1" style="display: block; "data-step-form-target="step">
+        <div class="flex flex-col items-center m-4">
+          <%= render partial: 'layouts/steps', locals: { now_step: 1 } %>
+        </div>
+        <div class="card bg-gray-50 shadow-xl m-4">
+          <div class="card-body">
+            <div class="flex flex-col text-slate-950">
+              <%= f.label :contact_method, class:"card-title text-orange justify-center "%>
+                <div class="form-control border-dashed border-b flex flex-row">
+                  <%= f.radio_button :contact_method, "電話", id: "contact_method_phone", class: "js-check-method" %>
+                  <%= f.label :contact_method_phone, "電話", for: "contact_method_phone", class: "ml-2 w-full"%>
+                </div>
+                <div class="form-control border-dashed border-b flex  flex-row">
+                  <%= f.radio_button :contact_method, "メール", id: "contact_method_email", class: "js-check-method"%>
+                  <%= f.label :contact_method_email, "メール", for: "contact_method_email", class: "ml-2 w-full" %>
+                </div>
+                <div class="form-control border-dashed border-b flex flex-row">
+                  <%= f.radio_button :contact_method, "SMS(ショートメッセージ)", id: "contact_method_sms", class: "js-check-method"%>
+                  <%= f.label :contact_method_sms, "SMS(ショートメッセージ)", for: "contact_method_sms", class: "ml-2 w-full" %>
+                </div>
+                <div class="form-control border-dashed border-b flex flex-row">
+                  <%= f.radio_button :contact_method, "ソーシャルメディア(Facebook、Twitterなど)", id: "contact_method_social_media", class: "js-check-method"%>
+                  <%= f.label :contact_method_social_media, "ソーシャルメディア(Facebook、Twitterなど)", for: "contact_method_social_media", class: "ml-2 w-full"%>
+                </div>
+                <div class="form-control border-dashed border-b flex flex-row">
+                  <%= f.radio_button :contact_method, "直接・対面で", id: "contact_method_in_person", class: "js-check-method"%>
+                  <%= f.label :contact_method_in_person, "直接・対面で", for: "contact_method_in_person", class: "ml-2 w-full"%>
+                </div>
+                <div class="form-control border-dashed border-b flex flex-row">
+                  <%= f.radio_button :contact_method, "メッセージングアプリ（LINE、WhatsAppなど）", id: "contact_method_messaging_app", class: "js-check-method"%>
+                  <%= f.label :contact_method_messaging_app, "メッセージングアプリ（LINE、WhatsAppなど)", for: "contact_method_messaging_app", class: "ml-2 w-full" %>
+                </div>
+                <div class="form-control border-dashed border-b flex flex-row">
+                  <%= f.radio_button :contact_method, "その他", id: "contact_method_other", class: "js-check-method"%>
+                  <%= f.label :contact_method_other, "その他", for: "contact_method_other", class: "ml-2 w-full"%>
+                </div>
+                <span id="method"><%= f.text_area :contact_method, id: "contact_method_text", disabled: true, required: true, placeholder: "具体的に入力してください", class:"w-full h-24 border-b border-dashed textarea textarea-bordered" %></span>
 
-                  <button type="button" data-action="step-form#nextStep" class="btn btn-outline btn-warning mt-10">次へ</button>
+                <button type="button" data-action="step-form#nextStep" class="btn btn-warning mt-10">次へ</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="step2" style="display: none;" data-step-form-target="step" >
+        <div class="flex flex-col items-center m-4">
+          <div class="flex flex-col items-center m-4">
+            <%= render partial: 'layouts/steps', locals: { now_step: 2 } %>
+          </div>
+        </div>
+        <div class="card bg-gray-50 shadow-xl m-4">
+          <div class="card-body">
+            <div class="flex flex-col text-slate-950">
+              <%= f.label :contact_content, class:"card-title text-orange justify-center" %>
+                <div class="form-control border-dashed border-b flex flex-row">
+                  <%= f.radio_button :contact_content, "投資の勧誘", id: "contact_content_investment", class: "js-check-content" %>
+                  <%= f.label :contact_content_investment, "投資の勧誘", for:"contact_content_investment", class: "ml-2 w-full" %>
+                </div>
+                <div class="form-control border-dashed border-b flex flex-row">
+                  <%= f.radio_button :contact_content, "ビジネスの案内", id: "contact_content_business", class: "js-check-content" %>
+                  <%= f.label :contact_content_business, "ビジネスの案内", for:"contact_content_business", class: "ml-2 w-full" %>
+                </div>
+                <div class="form-control border-dashed border-b flex flex-row">
+                  <%= f.radio_button :contact_content, "賞金や景品の当選通知", id: "contact_content_prize", class: "js-check-content" %>
+                  <%= f.label :contact_content_prize, "賞金や景品の当選通知", for:"contact_content_prize", class: "ml-2 w-full" %>
+                </div>
+                <div class="form-control border-dashed border-b flex flex-row">
+                  <%= f.radio_button :contact_content, "求人情報", id: "contact_content_job", class: "js-check-content" %>
+                  <%= f.label :contact_content_job, "求人情報", for:"contact_content_job", class: "ml-2 w-full" %>
+                </div>
+                <div class="form-control border-dashed border-b flex flex-row">
+                  <%= f.radio_button :contact_content, "デートなどの誘い", id: "contact_content_date", class: "js-check-content" %>
+                  <%= f.label :contact_content_date, "デートなどの誘い", for:"contact_content_date", class: "ml-2 w-full" %>
+                </div>
+                <div class="form-control border-dashed border-b flex flex-row">
+                  <%= f.radio_button :contact_content, "技術サポートの提供", id: "contact_content_tech_support", class: "js-check-content" %>
+                  <%= f.label :contact_content_tech_support, "技術サポートの提供", for:"contact_content_tech_support", class: "ml-2 w-full" %>
+                </div>
+                <div class="form-control border-dashed border-b flex flex-row">
+                  <%= f.radio_button :contact_content, "カジノ/ギャンブルの勧誘", id: "contact_content_casino", class: "js-check-content" %>
+                  <%= f.label :contact_content_casino, "カジノ/ギャンブルの勧誘", for:"contact_content_casino", class: "ml-2 w-full" %>
+                </div>
+                <div class="form-control border-dashed border-b flex flex-row">
+                  <%= f.radio_button :contact_content, "金銭援助", id: "contact_content_money_aid", class: "js-check-content" %>
+                  <%= f.label :contact_content_money_aid, "金銭援助", for:"contact_content_money_aid", class: "ml-2 w-full" %>
+                </div>
+                <div class="form-control border-dashed border-b flex flex-row">
+                  <%= f.radio_button :contact_content, "更新のお知らせ", id: "contact_content_update", class: "js-check-content" %>
+                  <%= f.label :contact_content_update, "更新のお知らせ", for:"contact_content_update", class: "ml-2 w-full" %>
+                </div>
+                <div class="form-control border-dashed border-b flex flex-row">
+                  <%= f.radio_button :contact_content, "その他", id: "contact_content_other", class: "js-check-content" %>
+                  <%= f.label :contact_content_other, "その他", for:"contact_content_other", class: "ml-2 w-full" %>
+                </div>
+                  <span id="content"><%= f.text_area :contact_content, id: "contact_content_text", disabled: true, required: true, placeholder: "具体的に入力してください", class:"w-full h-24 border-b border-dashed textarea textarea-bordered" %></span>
+                <div class="flex flex-row justify-between">
+                  <button type="button" data-action="step-form#prevStep" class="btn btn-success mt-10 w-1/4">戻る</button>
+                  <button type="button" data-action="step-form#nextStep" class="btn btn-warning mt-10 w-1/4">次へ</button>
                 </div>
             </div>
           </div>
         </div>
-
-      <div id="step2" style="display: none;" data-step-form-target="step" >
-        <%= f.label :contact_content %>
-          <div class="flex flex-wrap text-slate-950">
-            <%= f.radio_button :contact_content, "投資の勧誘", id: "contact_content_investment", class: "js-check-content" %>
-            <%= f.label :contact_content_investment, "投資の勧誘" %>
-            <%= f.radio_button :contact_content, "ビジネスの案内", id: "contact_content_business", class: "js-check-content" %>
-            <%= f.label :contact_content_business, "ビジネスの案内" %>
-            <%= f.radio_button :contact_content, "賞金や景品の当選通知", id: "contact_content_prize", class: "js-check-content" %>
-            <%= f.label :contact_content_prize, "賞金や景品の当選通知" %>
-            <%= f.radio_button :contact_content, "求人情報", id: "contact_content_job", class: "js-check-content" %>
-            <%= f.label :contact_content_job, "求人情報" %>
-            <%= f.radio_button :contact_content, "デートなどの誘い", id: "contact_content_date", class: "js-check-content" %>
-            <%= f.label :contact_content_date, "デートなどの誘い" %>
-            <%= f.radio_button :contact_content, "技術サポートの提供", id: "contact_content_tech_support", class: "js-check-content" %>
-            <%= f.label :contact_content_tech_support, "技術サポートの提供" %>
-            <%= f.radio_button :contact_content, "カジノ/ギャンブルの勧誘", id: "contact_content_casino", class: "js-check-content" %>
-            <%= f.label :contact_content_casino, "カジノ/ギャンブルの勧誘" %>
-            <%= f.radio_button :contact_content, "金銭援助", id: "contact_content_money_aid", class: "js-check-content" %>
-            <%= f.label :contact_content_money_aid, "金銭援助" %>
-            <%= f.radio_button :contact_content, "更新のお知らせ", id: "contact_content_update", class: "js-check-content" %>
-            <%= f.label :contact_content_update, "更新のお知らせ" %>
-            <%= f.radio_button :contact_content, "その他", id: "contact_content_other", class: "js-check-content" %>
-            <%= f.label :contact_content_other, "その他" %>
-            <span id="content"><%= f.text_field :contact_content, id: "contact_content_text", disabled: true, required: true, placeholder: "具体的に入力してください" %></span>
-          </div>
-            <button type="button" data-action="step-form#prevStep">戻る</button>
-            <button type="button" data-action="step-form#nextStep">次へ</button>
       </div>
 
       <div id="step3" style="display: none;" data-step-form-target="step">
-        <%= f.label :information %>
-        <div class="flex flex-wrap text-slate-950">
-            <%= f.radio_button :information, "個人情報(名前、住所、電話番号など)", id: "information_personal_info", class: "js-check-information" %>
-            <%= f.label :information_personal_info, "個人情報(名前、住所、電話番号など)" %>
-            <%= f.radio_button :information, "金融情報(クレジットカード番号、銀行講座情報など)", id: "information_financial_info", class: "js-check-information" %>
-            <%= f.label :information_financial_info, "金融情報(クレジットカード番号、銀行講座情報など)" %>
-            <%= f.radio_button :information, "URLのクリック", id: "information_url_click", class: "js-check-information" %>
-            <%= f.label :information_url_click, "URLのクリック" %>
-            <%= f.radio_button :information, "身分証明書のコピー", id: "information_id_copy", class: "js-check-information" %>
-            <%= f.label :information_id_copy, "身分証明書のコピー" %>
-            <%= f.radio_button :information, "高額商品の購入", id: "information_high_value_purchase", class: "js-check-information" %>
-            <%= f.label :information_high_value_purchase, "高額商品の購入" %>
-            <%= f.radio_button :information, "金銭援助", id: "information_money_aid", class: "js-check-information" %>
-            <%= f.label :information_money_aid, "金銭援助" %>
-            <%= f.radio_button :information, "会員の勧誘", id: "information_membership", class: "js-check-information" %>
-            <%= f.label :information_membership, "会員の勧誘" %>
-            <%= f.radio_button :information, "その他", id: "information_other", class: "js-check-information" %>
-            <%= f.label :information_other, "その他" %>
-            <span id="information"><%= f.text_field :information, id: "information_text", disabled: true, required: true, placeholder: "具体的に入力してください" %></span>
+        <div class="flex flex-col items-center m-4">
+          <div class="flex flex-col items-center m-4">
+            <%= render partial: 'layouts/steps', locals: { now_step: 3 } %>
+          </div>
         </div>
-            <button type="button" data-action="step-form#prevStep">戻る</button>
-            <button type="button" data-action="step-form#nextStep">次へ</button>
+        <div class="card bg-gray-50 shadow-xl m-4">
+          <div class="card-body">
+            <div class="flex flex-col text-slate-950">
+              <%= f.label :information, class:"card-title text-orange justify-center" %>
+                <div class="form-control border-dashed border-b flex flex-row">
+                  <%= f.radio_button :information, "個人情報(名前、住所、電話番号など)", id: "information_personal_info", class: "js-check-information" %>
+                  <%= f.label :information_personal_info, "個人情報(名前、住所、電話番号など)", for: "information_personal_info", class: "ml-2 w-full" %>
+                </div>
+                <div class="form-control border-dashed border-b flex flex-row">
+                  <%= f.radio_button :information, "金融情報(クレジットカード番号、銀行講座情報など)", id: "information_financial_info", class: "js-check-information" %>
+                  <%= f.label :information_financial_info, "金融情報(クレジットカード番号、銀行講座情報など)", for: "information_financial_info", class: "ml-2 w-full" %>
+                </div>
+                <div class="form-control border-dashed border-b flex flex-row">
+                  <%= f.radio_button :information, "URLのクリック", id: "information_url_click", class: "js-check-information" %>
+                  <%= f.label :information_url_click, "URLのクリック", for: "information_url_click", class: "ml-2 w-full" %>
+                </div>
+                <div class="form-control border-dashed border-b flex flex-row">
+                  <%= f.radio_button :information, "身分証明書のコピー", id: "information_id_copy", class: "js-check-information" %>
+                  <%= f.label :information_id_copy, "身分証明書のコピー", for: "information_id_copy", class: "ml-2 w-full" %>
+                </div>
+                <div class="form-control border-dashed border-b flex flex-row">
+                  <%= f.radio_button :information, "高額商品の購入", id: "information_high_value_purchase", class: "js-check-information" %>
+                  <%= f.label :information_high_value_purchase, "高額商品の購入", for: "information_high_value_purchase", class: "ml-2 w-full" %>
+                </div>
+                <div class="form-control border-dashed border-b flex flex-row">
+                  <%= f.radio_button :information, "金銭援助", id: "information_money_aid", class: "js-check-information" %>
+                  <%= f.label :information_money_aid, "金銭援助", for: "information_money_aid", class: "ml-2 w-full" %>
+                </div>
+                <div class="form-control border-dashed border-b flex flex-row">
+                  <%= f.radio_button :information, "会員の勧誘", id: "information_membership", class: "js-check-information" %>
+                  <%= f.label :information_membership, "会員の勧誘", for: "information_membership", class: "ml-2 w-full" %>
+                </div>
+                <div class="form-control border-dashed border-b flex flex-row">
+                  <%= f.radio_button :information, "その他", id: "information_other", class: "js-check-information" %>
+                  <%= f.label :information_other, "その他", for: "information_other", class: "ml-2 w-full" %>
+                </div>
+                  <span id="information"><%= f.text_area :information, id: "information_text", disabled: true, required: true, placeholder: "具体的に入力してください", class:"w-full h-24 border-b border-dashed textarea textarea-bordered" %></span>
+                <div class="flex flex-row justify-between">
+                  <button type="button" data-action="step-form#prevStep" class="btn btn-success mt-10 w-1/4">戻る</button>
+                  <button type="button" data-action="step-form#nextStep" class="btn btn-warning mt-10 w-1/4">次へ</button>
+                </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div id="step4" style="display: none;" data-step-form-target="step">
-        <%= f.label :urgent_action %>
-          <div class="flex flex-wrap text-slate-950">
-              <%= f.radio_button :urgent_action, "はい", id: "urgent_action_yes" %>
-              <%= f.label :urgent_action_yes, "はい" %>
-              <%= f.radio_button :urgent_action, "いいえ", id: "urgent_action_no" %>
-              <%= f.label :urgent_action_no, "いいえ" %>
+        <div class="flex flex-col items-center m-4">
+          <div class="flex flex-col items-center m-4">
+            <%= render partial: 'layouts/steps', locals: { now_step: 4 } %>
           </div>
-            <button type="button" data-action="step-form#prevStep">戻る</button>
-            <button type="button" data-action="step-form#nextStep">次へ</button>
+        </div>
+        <div class="card bg-gray-50 shadow-xl m-4">
+          <div class="card-body">
+            <div class="flex flex-col text-slate-950">
+            <%= f.label :urgent_action, class:"card-title text-orange justify-center" %>
+              <div class="form-control border-dashed border-b flex flex-row">
+                <%= f.radio_button :urgent_action, "はい", id: "urgent_action_yes" %>
+                <%= f.label :urgent_action_yes, "はい", for: "urgent_action_yes", class: "ml-2 w-full" %>
+              </div>
+              <div class="form-control border-dashed border-b flex flex-row">
+                <%= f.radio_button :urgent_action, "いいえ", id: "urgent_action_no" %>
+                <%= f.label :urgent_action_no, "いいえ", for: "urgent_action_no", class: "ml-2 w-full" %>
+              </div>
+              <div class="flex flex-row justify-between">
+                <button type="button" data-action="step-form#prevStep" class="btn btn-success mt-10 w-1/4">戻る</button>
+                <button type="button" data-action="step-form#nextStep" class="btn btn-warning mt-10 w-1/4">次へ</button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div id="step5" style="display: none;" data-step-form-target="step">
-            <%= f.label :payment_method %>
-            <div class="flex flex-wrap text-slate-950">
-                <%= f.radio_button :payment_method, "なし", id: "payment_method_none", class: "js-check-payment" %>
-                <%= f.label :payment_method_none, "なし" %>
-                <%= f.radio_button :payment_method, "銀行振込", id: "payment_method_bank_transfer", class: "js-check-payment" %>
-                <%= f.label :payment_method_bank_transfer, "銀行振込" %>
-                <%= f.radio_button :payment_method, "モバイル決済(PayPayやApplepayなど)", id: "payment_method_mobile_payment", class: "js-check-payment" %>
-                <%= f.label :payment_method_mobile_payment, "モバイル決済(PayPayやApplepayなど)" %>
-                <%= f.radio_button :payment_method, "現金", id: "payment_method_cash", class: "js-check-payment" %>
-                <%= f.label :payment_method_cash, "現金" %>
-                <%= f.radio_button :payment_method, "その他", id: "payment_method_other", class: "js-check-payment"%>
-                <%= f.label :payment_method_other, "その他" %>
-                <span id="payment"><%= f.text_field :information, id: "payment_text", disabled: true, required: true, placeholder: "具体的に入力してください" %></span>
+        <div class="flex flex-col items-center m-4">
+          <div class="flex flex-col items-center m-4">
+            <%= render partial: 'layouts/steps', locals: { now_step: 5 } %>
+          </div>
+        </div>
+        <div class="card bg-gray-50 shadow-xl m-4">
+          <div class="card-body">
+            <div class="flex flex-col text-slate-950">
+              <%= f.label :payment_method, class:"card-title text-orange justify-center" %>
+                <div class="form-control border-dashed border-b flex flex-row">
+                  <%= f.radio_button :payment_method, "なし", id: "payment_method_none", class: "js-check-payment" %>
+                  <%= f.label :payment_method_none, "なし", for: "payment_method_none", class: "ml-2 w-full" %>
+                </div>
+                <div class="form-control border-dashed border-b flex flex-row">
+                  <%= f.radio_button :payment_method, "銀行振込", id: "payment_method_bank_transfer", class: "js-check-payment" %>
+                  <%= f.label :payment_method_bank_transfer, "銀行振込", for: "payment_method_bank_transfer", class: "ml-2 w-full" %>
+                </div>
+                <div class="form-control border-dashed border-b flex flex-row">
+                  <%= f.radio_button :payment_method, "モバイル決済(PayPayやApplepayなど)", id: "payment_method_mobile_payment", class: "js-check-payment" %>
+                  <%= f.label :payment_method_mobile_payment, "モバイル決済(PayPayやApplepayなど)", for: "payment_method_mobile_payment", class: "ml-2 w-full" %>
+                </div>
+                <div class="form-control border-dashed border-b flex flex-row">
+                  <%= f.radio_button :payment_method, "現金", id: "payment_method_cash", class: "js-check-payment" %>
+                  <%= f.label :payment_method_cash, "現金", for: "payment_method_cash", class: "ml-2 w-full" %>
+                </div>
+                <div class="form-control border-dashed border-b flex flex-row">
+                  <%= f.radio_button :payment_method, "その他", id: "payment_method_other", class: "js-check-payment"%>
+                  <%= f.label :payment_method_other, "その他", for: "payment_method_other", class: "ml-2 w-full" %>
+                </div>
+                  <span id="payment"><%= f.text_area :information, id: "payment_text", disabled: true, required: true, placeholder: "具体的に入力してください", class:"w-full h-24 border-b border-dashed textarea textarea-bordered" %></span>
+                <div class="flex flex-row justify-between">
+                  <button type="button" data-action="step-form#prevStep" class="btn btn-success mt-10 w-1/4">戻る</button>
+                  <button type="button" data-action="step-form#nextStep" class="btn btn-warning mt-10 w-1/4">次へ</button>
+                </div>
             </div>
-            <button type="button" data-action="step-form#prevStep">戻る</button>
-            <button type="button" data-action="step-form#nextStep">次へ</button>
+          </div>
+        </div>
       </div>
 
       <div id="step6" style="display: none;" data-step-form-target="step">
-            <%= f.label :company_info %>
-            <div class="flex flex-wrap text-slate-950">
+        <div class="flex flex-col items-center m-4">
+          <div class="flex flex-col items-center m-4">
+            <%= render partial: 'layouts/steps', locals: { now_step: 6 } %>
+          </div>
+        </div>
+        <div class="card bg-gray-50 shadow-xl m-4">
+          <div class="card-body">
+            <div class="flex flex-col text-slate-950">
+              <%= f.label :company_info, class:"card-title text-orange justify-center" %>
+              <div class="form-control border-dashed border-b flex flex-row">
                 <%= f.radio_button :company_info, "はい", id: "company_info_yes" %>
-                <%= f.label :company_info_yes, "はい" %>
+                <%= f.label :company_info_yes, "はい", for: "company_info_yes", class: "ml-2 w-full" %>
+              </div>
+              <div class="form-control border-dashed border-b flex flex-row">
                 <%= f.radio_button :company_info, "いいえ", id: "company_info_no" %>
-                <%= f.label :company_info_no, "いいえ" %>
+                <%= f.label :company_info_no, "いいえ", for: "company_info_no", class: "ml-2 w-full" %>
+              </div>
+            <div class="flex flex-row justify-between">
+              <button type="button" data-action="step-form#prevStep" class="btn btn-success mt-10 w-1/4">戻る</button>
+              <button type="button" data-action="step-form#nextStep" class="btn btn-warning mt-10 w-1/4">次へ</button>
             </div>
-            <button type="button" data-action="step-form#prevStep">戻る</button>
-            <button type="button" data-action="step-form#nextStep">次へ</button>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div id="step7" style="display: none;" data-step-form-target="step">
-            <%= f.label :who_person %>
-            <div class="flex flex-wrap text-slate-950">
-                <%= f.radio_button :who_person, "親族", id: "who_person_relative" %>
-                <%= f.label :who_person_relative, "親族" %>
-                <%= f.radio_button :who_person, "社長や役員", id: "who_person_executive" %>
-                <%= f.label :who_person_executive, "社長や役員" %>
-                <%= f.radio_button :who_person, "会社員", id: "who_person_employee" %>
-                <%= f.label :who_person_employee, "会社員" %>
-                <%= f.radio_button :who_person, "フリーランス", id: "who_person_freelancer" %>
-                <%= f.label :who_person_freelancer, "フリーランス" %>
-                <%= f.radio_button :who_person, "主婦", id: "who_person_housewife" %>
-                <%= f.label :who_person_housewife, "主婦" %>
-                <%= f.radio_button :who_person, "学生", id: "who_person_student" %>
-                <%= f.label :who_person_student, "学生" %>
-                <%= f.radio_button :who_person, "無職やフリーター", id: "who_person_unemployed" %>
-                <%= f.label :who_person_unemployed, "無職やフリーター" %>
-                <%= f.radio_button :who_person, "友人や恋人", id: "who_person_friend" %>
-                <%= f.label :who_person_friend, "友人や恋人" %>
-                <%= f.radio_button :who_person, "具体的にはわからない", id: "who_person_unknown" %>
-                <%= f.label :who_person_unknown, "具体的にはわからない" %>
-            </div>
-            <button type="button" data-action="step-form#prevStep">戻る</button>
-          <div class="w-full mb-4 mt-10 text-center btn w-64 rounded-full">
-              <%= f.submit "診断する" %>
+        <div class="flex flex-col items-center m-4">
+          <div class="flex flex-col items-center m-4">
+            <%= render partial: 'layouts/steps', locals: { now_step: 7 } %>
           </div>
         </div>
+        <div class="card bg-gray-50 shadow-xl m-4">
+          <div class="card-body">
+            <div class="flex flex-col text-slate-950">
+              <%= f.label :who_person, class:"card-title text-orange justify-center" %>
+                <div class="form-control border-dashed border-b flex flex-row">
+                  <%= f.radio_button :who_person, "親族", id: "who_person_relative" %>
+                  <%= f.label :who_person_relative, "親族", for: "who_person_relative", class: "ml-2 w-full" %>
+                </div>
+                <div class="form-control border-dashed border-b flex flex-row">
+                  <%= f.radio_button :who_person, "社長や役員", id: "who_person_executive" %>
+                  <%= f.label :who_person_executive, "社長や役員", for: "who_person_executive", class: "ml-2 w-full" %>
+                </div>
+                <div class="form-control border-dashed border-b flex flex-row">
+                  <%= f.radio_button :who_person, "会社員", id: "who_person_employee" %>
+                  <%= f.label :who_person_employee, "会社員", for: "who_person_employee", class: "ml-2 w-full" %>
+                </div>
+                <div class="form-control border-dashed border-b flex flex-row">
+                  <%= f.radio_button :who_person, "フリーランス", id: "who_person_freelancer" %>
+                  <%= f.label :who_person_freelancer, "フリーランス", for: "who_person_freelancer", class: "ml-2 w-full" %>
+                </div>
+                <div class="form-control border-dashed border-b flex flex-row">
+                  <%= f.radio_button :who_person, "主婦", id: "who_person_housewife" %>
+                  <%= f.label :who_person_housewife, "主婦", for: "who_person_housewife", class: "ml-2 w-full" %>
+                </div>
+                <div class="form-control border-dashed border-b flex flex-row">
+                  <%= f.radio_button :who_person, "学生", id: "who_person_student" %>
+                  <%= f.label :who_person_student, "学生", for: "who_person_student", class: "ml-2 w-full" %>
+                </div>
+                <div class="form-control border-dashed border-b flex flex-row">
+                  <%= f.radio_button :who_person, "無職やフリーター", id: "who_person_unemployed" %>
+                  <%= f.label :who_person_unemployed, "無職やフリーター", for: "who_person_unemployed", class: "ml-2 w-full" %>
+                </div>
+                <div class="form-control border-dashed border-b flex flex-row">
+                  <%= f.radio_button :who_person, "友人や恋人", id: "who_person_friend" %>
+                  <%= f.label :who_person_friend, "友人や恋人", for: "who_person_friend", class: "ml-2 w-full" %>
+                </div>
+                <div class="form-control border-dashed border-b flex flex-row">
+                  <%= f.radio_button :who_person, "具体的にはわからない", id: "who_person_unknown" %>
+                  <%= f.label :who_person_unknown, "具体的にはわからない", for: "who_person_unknown", class: "ml-2 w-full" %>
+                </div>
+                <div class="flex flex-row justify-between">
+                  <button type="button" data-action="step-form#prevStep" class="btn btn-success mt-10">戻る</button>
+                  <%= f.submit "診断する!!", class: "btn btn-warning rounded-full mt-10 w-2/3" %>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <% end %>
   </div>
 </div>

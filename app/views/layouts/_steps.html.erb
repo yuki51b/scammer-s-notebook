@@ -1,0 +1,11 @@
+<ul class="steps">
+  <% (1..7).each do |step_number| %>
+    <% if step_number == now_step %>
+      <li data-content="★" class="step step-info">No.<%= step_number %></li>
+    <% elsif step_number < now_step %>
+      <li data-content="✓" class="step step-info">No.<%= step_number %></li>
+    <% else %>
+      <li data-content="" class="step step-info">No.<%= step_number %></li>
+    <% end %>
+  <% end %>
+</ul>
