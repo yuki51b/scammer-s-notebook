@@ -12,7 +12,7 @@ module.exports = {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
       },
       colors: {
-        'orange': '#FF6E05',
+        'orange': '#e65100',
       },
       textUnderlineOffset: {
         12: '12px',
@@ -24,9 +24,11 @@ module.exports = {
       themes: [
         {
           mytheme: {
-            "accent": "#120852",
+            "accent": "#1a237e",
             "primary": "#E6EBE7",
-            "button-orange": "#FF7D05",
+            "success": "#1565c0",
+            "warning": "#FBBF24",
+            "info": "#737373",
           },
         },
       ]

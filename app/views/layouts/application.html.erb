@@ -8,6 +8,7 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", type: "module" %>
+    <script src="https://kit.fontawesome.com/18d70577db.js" crossorigin="anonymous"></script>
   </head>
 
   <body class="flex flex-col min-h-screen bg-primary">
@@ -20,11 +21,6 @@
       <div class="flex-grow">
       <%= yield %>
       </div>
-      <%# 画像の配置%>
-          <div class="w-full flex justify-start">
-          <%= image_tag "characttor.jpeg", class: "w-40 h-40 my-10" %>
-          </div>
-
       <%= render 'shared/footer' %>
   </body>
 </html>

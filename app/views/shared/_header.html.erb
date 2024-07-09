@@ -1,11 +1,76 @@
-<header class="flex justify-between items-center bg-accent text-white w-full h-16 ">
-    <div class="ml-2">
-        <%= link_to t('header.title'),root_path %>
-    </div>
-    <div class="mr-4">
-        <%= link_to "ログアウト", logout_path, data: { turbo_method: :delete } %>
-        <%= link_to "詐欺一覧", scams_path %>
-        <%= link_to "投稿一覧", posts_path %>
-    </div>
+<header>
+	<!--ヘッダー部分-->
+	<div class="flex flex-row justify-between items-center bg-accent text-white w-full h-16 ">
+		<div class="pl-4">
+				<%= link_to t('header.title'),root_path %>
+		</div>
+			<div class="dropdown dropdown-end">
+				<div tabindex="0" role="button" class="flex items-center py-2 px-4 text-sm btn m-1  mr-4 hover:bg-orange">
+					<i class="fa-solid fa-bars fa-xl"></i>
+				</div>
+					<ul tabindex="0" class="dropdown-content menu bg-blue-100 text-slate-950 rounded-box z-[1] w-52 p-2 shadow">
+						<li>
+							<%= link_to "#", class: "flex items-center gap-x-2 py-2 hover:bg-gray-300" do %>
+								<i class="fa-solid fa-id-card fa-xl"></i>
+								プロフィール
+							<% end %>
+						</li>
+						<li>
+							<%= link_to posts_path, class: "flex items-center gap-x-2 py-2 hover:bg-gray-300" do %>
+								<i class="fa-solid fa-swatchbook fa-xl"></i>
+								投稿一覧
+							<% end %>
+						</li>
+						<li>
+							<%= link_to logout_path, data: { turbo_method: :delete }, class: "flex items-center gap-x-2 py-2 hover:bg-gray-300" do %>
+								<i class="fa-solid fa-right-from-bracket fa-xl"></i>
+								ログアウト
+							<% end %>
+						</li>
+					</ul>
+			</div>
+	</div>
 
+	<!--スマホサイド下部-->
+		<div class="fixed inset-x-0 bottom-0 bg-accent text-white ">
+			<div class="flex flex-row justify-between items-center py-4">
+				<div class="grid"><!-- 左端の透明なスペース --></div>
+				<% if current_page?(scams_path) %>
+					<i class="fa-solid fa-book-journal-whills text-orange fa-xl"></i>
+				<% else %>
+					<%= link_to scams_path do %>
+						<i class="fa-solid fa-book-journal-whills fa-xl"></i>
+					<% end %>
+				<% end %>
+				<% if current_page?(new_post_path) %>
+					<i class="fa-solid fa-pen-to-square text-orange fa-xl"></i>
+				<% else %>
+					<%= link_to new_post_path do %>
+						<i class="fa-solid fa-pen-to-square fa-xl"></i>
+					<% end %>
+				<% end %>
+				<% if current_page?(root_path) %>
+					<i class="fa-solid fa-house-chimney text-orange fa-xl"></i>
+				<% else %>
+					<%= link_to root_path do %>
+						<i class="fa-solid fa-house-chimney fa-xl"></i>
+					<% end %>
+				<% end %>
+				<% if current_page?("#") %>
+					<i class="fa-solid fa-bell text-orange fa-xl"></i>
+				<% else %>
+					<%= link_to "#" do%>
+						<i class="fa-solid fa-bell fa-xl"></i>
+					<% end %>
+				<% end %>
+				<% if current_page?("#") %>
+					<i class="fa-solid fa-square-phone-flip text-orange fa-xl"></i>
+				<% else %>
+					<%= link_to "#" do%>
+						<i class="fa-solid fa-square-phone-flip fa-xl"></i>
+					<% end %>
+				<% end %>
+				<div class="grid"><!-- 右端の透明なスペース --></div>
+			</div>
+		</div>
 </header>

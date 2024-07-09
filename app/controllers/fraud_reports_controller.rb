@@ -7,7 +7,7 @@ class FraudReportsController < ApplicationController
 
     def create
         @fraud_report = FraudReport.new(fraud_report_params)
-        prompt = scam_name_general_prompt(params[:fraud_report])
+        prompt = scam_name_general_prompt(params[:fraud_report]) # promptには受け取ったカラムの値を入れたプロンプトが入る
             response = ChatgptService.call(prompt)
         # 保存先をrespondカラムに指定
             @fraud_report.respond = response
@@ -77,11 +77,11 @@ class FraudReportsController < ApplicationController
                 - "1"でのnameが不動産詐欺で特殊詐欺ではない時、不動産詐欺
                 ## 出力フォーマット
                     name & (plus)
-
         PROMPT
     end
 
     def handle_scam_diagnosis(response_name)
+        Rails.logger.info "ChatGPT API response: #{response_name}"
         search_scam = Scam.find_by(name: response_name)  #find_byメソッドは値がない場合nilを返す。
         return search_scam if search_scam
         #詐欺名がなかった場合(search_scamがnilだった時)の詐欺詳細をAPIに聞く
