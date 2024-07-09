@@ -3,6 +3,7 @@ ja:
     models:
       scam: 詐欺情報
       fraud_report: 詐欺診断フォーム
+      user: ユーザー
     attributes:
       fraud_report:
         contact_method: 接触方法は何でしたか？
@@ -13,4 +14,9 @@ ja:
         company_info: 会社の情報は提示されましたか？(公式サイトなど)
         who_person: 相手の特徴や相手は誰かを教えてください
         additional_details: 他に特徴があれば記述してください。
+      user:
+        name: 名前
+        email: メールアドレス
+        password: パスワード
+        password_confirmation: パスワード（確認用）
 
