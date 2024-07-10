@@ -6,5 +6,6 @@ class ScamsController < ApplicationController
 
     def show
         @scam = Scam.find(params[:id])
+        @scam_strategy = @scam.scam_strategy.split("\n")
     end
 end

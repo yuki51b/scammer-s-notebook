@@ -1,14 +1,21 @@
-<div class="flex-grow container mx-auto  flex flex-col items-center  text-orange">
-    <div class="mt-4 mb-8 text-4xl">
+<div class="flex flex-col text-orange">
+		<div class="flex justify-center text-4xl mt-4 text-orange border-dashed border-b">
         <%=@scam.name %>
     </div>
-
-    <div class="mt-4 text-slate-950 text-xl">
-        <%= @scam.scam_strategy %>
-    </div>
-
-    <div class="w-full flex justify-between mt-10 px-40">
-        <%= link_to "詐欺の一覧", scams_path, class: "btn w-32 rounded-full mt-2" %>
-        <%= link_to "投稿を見にいく", posts_path, class: "btn w-32 rounded-full mt-2" %>
-    </div>
+	<div class="card bg-gray-50 shadow-xl m-4">
+		<div class="card-body">
+			<div class="text-slate-950 text-xl leading-normal">
+				<% @scam_strategy.each do |line| %>
+					<div class="border-b py-2">
+						<%= line %>
+					</div>
+				<% end %>
+			</div>
+		</div>
+	</div>
+	<div class="flex flex-row justify-between mt-10 mx-4">
+			<%= link_to "詐欺の一覧", scams_path, class: "btn btn-success w-64 rounded-full" %>
+				<div class="divider divider-horizontal">OR</div>
+			<%= link_to "投稿を見にいく", posts_path, class: "btn btn-warning w-64 rounded-full" %>
+	</div>
 </div>

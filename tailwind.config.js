@@ -29,6 +29,7 @@ module.exports = {
             "success": "#1565c0",
             "warning": "#FBBF24",
             "info": "#737373",
+            "secondary": "#d32f2f",
           },
         },
       ]
