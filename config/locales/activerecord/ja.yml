@@ -18,5 +18,9 @@ ja:
         name: 名前
         email: メールアドレス
         password: パスワード
-        password_confirmation: パスワード（確認用）
+        password_confirmation: パスワード（確認用)
+      post:
+        title: タイトル
+        users_scam_name: 詐欺名
+        body: 内容
 
