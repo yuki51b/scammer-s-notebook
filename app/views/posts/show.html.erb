@@ -1,18 +1,37 @@
-<div class="flex-grow container mx-auto  flex flex-col items-center  text-orange">
-    <div class="mt-4 mb-8 text-4xl">
-    <%= @post.title %>
-    </div>
-    <div class="mt-4 mb-8 text-4xl">
-    <%= @post.users_scam_name %>
-    </div>
-    <div class="mt-4 text-slate-950 text-2xl">
-        <%= @post.body %>
-    </div>
-        <% if current_user.own?(@post) %>
-            <div class="w-full flex justify-between mt-10 px-40">
-                <%= link_to "編集", edit_post_path(@post), class: "btn w-32 rounded-full mt-2" %>
-                <%= link_to "削除", "#", class: "btn w-32 rounded-full mt-2" %>
-            </div>
-        <% end %>
+<div class="flex flex-col items-center text-orange m-8">
+	<div class="card bg-gray-50 shadow-xl w-full">
+		<div class="card-body">
+			<div class="text-xl border-dashed border-b border-gray-500 px-4 overflow-x-auto">
+				<%= @post.title %>
+			</div>
+			<div class="text-xl border-dashed border-b border-gray-500 px-4 mt-4 overflow-x-auto">
+				<%= @post.users_scam_name %>
+			</div>
+			<div class="text-slate-950 text-xl my-10 px-4 py-2 border border-dashed border-gray-500 overflow-auto rounded h-48">
+				<% @post_body.each do |body|%>
+				<div class="flex">
+					<%= body %>
+				</div>
+				<% end %>
+			</div>
+			<div class="flex justify-between">
+				<div class="">
+					<%= link_to posts_path do %>
+						<i class="fa-solid fa-circle-left fa-xl"></i>
+					<% end %>
+				</div>
+				<% if current_user.own?(@post) %>
+				<div class="">
+						<%= link_to "#" do %>
+						<i class="fa-solid fa-pen-clip fa-xl "></i>
+						<% end %>
+						<%= link_to "#" do  %>
+						<i class="fa-solid fa-trash-can fa-xl"></i>
+						<% end %>
+				</div>
+			</div>
+			<% end %>
+		</div>
+	</div>
 </div>
 
