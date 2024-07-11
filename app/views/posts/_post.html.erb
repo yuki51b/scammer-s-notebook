@@ -3,10 +3,9 @@
     <%= post.title %>
   </td>
   <td class="px-6 py-4 whitespace-nowrap">
-      <span class="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full"><%= post.scam.name %></span>
+    <%= post.users_scam_name %>
   </td>
   <td class="px-6 py-4 whitespace-nowrap">
     <%= link_to '投稿の詳細', post_path(post), class: 'btn btn-info' %>
-    <%= link_to '詐欺の詳細', scam_path(post.scam), class: 'btn btn-info' %>
   </td>
 </tr>

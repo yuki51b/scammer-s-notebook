@@ -7,12 +7,15 @@ Rails.application.routes.draw do
   get '/terms', to: 'tops#terms'
 
   resources :fraud_reports, only: [:new, :create, :show]
-  resources :scams, only: [:index, :show]
+  resources :scams, only: [:index, :show] do
+    collection do
+      get 'autocomplete'
+    end
+  end
   resources :users, only: [:new, :create]
   get 'login', to: 'user_sessions#new'
   post 'login', to: 'user_sessions#create'
   delete 'logout', to: 'user_sessions#destroy'
 
   resources :posts
-
 end

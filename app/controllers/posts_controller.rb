@@ -1,9 +1,9 @@
 class PostsController < ApplicationController
   before_action :set_post, only: %i[edit update]
-  before_action :set_scams, only: %i[new create show edit update]
+  before_action :set_scams, only: %i[new show edit update]
 
   def index
-    @posts = Post.includes(:user, :scam)
+    @posts = Post.includes(:user)
   end
 
   def new
@@ -22,6 +22,7 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
+    @post_body = @post.body.split("\n")
   end
 
   def edit; end
@@ -39,7 +40,7 @@ class PostsController < ApplicationController
 private
 
   def post_params
-    params.require(:post).permit(:title, :body, :scam_id)
+    params.require(:post).permit(:title, :body, :users_scam_name)
   end
 
   def set_post
