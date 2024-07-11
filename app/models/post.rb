@@ -5,4 +5,12 @@ class Post < ApplicationRecord
 
     belongs_to :user
     belongs_to :scam, optional: true
+
+    def self.ransackable_attributes(auth_object = nil)
+		["title", "users_scam_name"]
+	end
+
+    def self.ransackable_associations(auth_object = nil)
+        ["user", "scam"]
+    end
 end

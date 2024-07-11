@@ -1,4 +1,7 @@
 <div class="flex-grow container mx-auto flex flex-col items-center text-orange">
+    <div class="">
+        <%= render 'shared/search', q: @q, url: posts_path, search_target: @search_target %>
+    </div>
     <div class="text-slate-950 text-2xl mt-10">
         <h1>投稿一覧</h1>
     </div>
