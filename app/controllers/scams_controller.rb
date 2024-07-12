@@ -1,9 +1,7 @@
 class ScamsController < ApplicationController
 
     def index
-        @q = Scam.ransack(params[:q])
-        @scams = @q.result(distinct: true)
-        @search_target = 'scam'
+        @scams = Scam.all
     end
 
     def show
@@ -11,9 +9,9 @@ class ScamsController < ApplicationController
         @scam_strategy = @scam.scam_strategy.split("\n")
     end
 
-    def autocomplete
-        term = params[:q]
-        @scams = Scam.where('name LIKE ?', "%#{term}%")
-        render partial: 'scams/autocomplete', locals: { scams: @scams }
-    end
+    # def autocomplete
+    #     term = params[:q]
+    #     @scams = Scam.where('name LIKE ?', "%#{term}%")
+    #     render partial: 'scams/autocomplete', locals: { scams: @scams }
+    # end
 end

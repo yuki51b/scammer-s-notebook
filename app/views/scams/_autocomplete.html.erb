@@ -1,7 +1,5 @@
-<div class="text-orange">
-  <% scams.each do |scam| %>
-    <li class="rounded-md  hover:bg-blue-200" role="option" data-autocomplete-label="<%= scam.name %>">
-      <%= scam.name %>
-    </li>
-  <% end %>
-</div>
+<% scams.each do |scam| %>
+  <li class="rounded-md  hover:bg-blue-200" role="option" data-autocomplete-label="<%= scam.name %>">
+    <%= scam.name %>
+  </li>
+<% end %>
