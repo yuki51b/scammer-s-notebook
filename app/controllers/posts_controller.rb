@@ -3,7 +3,9 @@ class PostsController < ApplicationController
   before_action :set_scams, only: %i[new show edit update]
 
   def index
-    @posts = Post.includes(:user)
+    @q = Post.ransack(params[:q])
+    @posts = @q.result(distinct: true).includes(:user)
+    @search_target = 'post'
   end
 
   def new
@@ -35,6 +37,13 @@ class PostsController < ApplicationController
       render :show
     end
   end
+
+  def autocomplete
+    term = params[:q]
+    @posts = Post.where('users_scam_name LIKE ?', "%#{term}%")
+    render partial: 'posts/autocomplete', locals: { posts: @posts }
+  end
+
 
 
 private

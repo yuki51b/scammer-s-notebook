@@ -1,31 +1,19 @@
-<div class="flex-grow container mx-auto flex flex-col items-center text-orange">
-    <div class="text-slate-950 text-2xl mt-10">
-        <h1>詐欺情報一覧</h1>
-    </div>
-    <div class="mt-4 text-xl w-full">
-        <% if @scams.present? %>
-            <table class="min-w-full divide-y divide-gray-200">
-                <thead class="bg-gray-50">
-                    <tr>
-                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                            ID
-                        </th>
-                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                            詐欺名
-                        </th>
-                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                            詳細
-                        </th>
-                    </tr>
-                </thead>
-                <tbody class="bg-white divide-y divide-gray-200">
-                    <%= render @scams %>
-                </tbody>
-            </table>
-        <% else %>
-            <div class="text-center py-4">
-                詐欺情報がありません
-            </div>
-        <% end %>
-    </div>
+<div class="flex flex-col items-center text-orange">
+	<div class="text-slate-950">
+		<h1>詐欺情報一覧</h1>
+	</div>
+	<div class="flex flex-row">
+		<%= render 'shared/search', q: @q, url: scams_path, search_target: @search_target %>
+	</div>
+	<div class=" flex flex-grow">
+		<% if @scams.present? %>
+					<div class="">
+							<%= render @scams %>
+					</div>
+		<% else %>
+			<div class="">
+					詐欺情報がありません
+			</div>
+		<% end %>
+	</div>
 </div>

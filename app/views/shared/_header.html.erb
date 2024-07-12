@@ -36,7 +36,9 @@
 			<div class="flex flex-row justify-between items-center py-4">
 				<div class="grid"><!-- 左端の透明なスペース --></div>
 				<% if current_page?(scams_path) %>
+				<%= link_to scams_path do %>
 					<i class="fa-solid fa-book-journal-whills text-orange fa-xl"></i>
+				<% end %>
 				<% else %>
 					<%= link_to scams_path do %>
 						<i class="fa-solid fa-book-journal-whills fa-xl"></i>
