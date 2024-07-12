@@ -43,11 +43,14 @@ RUN yarn install --frozen-lockfile
 # Copy application code
 COPY . .
 
+# Ensure config/master.key exists before precompiling assets
+COPY config/master.key /rails/config/master.key
+
 # Precompile bootsnap code for faster boot times
 RUN bundle exec bootsnap precompile app/ lib/
 
 # Precompiling assets for production without requiring secret RAILS_MASTER_KEY
-RUN SECRET_KEY_BASE_DUMMY=1 ./bin/rails assets:precompile
+RUN RAILS_ENV=production ./bin/rails assets:precompile
 
 
 # Final stage for app image
