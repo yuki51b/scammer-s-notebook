@@ -43,6 +43,9 @@ RUN yarn install --frozen-lockfile
 # Copy application code
 COPY . .
 
+# Copy master.key
+COPY config/master.key /rails/config/master.key
+
 # Precompile bootsnap code for faster boot times
 RUN bundle exec bootsnap precompile app/ lib/
 
