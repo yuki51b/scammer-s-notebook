@@ -1,11 +1,12 @@
-<tr>
-  <td class="px-6 py-4 whitespace-nowrap">
-    <%= scam.id %>
-  </td>
-  <td class="px-6 py-4 whitespace-nowrap">
-    <%= scam.name %>
-  </td>
-  <td class="px-6 py-4 whitespace-nowrap">
-    <%= link_to '詳細', scam_path(scam), class: 'btn btn-info' %>
-  </td>
-</tr>
+<div class="card bg-error  shadow-xl m-2 h-32">
+  <div class="card-body h-24 w-40">
+    <div class="flex flex-col flex items-center">
+      <div class="">
+        <%= scam.name %>
+      </div>
+      <div class="">
+        <%= link_to '詳細', scam_path(scam), class: 'btn btn-info' %>
+      </div>
+    </div>
+  </div>
+</div>

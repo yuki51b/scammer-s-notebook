@@ -30,6 +30,7 @@ module.exports = {
             "warning": "#FBBF24",
             "info": "#737373",
             "secondary": "#d32f2f",
+            "error": "#6d4c41",
           },
         },
       ]
