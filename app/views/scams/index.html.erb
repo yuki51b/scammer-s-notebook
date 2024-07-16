@@ -5,9 +5,9 @@
 	<div class="flex flex-row">
 		<%= render 'shared/search', q: @q, url: scams_path, search_target: @search_target %>
 	</div>
-	<div class=" flex flex-grow">
+	<div class="">
 		<% if @scams.present? %>
-					<div class="">
+					<div class="grid grid-cols-3">
 							<%= render @scams %>
 					</div>
 		<% else %>
