@@ -15,18 +15,18 @@
 				<% end %>
 			</div>
 			<div class="flex justify-between">
-				<div class="">
+				<div class="text-success">
 					<%= link_to posts_path do %>
-						<i class="fa-solid fa-circle-left fa-xl"></i>
+						<i class="fa-solid fa-circle-left fa-2xl "></i>
 					<% end %>
 				</div>
 				<% if current_user.own?(@post) %>
 				<div class="">
 						<%= link_to "#" do %>
-						<i class="fa-solid fa-pen-clip fa-xl "></i>
+						<i class="fa-solid fa-pen-clip fa-2xl "></i>
 						<% end %>
 						<%= link_to "#" do  %>
-						<i class="fa-solid fa-trash-can fa-xl"></i>
+						<i class="fa-solid fa-trash-can fa-2xl"></i>
 						<% end %>
 				</div>
 			</div>

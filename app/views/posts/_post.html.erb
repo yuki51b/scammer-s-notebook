@@ -1,11 +1,29 @@
-<tr>
-  <td class="px-6 py-4 whitespace-nowrap">
-    <%= post.title %>
-  </td>
-  <td class="px-6 py-4 whitespace-nowrap">
-    <%= post.users_scam_name %>
-  </td>
-  <td class="px-6 py-4 whitespace-nowrap">
-    <%= link_to '投稿の詳細', post_path(post), class: 'btn btn-info' %>
-  </td>
-</tr>
+<div class="card bg-gray-50 shadow-xl m-4">
+  <div class="card-body">
+    <div class="overflow-x-auto m-10">
+      <table class="table">
+        <!-- head -->
+        <thead>
+          <tr>
+            <th>タイトル</th>
+            <th>詐欺名</th>
+            <th>投稿の内容</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% posts.each do |post| %>
+            <tr class=" text-xl hover:bg-slate-300 text-slate-950 border-dashed">
+              <td><%= post.title %></td>
+              <td><%= post.users_scam_name %></td>
+              <td>
+                <%= link_to  post_path(post) do %>
+                <i class="fa-solid fa-book-open fa-xl pl-4"></i>
+                <% end %>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
