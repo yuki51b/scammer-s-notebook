@@ -21,14 +21,16 @@
     <% end %>
     </div>
   </div>
-
-
-      <%= link_to 'Login with Line', auth_at_provider_path(:provider => :line) %>
-
-        <div class="flex flex-col">
-            <%= link_to "ユーザー登録", new_user_path, class: "btn rounded-full btn-success" %>
-						<div class="divider">OR</div>
-            <%= link_to 'パスワードをお忘れの方はこちら', '#', class: "underline text-orange" %>
-        </div>
+  <div class="">
+    <%= link_to auth_at_provider_path(:provider => :line), method: :post, data: { turbo: false }, class: "w-full  flex items-center h-10 bg-[#06C755] text-white font-medium rounded shadow" do %>
+      <%= image_tag 'btn_base.png', alt: 'LINE Icon', class: 'w-8 h-8 ml-4 mr-2' %>
+      <span class="flex-1 text-xl text-center font-bold mr-10">LINEでログイン</span>
+    <% end %>
+  </div>
+    <div class="flex flex-col mt-10">
+        <%= link_to "ユーザー登録", new_user_path, class: "btn rounded-full btn-success" %>
+        <div class="divider">OR</div>
+        <%= link_to 'パスワードをお忘れの方はこちら', '#', class: "underline text-orange" %>
+    </div>
 </div>
 
