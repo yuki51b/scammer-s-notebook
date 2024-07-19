@@ -88,3 +88,8 @@ end
 
 # gem 'ransack' install
 gem 'ransack', '~> 4.0.0'
+
+# gem 'omniauth' install
+  gem 'omniauth-auth0'
+  gem 'omniauth-line'
+  gem 'omniauth-rails_csrf_protection'

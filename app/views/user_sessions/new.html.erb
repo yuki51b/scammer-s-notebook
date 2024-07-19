@@ -21,6 +21,10 @@
     <% end %>
     </div>
   </div>
+
+
+      <%= link_to 'Login with Line', auth_at_provider_path(:provider => :line) %>
+
         <div class="flex flex-col">
             <%= link_to "ユーザー登録", new_user_path, class: "btn rounded-full btn-success" %>
 						<div class="divider">OR</div>
