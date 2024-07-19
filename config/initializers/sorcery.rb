@@ -221,7 +221,11 @@ Rails.application.config.sorcery.configure do |config|
 
   config.line.key = Rails.application.credentials.dig(:line, :channel_id)
   config.line.secret = Rails.application.credentials.dig(:line, :channel_secret)
+  if Rails.env.development?
   config.line.callback_url = "https://6aff-58-190-15-35.ngrok-free.app/oauth/callback?provider=line"
+  elsif Rails.env.production?
+    config.line.callback_url = "https://scammer-s-notebook.onrender.com//oauth/callback?provider=line"
+  end
   config.line.scope = "profile"
   # config.line.bot_prompt = "normal"
   config.line.user_info_mapping = {name: 'displayName', email: 'userId'}
