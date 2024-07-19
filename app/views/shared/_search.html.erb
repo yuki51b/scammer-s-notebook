@@ -1,18 +1,16 @@
-<div class="flex flex-row">
-  <%= search_form_for q, url: url do |f| %>
-    <% if search_target == 'post' %>
-    <div class="" data-controller="autocomplete" data-autocomplete-min-length-value="2" data-autocomplete-url-value="/posts/autocomplete" role="combobox">
-      <%= f.search_field :users_scam_name_cont, class: 'form-control', data: { autocomplete_target: 'input' }, placeholder: '詐欺名' %>
+<%= search_form_for q, url: url, class: "flex items-center" do |f| %>
+  <% if search_target == 'post' %>
+    <div class="relative w-full" data-controller="autocomplete" data-autocomplete-min-length-value="2" data-autocomplete-url-value="/posts/autocomplete" role="combobox">
+      <%= f.search_field :users_scam_name_cont, class: 'form-control flex-grow', data: { autocomplete_target: 'input' }, placeholder: '詐欺名' %>
       <%= f.hidden_field :users_scam_name, data: { autocomplete_target: 'hidden' } %>
-      <ul class="list-group mt-4 text-xs" data-autocomplete-target="results"></ul>
-      </div>
-    <% elsif search_target == 'scam' %>
-      <div class="" data-controller="autocomplete" data-autocomplete-min-length-value="2" data-autocomplete-url-value="/scams/autocomplete" role="combobox">
-        <%= f.search_field :name_cont, class: 'form-control', data: { autocomplete_target: 'input' }, placeholder: '詐欺名' %>
-        <%= f.hidden_field :name, data: { autocomplete_target: 'hidden' } %>
-        <ul class="list-group mt-4 text-xs" data-autocomplete-target="results"></ul>
-      </div>
-    <% end %>
-    <%= f.submit '検索', class: 'btn btn-primary' %>
+      <ul class="list-group mt-4 text-xs absolute w-full bg-white z-10" data-autocomplete-target="results"></ul>
+    </div>
+  <% elsif search_target == 'scam' %>
+    <div class="relative w-full" data-controller="autocomplete" data-autocomplete-min-length-value="2" data-autocomplete-url-value="/scams/autocomplete" role="combobox">
+      <%= f.search_field :name_cont, class: 'form-control flex-grow', data: { autocomplete_target: 'input' }, placeholder: '詐欺名' %>
+      <%= f.hidden_field :name, data: { autocomplete_target: 'hidden' } %>
+      <ul class="list-group mt-4 text-xs absolute w-full bg-white z-10" data-autocomplete-target="results"></ul>
+    </div>
   <% end %>
-</div>
+  <%= f.submit '検索', class: 'btn btn-success ml-2' %>
+<% end %>

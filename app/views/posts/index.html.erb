@@ -1,20 +1,19 @@
-<div class="flex-grow container mx-auto flex flex-col items-center text-orange">
-    <div class="">
-        <%= render 'shared/search', q: @q, url: posts_path, search_target: @search_target %>
-    </div>
-    <div class="text-slate-950 text-2xl mt-10">
-        <h1>投稿一覧</h1>
-    </div>
-    <div class="mt-4 text-xl w-full">
-        <% if @posts.present? %>
-                <div class="">
-                    <%= render @posts %>
-                </div>
-            </table>
-        <% else %>
-            <div class="text-center py-4">
-                まだ投稿がありません
-            </div>
-        <% end %>
-    </div>
+<div class="flex flex-col items-center text-orange">
+  <div class="text-slate-950 text-2xl m-6">
+    <h1>投稿一覧</h1>
+  </div>
+  <div class="">
+    <%= render 'shared/search', q: @q, url: posts_path, search_target: @search_target %>
+  </div>
+  <div class="w-full">
+    <% if @posts.present? %>
+      <div class="">
+        <%= render partial: 'posts/post', locals: { posts: @posts } %>
+      </div>
+    <% else %>
+      <div class="text-center py-4">
+        投稿はありません
+      </div>
+    <% end %>
+  </div>
 </div>
