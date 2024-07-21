@@ -93,3 +93,9 @@ gem 'ransack', '~> 4.0.0'
   gem 'omniauth-auth0'
   gem 'omniauth-line'
   gem 'omniauth-rails_csrf_protection'
+
+# gem'line-bot-api' install
+  gem 'line-bot-api'
+
+# gem 'whenever' install
+  gem 'whenever', require: false
