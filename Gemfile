@@ -96,3 +96,6 @@ gem 'ransack', '~> 4.0.0'
 
 # gem'line-bot-api' install
   gem 'line-bot-api'
+
+# gem 'whenever' install
+  gem 'whenever', require: false
