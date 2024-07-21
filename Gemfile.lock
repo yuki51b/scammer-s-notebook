@@ -129,6 +129,7 @@ GEM
     jwt (2.8.2)
       base64
     language_server-protocol (3.17.0.3)
+    line-bot-api (1.29.0)
     loofah (2.22.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.12.0)
@@ -369,6 +370,7 @@ DEPENDENCIES
   httparty
   jbuilder
   jsbundling-rails
+  line-bot-api
   omniauth-auth0
   omniauth-line
   omniauth-rails_csrf_protection
