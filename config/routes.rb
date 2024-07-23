@@ -26,4 +26,8 @@ Rails.application.routes.draw do
       get 'autocomplete'
     end
   end
+
+
+  require 'sidekiq/web'
+  mount Sidekiq::Web, at: '/sidekiq'
 end
