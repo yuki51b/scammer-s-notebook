@@ -9,4 +9,6 @@ class TopsController < ApplicationController
   def privacy_policy; end
 
   def terms; end
+
+  def line_notify; end
 end

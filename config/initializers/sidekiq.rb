@@ -1,7 +1,8 @@
+
 Sidekiq.configure_server do |config|
-  config.redis = { url: 'redis://redis:6379' }
+  config.redis = { url: Rails.env.production? ? Rails.application.credentials.redis[:production] : Rails.application.credentials.redis[:development] }
 end
 
 Sidekiq.configure_client do |config|
-  config.redis = { url: 'redis://redis:6379' }
+  config.redis = { url: Rails.env.production? ? Rails.application.credentials.redis[:production] : Rails.application.credentials.redis[:development] }
 end

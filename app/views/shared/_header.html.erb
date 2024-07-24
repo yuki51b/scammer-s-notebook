@@ -58,10 +58,10 @@
 						<i class="fa-solid fa-house-chimney fa-xl"></i>
 					<% end %>
 				<% end %>
-				<% if current_page?("#") %>
+				<% if current_page?(line_notify_path) %>
 					<i class="fa-solid fa-bell text-orange fa-xl"></i>
 				<% else %>
-					<%= link_to "#" do%>
+					<%= link_to line_notify_path do %>
 						<i class="fa-solid fa-bell fa-xl"></i>
 					<% end %>
 				<% end %>

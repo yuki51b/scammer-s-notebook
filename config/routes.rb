@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   root 'tops#index'
   get '/privacy_policy', to: 'tops#privacy_policy'
   get '/terms', to: 'tops#terms'
+  get '/line_notify', to: 'tops#line_notify'
 
   resources :fraud_reports, only: [:new, :create, :show]
   resources :scams, only: [:index, :show] do
@@ -26,7 +27,6 @@ Rails.application.routes.draw do
       get 'autocomplete'
     end
   end
-
 
   require 'sidekiq/web'
   mount Sidekiq::Web, at: '/sidekiq'
