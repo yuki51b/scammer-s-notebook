@@ -1,0 +1,9 @@
+:concurrency: 3
+:queues:
+  - default
+:scheduler:
+  :schedule:
+    send_line_message_job:
+      cron: "0 7 * * *"  # 毎朝7時に実行
+      class: "SendLineMessageJob"
+      queue: default

@@ -33,7 +33,24 @@ services:
     depends_on:
       db:
         condition: service_healthy
+  redis:
+    image: "redis:7.0-alpine"
+    volumes:
+      - redis_volume:/data
+    command: redis-server --appendonly yes
+    ports:
+      - "6379:6379"
+  sidekiq:
+    build:
+      context: .
+    command: bundle exec sidekiq
+    volumes:
+      - .:/myapp
+    depends_on:
+      - db
+      - redis
 volumes:
   bundle_data:
   postgresql_data:
   node_modules:
+  redis_volume:
