@@ -1,3 +1,4 @@
+<% content_for(:title, t('.title')) %>
 <div class="flex-grow container mx-auto  flex flex-col items-center  text-orange">
     <p class="my-8 text-4xl">編集ページ</p>
     <%= form_with model: @post, local: true, data: { turbo: false } do |f| %>
