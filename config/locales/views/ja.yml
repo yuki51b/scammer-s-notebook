@@ -2,9 +2,36 @@ ja:
   tops:
     index:
       title: 詐欺師の手帳
+    line_notify:
+      title: 友だち追加
   header:
     title: 詐欺師の手帳
   footer:
     terms: ・利用規約
     privacy: ・プライバシーポリシー
     contact: ・お問い合わせ
+  fraud_reports:
+    new:
+      title: 情報入力
+    show:
+      title: 診断結果
+  posts:
+    edit:
+      title: 投稿編集
+    index:
+      title: 投稿一覧
+    new:
+      title: 新規投稿作成
+    show:
+      title: 投稿詳細
+  scams:
+    index:
+      title: 詐欺情報一覧
+    show:
+      title: 詐欺詳細
+  user_sessions:
+    new:
+      title: ログイン画面
+  users:
+    new:
+      title: ユーザー登録画面
