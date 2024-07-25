@@ -100,3 +100,6 @@ gem 'ransack', '~> 4.0.0'
 # Background Job
   gem 'sidekiq'
   gem 'sidekiq-scheduler'
+
+# gem 'dotenv-rails' install
+gem 'dotenv-rails'
