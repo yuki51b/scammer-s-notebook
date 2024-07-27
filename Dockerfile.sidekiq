@@ -34,8 +34,6 @@ RUN yarn install --frozen-lockfile
 COPY . .
 
 RUN bundle exec bootsnap precompile app/ lib/
-ENV SECRET_KEY_BASE=Rails.application.config.secret_key_base=ENV['SECRET_KEY_BASE']
-RUN ./bin/rails assets:precompile
 
 FROM base
 
@@ -50,6 +48,4 @@ RUN useradd rails --create-home --shell /bin/bash && \
     chown -R rails:rails db log storage tmp
 USER rails:rails
 
-ENTRYPOINT ["/rails/bin/docker-entrypoint"]
-EXPOSE 3000
-CMD ["./bin/rails", "server", "-b", "0.0.0.0", "-p", "3000"]
+CMD ["bundle", "exec", "sidekiq"]
