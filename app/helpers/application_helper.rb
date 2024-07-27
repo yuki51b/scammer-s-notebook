@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 module ApplicationHelper
+  include MarkdownHelper
+  
     def flash_background_color(type)
       case type.to_sym
         when :notice then "bg-green-500"

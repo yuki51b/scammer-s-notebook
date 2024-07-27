@@ -102,4 +102,6 @@ gem 'ransack', '~> 4.0.0'
   gem 'sidekiq-scheduler'
 
 # gem 'dotenv-rails' install
-gem 'dotenv-rails'
+  gem 'dotenv-rails'
+# gem 'redcarpet' install
+  gem 'redcarpet'
