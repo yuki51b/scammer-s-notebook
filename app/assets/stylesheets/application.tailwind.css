@@ -1,3 +1,31 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.markdown-body h1 {
+  @apply text-4xl font-bold;
+}
+.markdown-body h2 {
+  @apply text-2xl font-bold;
+}
+.markdown-body h3 {
+  @apply text-xl font-bold;
+}
+.markdown-body h4 {
+  @apply text-lg font-bold;
+}
+.markdown-body a {
+  @apply text-sky-500 border-b border-sky-500;
+}
+.markdown-body ul {
+  @apply list-disc list-inside;
+}
+.markdown-body hr {
+  @apply border-t-2 border-slate-400 w-full;
+}
+.markdown-body blockquote {
+  @apply p-2 border-s-4 border-gray-300 bg-gray-100 text-sm;
+}
+.markdown-body code {
+  @apply bg-red-200 font-normal text-base;
+}

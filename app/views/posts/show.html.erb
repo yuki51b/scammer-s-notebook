@@ -9,9 +9,9 @@
 				<%= @post.users_scam_name %>
 			</div>
 			<div class="text-slate-950 text-xl my-10 px-4 py-2 border border-dashed border-gray-500 overflow-auto rounded h-48">
-				<% @post_body.each do |body|%>
-				<div class="flex">
-					<%= body %>
+			<% @post_body.each do |body| %>
+				<div class="markdown-body">
+				<%= markdown(body) %>
 				</div>
 				<% end %>
 			</div>
