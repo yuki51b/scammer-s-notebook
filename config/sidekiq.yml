@@ -4,6 +4,7 @@
 :scheduler:
   :schedule:
     send_line_message_job:
-      cron: "0 7 * * *"  # 毎朝7時に実行
+      # cron: "0 7 * * *"  # 毎朝7時に実行
+      every: '2m'
       class: "SendLineMessageJob"
       queue: default
