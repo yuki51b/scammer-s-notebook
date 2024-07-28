@@ -8,12 +8,10 @@
 			<div class="text-xl border-dashed border-b border-gray-500 px-4 mt-4 overflow-x-auto">
 				<%= @post.users_scam_name %>
 			</div>
-			<div class="text-slate-950 text-xl my-10 px-4 py-2 border border-dashed border-gray-500 overflow-auto rounded h-48">
-			<% @post_body.each do |body| %>
-				<div class="markdown-body">
-				<%= markdown(body) %>
+			<div class="text-slate-950 text-xl my-10 px-4 py-2 border border-dashed border-gray-500 overflow-auto rounded h-full">
+				<div class="markdown-body whitespace-pre-line">
+				<%= markdown(@post.body) %>
 				</div>
-				<% end %>
 			</div>
 			<div class="flex justify-between">
 				<div class="text-success">

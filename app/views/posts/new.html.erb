@@ -12,9 +12,9 @@
 							<%= f.label :users_scam_name %>
 							<%= f.text_field :users_scam_name,  class: "text-slate-950 input input-bordered" %>
 					</div>
-					<div class="flex flex-col m-2">
+					<div class="flex flex-col mt-10 mx-2 mb-2" data-controller="textarea">
 							<%= f.label :body %>
-							<%= f.text_area :body,  class: "text-slate-950 textarea textarea-bordered" %>
+							<%= f.text_area :body,  class: "text-slate-950 textarea textarea-bordered resize-none min-h-64", data: { action: "input->textarea#resize", target: "textarea.textarea" } %>
 					</div>
 					<div class="mt-10 text-center">
 									<%= f.submit "投稿する", class: "justify-items-center btn btn-warning w-64 rounded-full" %>

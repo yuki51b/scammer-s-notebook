@@ -12,3 +12,6 @@ application.register("hello", HelloController)
 
 import StepFormController from "./step_form_controller"
 application.register("step-form", StepFormController)
+
+import TextareaController from "./textarea_controller"
+application.register("textarea", TextareaController)

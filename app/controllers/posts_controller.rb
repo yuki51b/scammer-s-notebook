@@ -24,7 +24,7 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
-    @post_body = @post.body.split("\n")
+    # @post_body = @post.body.split("\n")
   end
 
   def edit; end
