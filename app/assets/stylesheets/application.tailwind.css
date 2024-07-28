@@ -27,5 +27,5 @@
   @apply p-2 border-s-4 border-gray-300 bg-gray-100 text-sm;
 }
 .markdown-body code {
-  @apply bg-red-200 font-normal text-base;
+  @apply bg-red-200 font-mono;
 }
