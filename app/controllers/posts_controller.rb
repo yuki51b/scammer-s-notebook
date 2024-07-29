@@ -17,14 +17,12 @@ class PostsController < ApplicationController
       if @post.save
         redirect_to posts_path, notice: '投稿に成功したぞ！'
       else
-        flash.now[:alert] = "投稿に失敗しました"
-        render :new
+        redirect_to new_post_path, alert: '投稿に失敗しました'
       end
   end
 
   def show
     @post = Post.find(params[:id])
-    # @post_body = @post.body.split("\n")
   end
 
   def edit; end

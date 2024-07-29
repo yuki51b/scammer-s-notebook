@@ -10,6 +10,9 @@ application.register("form", FormController)
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
 
+import PreviewController from "./preview_controller"
+application.register("preview", PreviewController)
+
 import StepFormController from "./step_form_controller"
 application.register("step-form", StepFormController)
 
