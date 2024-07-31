@@ -1,5 +1,4 @@
 class OgpCreator
-  skip_before_action :require_login, raise: false
 
   require 'mini_magick'
   BASE_IMAGE_PATH = './app/assets/images/X_post.jpg'
