@@ -1,4 +1,6 @@
 class ImagesController < ApplicationController
+  skip_before_action :require_login, raise: false
+
   def ogp
     text = ogp_params[:text]
     image = OgpCreator.build(text).tempfile.open.read
