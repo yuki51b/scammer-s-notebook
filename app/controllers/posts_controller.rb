@@ -62,9 +62,9 @@ private
   def prepare_meta_tags(post)
     image_url = "#{request.base_url}/images/ogp.png?text=#{CGI.escape(post.title)}"
     set_meta_tags og: {
-      site_name: 'サイトネーム',
+      site_name: '詐欺師の手帳',
       title: post.title,
-      description: 'タスクの詳細説明',
+      description: 'ユーザーによる詐欺被害の投稿です',
       type: 'website',
       url: request.original_url,
       image: image_url,
