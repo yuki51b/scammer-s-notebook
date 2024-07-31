@@ -23,6 +23,7 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
+    prepare_meta_tags(@post)
   end
 
   def edit; end
@@ -56,5 +57,23 @@ private
 
   def set_scams
     @scams = Scam.all
+  end
+
+  def prepare_meta_tags(post)
+    image_url = "#{request.base_url}/images/ogp.png?text=#{CGI.escape(post.title)}"
+    set_meta_tags og: {
+      site_name: '詐欺師の手帳',
+      title: post.title,
+      description: 'ユーザーによる詐欺被害の投稿です',
+      type: 'website',
+      url: request.original_url,
+      image: image_url,
+      locale: 'ja-JP'
+    },
+    twitter: {
+      card: 'summary_large_image',
+      site: '@your_twitter_account',
+      image: image_url
+    }
   end
 end

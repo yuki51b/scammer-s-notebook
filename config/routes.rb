@@ -28,6 +28,8 @@ Rails.application.routes.draw do
     end
   end
 
+  get 'images/ogp.png', to: 'images#ogp', as: 'images_ogp'
+
   require 'sidekiq/web'
   mount Sidekiq::Web, at: '/sidekiq'
 end

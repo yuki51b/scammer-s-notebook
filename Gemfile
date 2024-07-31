@@ -103,5 +103,12 @@ gem 'ransack', '~> 4.0.0'
 
 # gem 'dotenv-rails' install
   gem 'dotenv-rails'
+
 # gem 'redcarpet' install
   gem 'redcarpet'
+
+# gem 'mini_magick' install
+gem 'mini_magick'
+
+# gem 'meta-tags' install
+  gem 'meta-tags', :require => 'meta_tags'

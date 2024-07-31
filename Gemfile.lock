@@ -151,7 +151,10 @@ GEM
       net-smtp
     marcel (1.0.4)
     matrix (0.4.2)
+    meta-tags (2.22.0)
+      actionpack (>= 6.0.0, < 8.1)
     method_source (1.1.0)
+    mini_magick (5.0.1)
     mini_mime (1.1.5)
     minitest (5.23.1)
     msgpack (1.7.2)
@@ -400,6 +403,8 @@ DEPENDENCIES
   jbuilder
   jsbundling-rails
   line-bot-api
+  meta-tags
+  mini_magick
   omniauth-auth0
   omniauth-line
   omniauth-rails_csrf_protection
