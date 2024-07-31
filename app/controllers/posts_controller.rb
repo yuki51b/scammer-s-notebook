@@ -1,6 +1,8 @@
 class PostsController < ApplicationController
   before_action :set_post, only: %i[edit update]
   before_action :set_scams, only: %i[new show edit update]
+  skip_before_action :require_login, only: [:index, :show]
+
 
   def index
     @q = Post.ransack(params[:q])
