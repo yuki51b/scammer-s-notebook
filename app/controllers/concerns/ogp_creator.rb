@@ -11,7 +11,6 @@ class OgpCreator
   def self.build(text)
     text = prepare_text(text)
     image = MiniMagick::Image.open(BASE_IMAGE_PATH)
-    begin #デバック
       image.combine_options do |config|
         config.font FONT
         config.fill '#0f172a'
@@ -19,11 +18,6 @@ class OgpCreator
         config.pointsize FONT_SIZE
         config.draw "text #{TEXT_POSITION} '#{text}'"
       end
-      image
-    rescue MiniMagick::Error => e
-      Rails.logger.error "MiniMagick Error: #{e.message}"
-      raise
-    end
   end
 
   private
