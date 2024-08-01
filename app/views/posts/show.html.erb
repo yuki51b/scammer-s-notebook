@@ -20,13 +20,13 @@
 					<% end %>
 				</div>
 				<div class="text-gray-600">
-				<% prepare_meta_tags @post %>
-				<% twitter_share_url = "https://twitter.com/share?url= #{CGI.escape(post_url(@post))}" %>
-				<%= link_to twitter_share_url, target: '_blank', data: { toggle: "tooltip", placement: "bottom" }, title: "Xでシェア" do %>
-				<i class="fa-brands fa-square-x-twitter fa-2xl"></i>
-				<% end %>
+					<% prepare_meta_tags @post %>
+					<% twitter_share_url = "https://twitter.com/share?url= #{CGI.escape(post_url(@post))}" %>
+					<%= link_to twitter_share_url, target: '_blank', data: { toggle: "tooltip", placement: "bottom" }, title: "Xでシェア" do %>
+					<i class="fa-brands fa-square-x-twitter fa-2xl"></i>
+					<% end %>
 				</div>
-				<% if current_user.own?(@post) %>
+				<% if current_user && current_user.own?(@post) %>
 				<div class="">
 						<%= link_to "#" do %>
 						<i class="fa-solid fa-pen-clip fa-2xl "></i>
