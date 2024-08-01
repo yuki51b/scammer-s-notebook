@@ -108,7 +108,7 @@ gem 'ransack', '~> 4.0.0'
   gem 'redcarpet'
 
 # gem 'mini_magick' install
-gem 'mini_magick'
+  gem 'mini_magick'
 
 # gem 'meta-tags' install
   gem 'meta-tags', :require => 'meta_tags'
