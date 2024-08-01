@@ -21,8 +21,7 @@
 				</div>
 				<div class="text-gray-600">
 				<% prepare_meta_tags @post %>
-				<% ogp_image_url = "#{request.base_url}/images/ogp.png?text=#{CGI.escape(@post.title)}" %>
-				<% twitter_share_url = "https://twitter.com/share?url=#{CGI.escape(ogp_image_url)}" %>
+				<% twitter_share_url = "https://twitter.com/share?url= #{CGI.escape(post_url(@post))}" %>
 				<%= link_to twitter_share_url, target: '_blank', data: { toggle: "tooltip", placement: "bottom" }, title: "Xでシェア" do %>
 				<i class="fa-brands fa-square-x-twitter fa-2xl"></i>
 				<% end %>
