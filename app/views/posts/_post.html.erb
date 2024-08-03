@@ -1,29 +1,21 @@
-<div class="card bg-gray-50 shadow-xl m-4">
-  <div class="card-body">
-    <div class="overflow-x-auto m-10">
-      <table class="table">
-        <!-- head -->
-        <thead>
-          <tr>
-            <th>タイトル</th>
-            <th>詐欺名</th>
-            <th>投稿の内容</th>
-          </tr>
-        </thead>
-        <tbody>
-          <% posts.each do |post| %>
-            <tr class=" text-xl hover:bg-slate-300 text-slate-950 border-dashed">
-              <td><%= post.title %></td>
-              <td><%= post.users_scam_name %></td>
-              <td>
-                <%= link_to  post_path(post) do %>
-                <i class="fa-solid fa-book-open fa-xl pl-4"></i>
-                <% end %>
-              </td>
-            </tr>
-          <% end %>
-        </tbody>
-      </table>
-    </div>
-  </div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-4">
+  <% posts.each do |post| %>
+    <%= link_to post_path(post) do %>
+      <div class="card bg-gray-50 shadow-xl w-auto m-4 min-h-32 text-slate-950">
+        <div class="card-body text-xl">
+          <div class="text-center border-dashed border-b">
+            <%= post.title %>
+          </div>
+          <div class="flex justify-between text-sm pt-8">
+            <div class="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">
+              <%= post.users_scam_name %>
+            </div>
+            <div class="">
+            by <%= current_user.name %>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
 </div>

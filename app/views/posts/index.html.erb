@@ -6,7 +6,7 @@
   <div class="">
     <%= render 'shared/search', q: @q, url: posts_path, search_target: @search_target %>
   </div>
-  <div class="w-full">
+  <div class="w-full mt-10">
     <% if @posts.present? %>
       <div class="">
         <%= render partial: 'posts/post', locals: { posts: @posts } %>
