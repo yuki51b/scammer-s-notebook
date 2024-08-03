@@ -6,11 +6,9 @@
 	<div class="">
 		<%= render 'shared/search', q: @q, url: scams_path, search_target: @search_target %>
 	</div>
-	<div class="m-4 p-4 w-full">
+	<div class="w-full">
 		<% if @scams.present? %>
-					<div class="grid grid-cols-3 text-white">
-							<%= render @scams %>
-					</div>
+			<%= render partial: 'scams/scam', locals: { scams: @scams }  %>
 		<% else %>
 			<div class="">
 					詐欺情報がありません
