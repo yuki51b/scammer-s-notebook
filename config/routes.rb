@@ -7,12 +7,16 @@ Rails.application.routes.draw do
   get '/terms', to: 'tops#terms'
   get '/line_notify', to: 'tops#line_notify'
 
+  resource :profile, only: [:edit, :show, :update]
+
   resources :fraud_reports, only: [:new, :create, :show]
+
   resources :scams, only: [:index, :show] do
     collection do
       get 'autocomplete'
     end
   end
+
   resources :users, only: [:new, :create]
   get 'login', to: 'user_sessions#new'
   post 'login', to: 'user_sessions#create'
