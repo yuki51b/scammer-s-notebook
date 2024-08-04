@@ -1,0 +1,28 @@
+<div class="card bg-gray-50 shadow-xl m-4">
+  <div class="card-body">
+    <div class="overflow-x-auto m-10">
+      <table class="table">
+        <!-- head -->
+        <thead>
+          <tr>
+            <th>詐欺名</th>
+            <th>詐欺詳細</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @scams.each do |scam| %>
+            <tr class="text-xl hover:bg-slate-300 text-slate-950 border-dashed">
+              <td><%= scam.name %></td>
+              <td>
+                <%= link_to scam_path(scam) do %>
+                <i class="fa-solid fa-book-open fa-xl pl-4"></i>
+                <% end %>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+

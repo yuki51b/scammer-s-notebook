@@ -32,6 +32,14 @@ Rails.application.routes.draw do
     end
   end
 
+  namespace :admin do
+    root "scams#index"
+    resource :scams
+    get 'login' => 'user_sessions#new', :as => :login
+    post 'login' => "user_sessions#create"
+    delete 'logout' => 'user_sessions#destroy', :as => :logout
+  end
+
   get 'images/ogp.png', to: 'images#ogp', as: 'images_ogp'
 
   require 'sidekiq/web'
