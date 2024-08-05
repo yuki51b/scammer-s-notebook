@@ -22,8 +22,12 @@
           <%= @scam.point_3 %>
         </div>
       <p class="pb-2 text-orange">詐欺の詳細(詐欺師視点)</p>
-        <div class="mb-8 border-dashed border-b">
-          <%= @scam_strategy %>
+        <div class="mb-8">
+          <% @scam_strategy.each do |line| %>
+            <div class="border-b py-2">
+              <%= line %>
+            </div>
+          <% end %>
         </div>
     </div>
         <div class="flex flex-row justify-between mt-10">
