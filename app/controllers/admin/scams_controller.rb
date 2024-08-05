@@ -40,12 +40,12 @@ class Admin::ScamsController < Admin::BaseController
 
 private
 
-def scam_params
-  params.require(:scam).permit(:name, :content, :point_1, :point_2, :point_3, :scam_strategy)
-end
+  def scam_params
+    params.require(:scam).permit(:name, :content, :point_1, :point_2, :point_3, :scam_strategy)
+  end
 
-def set_scam
-  @scam = Scam.find(params[:id])
-end
+  def set_scam
+    @scam = Scam.find(params[:id])
+  end
 
 end
