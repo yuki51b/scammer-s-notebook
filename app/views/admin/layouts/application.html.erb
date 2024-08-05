@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>管理者</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", type: "module" %>
+    <script src="https://kit.fontawesome.com/18d70577db.js" crossorigin="anonymous"></script>
+  </head>
+    <body class="flex flex-col min-h-screen bg-primary">
+        <%= render 'admin/shared/header' %>
+      <div class="flex-grow">
+        <%= render 'layouts/flash_messages' %>
+      <%= yield %>
+      </div>
+  </body>
+</html>
