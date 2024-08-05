@@ -34,7 +34,7 @@ Rails.application.routes.draw do
 
   namespace :admin do
     root "scams#index"
-    resource :scams
+    resources :scams
     get 'login' => 'user_sessions#new', :as => :login
     post 'login' => "user_sessions#create"
     delete 'logout' => 'user_sessions#destroy', :as => :logout

@@ -10,13 +10,13 @@
 				</div>
 					<ul tabindex="0" class="dropdown-content menu bg-blue-100 text-slate-950 rounded-box z-[2] w-52 p-2 shadow">
 						<li>
-							<%= link_to "#", class: "flex items-center gap-x-2 py-2 hover:bg-gray-300" do %>
+							<%= link_to new_admin_scam_path, class: "flex items-center gap-x-2 py-2 hover:bg-gray-300" do %>
 								<i class="fa-solid fa-swatchbook fa-xl"></i>
 								詐欺追加
 							<% end %>
 						</li>
 						<li>
-							<%= link_to "#", data: { turbo_method: :delete }, class: "flex items-center gap-x-2 py-2 hover:bg-gray-300" do %>
+							<%= link_to logout_path, data: { turbo_method: :delete }, class: "flex items-center gap-x-2 py-2 hover:bg-gray-300" do %>
 								<i class="fa-solid fa-right-from-bracket fa-xl"></i>
 								ログアウト
 							<% end %>

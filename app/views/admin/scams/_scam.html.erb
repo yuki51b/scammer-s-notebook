@@ -7,6 +7,8 @@
           <tr>
             <th>詐欺名</th>
             <th>詐欺詳細</th>
+            <th>編集</th>
+            <th>削除</th>
           </tr>
         </thead>
         <tbody>
@@ -14,8 +16,18 @@
             <tr class="text-xl hover:bg-slate-300 text-slate-950 border-dashed">
               <td><%= scam.name %></td>
               <td>
-                <%= link_to scam_path(scam) do %>
+                <%= link_to admin_scam_path(scam) do %>
                 <i class="fa-solid fa-book-open fa-xl pl-4"></i>
+                <% end %>
+              </td>
+              <td>
+                <%= link_to "#" do %>
+                <i class="fa-solid fa-marker"></i>
+                <% end %>
+              </td>
+              <td>
+                <%= link_to "#" do %>
+                <i class="fa-regular fa-trash-can"></i>
                 <% end %>
               </td>
             </tr>

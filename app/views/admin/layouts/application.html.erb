@@ -13,6 +13,7 @@
     <body class="flex flex-col min-h-screen bg-primary">
         <%= render 'admin/shared/header' %>
       <div class="flex-grow">
+        <%= render 'layouts/flash_messages' %>
       <%= yield %>
       </div>
   </body>

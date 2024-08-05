@@ -1,0 +1,30 @@
+<div class="card bg-gray-50 shadow-xl m-4">
+  <div class="card-body">
+    <div class="flex flex-col text-center">
+      <P class="pb-2 text-orange">詐欺名</p>
+        <div class="mb-8 border-dashed border-b">
+          <%= @scam.name %>
+        </div>
+      <P class="pb-2 text-orange">詐欺について一言で説明</p>
+        <div class="mb-8 border-dashed border-b">
+          <%= @scam.content %>
+        </div>
+      <P class="pb-2 text-orange">確認するポイント1</p>
+        <div class="mb-8 border-dashed border-b">
+          <%= @scam.point_1 %>
+        </div>
+      <P class="pb-2 text-orange">確認するポイント2</p>
+        <div class="mb-8 border-dashed border-b">
+          <%= @scam.point_2 %>
+        </div>
+      <P class="pb-2 text-orange">確認するポイント3</p>
+        <div class="mb-8 border-dashed border-b">
+          <%= @scam.point_3 %>
+        </div>
+      <p class="pb-2 text-orange">詐欺の詳細(詐欺師視点)</p>
+        <div class="mb-8 border-dashed border-b">
+          <%= @scam_strategy %>
+        </div>
+    </div>
+  </div>
+</div>
