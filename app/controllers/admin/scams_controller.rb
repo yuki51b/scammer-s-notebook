@@ -1,4 +1,5 @@
 class Admin::ScamsController < Admin::BaseController
+  before_action :set_scam, only: %i[show edit update destroy]
 
   def index
     @scams = Scam.all.order("name")
@@ -19,9 +20,10 @@ class Admin::ScamsController < Admin::BaseController
   end
 
   def show
-    @scam = Scam.find(params[:id])
     @scam_strategy = @scam.scam_strategy.split("\n")
   end
+
+  def edit; end
 
 private
 
@@ -29,5 +31,8 @@ def scam_params
   params.require(:scam).permit(:name, :content, :point_1, :point_2, :point_3, :scam_strategy)
 end
 
+def set_scam
+  @scam = Scam.find(params[:id])
+end
 
 end
