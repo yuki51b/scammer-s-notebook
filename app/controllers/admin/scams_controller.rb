@@ -15,7 +15,7 @@ class Admin::ScamsController < Admin::BaseController
     if @scam.save
       redirect_to admin_scams_path, notice: "詐欺情報を作成しました"
     else
-      render :new, error: "作成に失敗しました"
+      redirect_to new_admin_scam_path, alert: "作成に失敗しました"
     end
   end
 
@@ -24,6 +24,19 @@ class Admin::ScamsController < Admin::BaseController
   end
 
   def edit; end
+
+  def update
+    if @scam.update(scam_params)
+      redirect_to admin_scam_path(@scam), notice: "編集に成功しました"
+    else
+      render :edit, alert: "編集に失敗しました"
+    end
+  end
+
+  def destroy
+    @scam.destroy!
+    redirect_to admin_scams_path, notice: "削除しました", status: :see_other
+  end
 
 private
 
