@@ -26,5 +26,10 @@
           <%= @scam_strategy %>
         </div>
     </div>
+        <div class="flex flex-row justify-between mt-10">
+				<%= link_to "戻る", admin_root_path, class: "btn  btn-success w-32 rounded-full" %>
+				<div class="divider divider-horizontal">OR</div>
+				<%= link_to "編集する", edit_admin_scam_path(@scam), class: "btn btn-warning w-32 rounded-full" %>
+			</div>
   </div>
 </div>
