@@ -1,4 +1,4 @@
-class CreateScams < ActiveRecord::Migration[7.1]
+class CreateScams < ActiveRecord::Migration[7.0]
   def change
     create_table :scams do |t|
       t.string :name, null: false

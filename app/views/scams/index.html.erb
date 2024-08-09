@@ -10,7 +10,7 @@
 		<% if @scams.present? %>
 			<%= render partial: 'scams/scam', locals: { scams: @scams }  %>
 		<% else %>
-			<div class="">
+			<div class="flex justify-center mt-10 text-xl">
 					詐欺情報がありません
 			</div>
 		<% end %>

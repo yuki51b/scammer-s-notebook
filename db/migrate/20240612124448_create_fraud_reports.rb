@@ -1,4 +1,4 @@
-class CreateFraudReports < ActiveRecord::Migration[7.1]
+class CreateFraudReports < ActiveRecord::Migration[7.0]
   def change
     create_table :fraud_reports do |t|
       t.string :contact_method, null: false
