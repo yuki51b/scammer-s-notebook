@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get '/privacy_policy', to: 'tops#privacy_policy'
   get '/terms', to: 'tops#terms'
   get '/line_notify', to: 'tops#line_notify'
+  get '/list_of_support', to: 'tops#list_of_support'
 
   resource :profile, only: [:edit, :show, :update]
 
