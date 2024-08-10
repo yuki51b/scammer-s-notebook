@@ -65,10 +65,10 @@
 						<i class="fa-solid fa-bell fa-xl"></i>
 					<% end %>
 				<% end %>
-				<% if current_page?("#") %>
+				<% if current_page?(list_of_support_path) %>
 					<i class="fa-solid fa-square-phone-flip text-orange fa-xl"></i>
 				<% else %>
-					<%= link_to "#" do%>
+					<%= link_to list_of_support_path do%>
 						<i class="fa-solid fa-square-phone-flip fa-xl"></i>
 					<% end %>
 				<% end %>
