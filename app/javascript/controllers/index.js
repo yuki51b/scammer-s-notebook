@@ -18,3 +18,6 @@ application.register("step-form", StepFormController)
 
 import TextareaController from "./textarea_controller"
 application.register("textarea", TextareaController)
+
+import ViewChatController from "./view_chat_controller"
+application.register("view-chat", ViewChatController)
