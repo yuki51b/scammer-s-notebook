@@ -8,6 +8,19 @@ module.exports = {
   ],
   theme: {
     extend: {
+      animation: {
+        "fade-out": "fade-out 1s ease 0.5s  both"
+      },
+      keyframes: {
+          "fade-out": {
+              "0%": {
+                  opacity: "1"
+              },
+              to: {
+                  opacity: "0"
+              }
+          }
+      },
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
       },
