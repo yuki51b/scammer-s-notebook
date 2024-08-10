@@ -4,6 +4,6 @@
 :scheduler:
   :schedule:
     send_line_message_job:
-      cron: "0 7 * * *"  # 毎朝7時に実行
+      cron: "0 22 * * *"  # 毎朝7時に実行するためにシンガポールの9時間前に設定
       class: "SendLineMessageJob"
       queue: default
