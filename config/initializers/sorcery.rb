@@ -224,7 +224,7 @@ Rails.application.config.sorcery.configure do |config|
   if Rails.env.development?
   config.line.callback_url = "https://901d-58-190-15-35.ngrok-free.app/oauth/callback?provider=line"
   elsif Rails.env.production?
-    config.line.callback_url = "https://scammer-s-notebook.onrender.com//oauth/callback?provider=line"
+    config.line.callback_url = "https://scammers-notebook.com/oauth/callback?provider=line"
   end
   config.line.scope = "profile"
   # config.line.bot_prompt = "normal"
