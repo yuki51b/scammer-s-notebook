@@ -27,6 +27,9 @@ module.exports = {
       colors: {
         'orange': '#e65100',
       },
+      lineHeight: {
+        '2': '0.625rem', // 10px相当の行間をカスタムクラスとして追加
+      },
       textUnderlineOffset: {
         12: '12px',
       },

@@ -3,29 +3,33 @@
 @tailwind utilities;
 
 .markdown-body h1 {
-  @apply text-4xl font-bold;
+  @apply text-5xl font-bold m-0 p-0;
 }
 .markdown-body h2 {
-  @apply text-2xl font-bold;
+  @apply text-4xl font-bold m-0 p-0;
 }
 .markdown-body h3 {
-  @apply text-xl font-bold;
+  @apply text-2xl font-bold m-0 p-0;
 }
 .markdown-body h4 {
-  @apply text-lg font-bold;
+  @apply text-lg font-bold m-0 p-0;
 }
 .markdown-body a {
-  @apply text-sky-500 border-b border-sky-500;
+  @apply text-sky-500 border-b border-sky-500 m-0 p-0;
 }
 .markdown-body ul {
-  @apply list-disc list-inside;
+  @apply list-disc list-inside m-0 p-0;
 }
 .markdown-body hr {
-  @apply border-t-2 border-slate-400 w-full;
+  @apply border-t-2 border-slate-400 w-full m-0 p-0;
 }
 .markdown-body blockquote {
-  @apply p-2 border-s-4 border-gray-300 bg-gray-100 text-sm;
+  @apply p-2 border-s-4 border-gray-300 bg-gray-100 text-sm m-0 p-0;
 }
 .markdown-body code {
-  @apply bg-red-200 font-mono;
+  @apply bg-red-200 font-mono m-0 p-0;
+}
+.markdown-body {
+  white-space: pre-line;
+  line-height: 0.625;
 }
