@@ -89,6 +89,9 @@ end
 # gem 'ransack' install
 gem 'ransack', '~> 4.0.0'
 
+# gem 'kaminari' install
+  gem 'kaminari'
+
 # gem 'omniauth' install
   gem 'omniauth-auth0'
   gem 'omniauth-line'

@@ -2,7 +2,7 @@ class ScamsController < ApplicationController
 
     def index
         @q = Scam.ransack(params[:q])
-        @scams = @q.result(distinct: true).order("name")
+        @scams = @q.result(distinct: true).order("name").page(params[:page])
         @search_target = 'scam'
     end
 
