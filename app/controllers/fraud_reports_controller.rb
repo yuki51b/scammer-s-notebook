@@ -1,5 +1,7 @@
 class FraudReportsController < ApplicationController
     skip_before_action :require_login, only: [ :new, :create, :show ]
+    helper_method :prepare_meta_tags
+
 
     def new
         @fraud_report = FraudReport.new
@@ -32,6 +34,7 @@ class FraudReportsController < ApplicationController
     def show
         @fraud_report = FraudReport.find(params[:id])
         @scam = Scam.find_by(name: @fraud_report.respond)
+        prepare_meta_tags(@scam)
     end
 
   private
@@ -194,5 +197,23 @@ class FraudReportsController < ApplicationController
             - "指示"以上の回答はしないでください。
             - 500文字以内でお願いします
         PROMPT
+    end
+
+    def prepare_meta_tags(scam)
+        image_url = "#{request.base_url}/images/ogp.png?text=#{CGI.escape(scam.name)}"
+        set_meta_tags og: {
+            site_name: '詐欺師の手帳',
+            title: scam.name,
+            description: 'ユーザーによる詐欺被害の投稿です',
+            type: 'website',
+            url: request.original_url,
+            image: image_url,
+            locale: 'ja-JP'
+        },
+        twitter: {
+            card: 'summary_large_image',
+            site: '@your_twitter_account',
+            image: image_url
+        }
     end
 end
