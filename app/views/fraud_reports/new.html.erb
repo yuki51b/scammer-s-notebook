@@ -1,7 +1,7 @@
 <% content_for(:title, t('.title')) %>
 <div class="flex flex-col items-center text-orange text-xl" data-controller="form">
-  <div data-controller="step-form">
-    <%= form_with model: @fraud_report do |f| %>
+  <div data-controller="step-form loading-modal">
+    <%= form_with model: @fraud_report, data: { action: "submit->loading-modal#show"} do  |f| %>
       <div id="step1" style="display: block; "data-step-form-target="step">
         <div class="flex flex-col items-center m-4">
           <%= render partial: 'layouts/steps', locals: { now_step: 1 } %>
@@ -306,7 +306,16 @@
           </div>
         </div>
       </div>
-    </div>
     <% end %>
+    <!-- モーダルウィンドウ -->
+      <div data-loading-modal-target="loadingModal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 hidden ">
+        <div class="bg-white p-6 rounded-lg shadow-md w-11/12 max-w-lg">
+          <p class="text-lg font-bold mb-4 text-center text-slate-950">今調査しているから、少し待ってほしいぞ...</p>
+          <div class="flex justify-center mb-4">
+            <span class="loading loading-dots loading-lg"></span>
+          </div>
+          <p class="text-sm text-gray-700">初めて診断される詐欺には少し時間がかかります...</p>
+        </div>
+      </div>
   </div>
 </div>
