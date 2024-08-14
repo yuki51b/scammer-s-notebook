@@ -1,5 +1,5 @@
 <% content_for(:title, t('.title')) %>
-<div class="flex flex-col items-center text-orange text-xl" data-controller="form">
+<div class="flex flex-col items-center text-orange text-base" data-controller="form">
   <div data-controller="step-form loading-modal">
     <%= form_with model: @fraud_report, data: { action: "submit->loading-modal#show"} do  |f| %>
       <div id="step1" style="display: block; "data-step-form-target="step">
