@@ -1,12 +1,12 @@
-<div class="card bg-gray-50 shadow-xl m-4">
+<div class="card bg-blue-100 shadow-xl m-4">
   <div class="card-body">
-    <div class="overflow-x-auto m-10">
+    <div class="overflow-x-auto">
       <table class="table">
         <!-- head -->
         <thead>
           <tr>
-            <th>詐欺名</th>
-            <th>詐欺詳細</th>
+            <th class="text-sm md:text-base">詐欺名</th>
+            <th class="text-sm md:text-base">詐欺詳細</th>
           </tr>
         </thead>
         <tbody>
@@ -15,7 +15,7 @@
               <td><%= scam.name %></td>
               <td>
                 <%= link_to scam_path(scam) do %>
-                <i class="fa-solid fa-book-open fa-xl pl-4"></i>
+                <i class="fa-solid fa-book-open fa-xl pl-4 text-yellow-900"></i>
                 <% end %>
               </td>
             </tr>
