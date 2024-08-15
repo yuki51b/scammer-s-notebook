@@ -1,9 +1,9 @@
 <% content_for(:title, t('.title')) %>
 <div class="flex flex-col items-center text-orange">
 	<div class="text-4xl m-6">
-		<h1>詐欺情報一覧!</h1>
+		<p class="">詐欺情報一覧!</p>
 	</div>
-	<div class="">
+	<div class="text-slate-950 w-4/5">
 		<%= render 'shared/search', q: @q, url: scams_path, search_target: @search_target %>
 	</div>
 	<div class="w-full">

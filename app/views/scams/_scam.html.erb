@@ -11,7 +11,7 @@
         </thead>
         <tbody>
           <% @scams.each do |scam| %>
-            <tr class="text-xl hover:bg-slate-300 text-slate-950 border-dashed">
+            <tr class="text-base md:text-xl hover:bg-slate-300 text-slate-950 border-dashed">
               <td><%= scam.name %></td>
               <td>
                 <%= link_to scam_path(scam) do %>
