@@ -14,6 +14,9 @@
 .markdown-body h4 {
   @apply text-lg font-bold m-0 p-0;
 }
+.markdown-body p {
+  @apply m-0 p-0 text-base;
+}
 .markdown-body a {
   @apply text-sky-500 border-b border-sky-500 m-0 p-0;
 }
@@ -27,7 +30,7 @@
   @apply p-2 border-s-4 border-gray-300 bg-gray-100 text-sm m-0 p-0;
 }
 .markdown-body code {
-  @apply bg-red-200 font-mono m-0 p-0;
+  @apply bg-yellow-200 font-mono m-0 p-0;
 }
 .markdown-body {
   white-space: pre-line;

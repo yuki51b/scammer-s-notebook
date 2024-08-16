@@ -1,18 +1,18 @@
-<footer class="flex  justify-between bg-base-200 rounded pb-10 mb-6 w-full">
+<footer class="bg-base-200 rounded pb-10 mb-6 w-full">
     <div class="flex flex-col flex-grow">
       <div class="chat chat-start" data-controller="view-chat">
-        <div class="chat-image avatar w-30 h-40" data-action="click->view-chat#preview">
-        <%= button_tag(type: "button") do %>
-          <%= image_tag "characttor.jpeg"%>
+        <div class="chat-image avatar h-32 md:w-30 md:h-40" data-action="click->view-chat#preview">
+        <%= button_tag(type: "button")  do %>
+          <%= image_tag "characttor.jpeg" %>
         <% end %>
         </div>
-        <div class="chat-bubble chat-bubble-info mt-10" data-view-chat-target="viewChat">
+        <div class="chat-bubble chat-bubble-info mt-4 text-xs md:text-xl md:mt-10" data-view-chat-target="viewChat">
           僕の手帳を見るかい？
         </div>
       </div>
-      <P class="pl-4 pt-2">(天才詐欺師)マドフくん</p>
+      <P class="ml-2 pt-2 text-xs lg:text-sm ml-4">(天才詐欺師)マドフくん</p>
     </div>
-    <div class="pt-36 mr-4">
-      <p>Copyright © 2024  - 詐欺師の手帳</p>
+    <div class="mr-2 text-xs flex justify-end">
+      <p>Copyright © 2024- 詐欺師の手帳</p>
     </div>
 </footer>

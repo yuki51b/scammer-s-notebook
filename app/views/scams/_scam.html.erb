@@ -1,21 +1,22 @@
 <div class="card bg-gray-50 shadow-xl m-4">
   <div class="card-body">
-    <div class="overflow-x-auto m-10">
+    <div class="overflow-x-auto">
       <table class="table">
         <!-- head -->
         <thead>
           <tr>
-            <th>詐欺名</th>
-            <th>詐欺詳細</th>
+            <th class="text-sm md:text-base">詐欺名</th>
+            <th class="text-sm md:text-base">詐欺詳細</th>
           </tr>
         </thead>
         <tbody>
           <% @scams.each do |scam| %>
-            <tr class="text-xl hover:bg-slate-300 text-slate-950 border-dashed">
+            <tr class="text-base md:text-xl hover:bg-slate-300 text-gray-600 border-dashed">
               <td><%= scam.name %></td>
               <td>
-                <%= link_to scam_path(scam) do %>
-                <i class="fa-solid fa-book-open fa-xl pl-4"></i>
+                <%= link_to scam_path(scam), class: "md:flex md:items-center md:bg-blue-200 md:rounded md:shadow md:text-center" do %>
+                <i class="fa-solid fa-book-open pl-4 text-yellow-900 text-2xl md:text-sm"></i>
+                <p class="hidden md:block md:text-xl md:px-2 md:text-slate-950">詳細へ<p>
                 <% end %>
               </td>
             </tr>

@@ -204,7 +204,7 @@ class FraudReportsController < ApplicationController
         set_meta_tags og: {
             site_name: '詐欺師の手帳',
             title: scam.name,
-            description: 'ユーザーによる詐欺被害の投稿です',
+            description: '詐欺診断が共有されました',
             type: 'website',
             url: request.original_url,
             image: image_url,

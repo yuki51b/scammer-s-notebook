@@ -2,7 +2,7 @@
 <div class="flex flex-col items-center text-slate-950">
 	<div class="card bg-gray-50 shadow-xl my-10 mx-4 w-4/5">
     <div class="card-body">
-      <p class="flex justify-center text-orange text-xl">ログインしてくれよな!</p>
+      <p class="flex justify-center font-mono text-orange text-xl md:text-2xl">ログインしてくれよな!</p>
     <%= form_with(url: login_path, data: { turbo: false }) do |f| %>
         <div class="flex flex-col m-2">
             <%= f.label :email, class: "input input-bordered flex items-center gap-2" do %>
@@ -17,21 +17,19 @@
 						<% end %>
         </div>
         <div class="flex flex-col m-2">
-            <%= f.submit "ログイン", class: "btn rounded-full btn-warning" %>
+            <%= f.submit "ログイン", class: "btn rounded-full btn-warning text-base md:text-xl" %>
         </div>
     <% end %>
     </div>
   </div>
-  <div class="">
+  <div class="flex flex-col">
     <%= link_to auth_at_provider_path(:provider => :line), method: :post, data: { turbo: false }, class: "w-full  flex items-center h-10 bg-[#06C755] text-white font-medium rounded shadow" do %>
       <%= image_tag 'btn_base.png', alt: 'LINE Icon', class: 'w-8 h-8 ml-4 mr-2' %>
       <span class="flex-1 text-xl text-center font-bold mr-10">LINEでログイン</span>
     <% end %>
-  </div>
-    <div class="flex flex-col mt-10">
-        <%= link_to "ユーザー登録", new_user_path, class: "btn rounded-full btn-success" %>
-        <div class="divider">OR</div>
-        <%= link_to 'パスワードをお忘れの方はこちら', '#', class: "underline text-orange" %>
+    <div class="mt-10">
+        <%= link_to "ユーザー登録", new_user_path, class: "btn rounded-full btn-success w-full text-xl" %>
     </div>
+  </div>
 </div>
 

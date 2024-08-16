@@ -42,7 +42,7 @@ export default class extends Controller {
       alert("選択してください");
     }
   }
-  
+
   prevStep() {
     if (this.currentStep > 1) {
       this.currentStep--;
