@@ -32,14 +32,14 @@
 					<% end %>
 				</div>
 				<% if current_user && current_user.own?(@post) %>
-				<div class="">
+					<div class="">
 						<%= link_to "#" do %>
 						<i class="fa-solid fa-pen-clip fa-2xl "></i>
 						<% end %>
-						<%= link_to "#" do  %>
+						<%= link_to post_path(@post), data: { turbo_method: :delete, turbo_confirm: "削除しますか？" } do  %>
 						<i class="fa-solid fa-trash-can fa-2xl"></i>
 						<% end %>
-				</div>
+					</div>
 			</div>
 			<% end %>
 		</div>

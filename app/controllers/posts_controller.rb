@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
-  before_action :set_post, only: %i[edit update]
-  before_action :set_scams, only: %i[new show edit update]
+  before_action :set_post, only: %i[edit update destroy]
+  before_action :set_scams, only: %i[new show edit update destroy]
   skip_before_action :require_login, only: [:index, :show]
   helper_method :prepare_meta_tags
 
@@ -39,6 +39,12 @@ class PostsController < ApplicationController
       render :show
     end
   end
+
+  def destroy
+    @post.destroy!
+    redirect_to posts_path, notice: '削除しました', status: :see_other
+  end
+
 
   def autocomplete
     term = params[:q]
