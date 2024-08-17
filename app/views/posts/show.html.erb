@@ -33,7 +33,7 @@
 				</div>
 				<% if current_user && current_user.own?(@post) %>
 					<div class="">
-						<%= link_to "#" do %>
+						<%= link_to edit_post_path(@post) do %>
 						<i class="fa-solid fa-pen-clip fa-2xl "></i>
 						<% end %>
 						<%= link_to post_path(@post), data: { turbo_method: :delete, turbo_confirm: "削除しますか？" } do  %>
