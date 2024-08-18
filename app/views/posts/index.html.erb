@@ -7,6 +7,7 @@
     <%= render 'shared/search', q: @q, url: posts_path, search_target: @search_target %>
   </div>
   <div class="w-full mt-10">
+  <%= turbo_frame_tag "scams-list" do %>
     <% if @posts.present? %>
       <div class="">
         <%= render partial: 'posts/post', locals: { posts: @posts } %>
@@ -20,4 +21,5 @@
     <div class="my-10">
       <%= paginate @posts %>
     </div>
+  <% end %>
 </div>

@@ -8,7 +8,7 @@
     remote:        data-remote
 -%>
 <% if page.current? %>
-  <span class="bg-indigo-400 text-white px-4 py-3 rounded"><%= page %></span>
+  <span class="bg-warning hover:bg-yellow-500 text-white px-4 py-3 rounded"><%= page %></span>
 <% else %>
-  <%= link_to page, url, remote: remote, rel: page.rel, class: "px-4 text-gray-800 font-light" %>
+  <%= link_to page, url, remote: remote, rel: page.rel, class: "px-4 text-gray-800 bg-sky-300 hover:bg-sky-500 font-light" %>
 <% end %>
