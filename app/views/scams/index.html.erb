@@ -7,6 +7,7 @@
 		<%= render 'shared/search', q: @q, url: scams_path, search_target: @search_target %>
 	</div>
 	<div class="w-full">
+	<%= turbo_frame_tag "scams-list" do %>
 		<% if @scams.present? %>
 			<%= render partial: 'scams/scam', locals: { scams: @scams }  %>
 		<% else %>
@@ -18,4 +19,5 @@
 		<div class="my-10">
 			<%= paginate @scams %>
 		</div>
+	<% end %>
 </div>
