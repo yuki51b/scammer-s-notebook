@@ -12,8 +12,8 @@ module ApplicationHelper
       end
     end
 
-    def page_title(title = '')
-      base_title = '詐欺師の手帳'
+    def page_title(title = '', admin: false)
+      base_title = admin ? '詐欺師の手帳(管理者)' : '詐欺師の手帳'
       title.present? ? "#{title} | #{base_title}" : base_title
     end
 end

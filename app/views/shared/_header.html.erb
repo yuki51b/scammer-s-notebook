@@ -12,19 +12,19 @@
 						<li>
 							<%= link_to profile_path, class: "flex items-center gap-x-2 py-2 hover:bg-gray-300" do %>
 								<i class="fa-solid fa-id-card fa-xl"></i>
-								プロフィール
+								<%= t('header.profile') %>
 							<% end %>
 						</li>
 						<li>
 							<%= link_to posts_path, class: "flex items-center gap-x-2 py-2 hover:bg-gray-300" do %>
 								<i class="fa-solid fa-swatchbook fa-xl"></i>
-								投稿一覧
+								<%= t('header.posts') %>
 							<% end %>
 						</li>
 						<li>
 							<%= link_to logout_path, data: { turbo_method: :delete }, class: "flex items-center gap-x-2 py-2 hover:bg-gray-300" do %>
 								<i class="fa-solid fa-right-from-bracket fa-xl"></i>
-								ログアウト
+								<%= t('header.logout') %>
 							<% end %>
 						</li>
 					</ul>
