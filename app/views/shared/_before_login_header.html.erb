@@ -11,13 +11,13 @@
                     <li>
                         <%= link_to new_user_path, class: "flex items-center gap-x-2 py-2 hover:bg-gray-300" do %>
                             <i class="fa-solid fa-id-card fa-xl"></i>
-                            ユーザー登録
+                            <%= t('header.users') %>
                         <% end %>
                     </li>
                     <li>
                         <%= link_to login_path, class: "flex items-center gap-x-2 py-2 hover:bg-gray-300" do %>
                             <i class="fa-solid fa-user-pen fa-xl"></i>
-                            ログイン
+                            <%= t('header.login') %>
                         <% end %>
                     </li>
                 </ul>

@@ -132,8 +132,8 @@
                     <%= f.label :information_high_value_purchase, "高額商品の購入", for: "information_high_value_purchase", class: "ml-2 w-full" %>
                   </div>
                   <div class="form-control border-dashed border-b flex flex-row md:text-xl">
-                    <%= f.radio_button :information, "金銭援助", id: "information_money_aid", class: "js-check-information" %>
-                    <%= f.label :information_money_aid, "金銭援助", for: "information_money_aid", class: "ml-2 w-full" %>
+                    <%= f.radio_button :information, "ATMなどに向かう", id: "information_money_aid", class: "js-check-information" %>
+                    <%= f.label :information_money_aid, "ATMなどに向かう", for: "information_money_aid", class: "ml-2 w-full" %>
                   </div>
                   <div class="form-control border-dashed border-b flex flex-row md:text-xl">
                     <%= f.radio_button :information, "会員の勧誘", id: "information_membership", class: "js-check-information" %>
@@ -248,7 +248,7 @@
           <div class="card bg-gray-50 shadow-xl m-4">
             <div class="card-body">
               <div class="flex flex-col text-slate-950">
-                <p class="card-title text-orange justify-center py-4 md:text-2xl lg:text-3xl">接触方法はなんでしたか？</p>
+                <p class="card-title text-orange justify-center py-4 md:text-2xl lg:text-3xl">相手は誰ですか？</p>
                   <div class="form-control border-dashed border-b flex flex-row md:text-xl">
                     <%= f.radio_button :who_person, "親族", id: "who_person_relative" %>
                     <%= f.label :who_person_relative, "親族", for: "who_person_relative", class: "ml-2 w-full" %>
@@ -287,7 +287,7 @@
                   </div>
                   <div class="flex flex-row justify-between">
                     <button type="button" data-action="step-form#prevStep" class="btn btn-success mt-10 md:text-xl">戻る</button>
-                    <%= f.submit "診断する!!", class: "btn btn-warning rounded-full mt-10 w-2/3 md:text-xl" %>
+                    <%= f.submit  class: "btn btn-warning rounded-full mt-10 w-2/3 md:text-xl" %>
                   </div>
               </div>
             </div>

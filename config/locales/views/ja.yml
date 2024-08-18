@@ -1,20 +1,32 @@
 ja:
   helpers:
     submit:
-      post:
+      posts:
         create: 投稿する
         update: 更新する
+      fraud_reports:
+        create: 診断する!!
+      users:
+        create: 登録する
   tops:
     index:
       title: 詐欺師の手帳
     line_notify:
       title: 友だち追加
+    list_of_support:
+      title: 相談先一覧
+    privacy_policy:
+      title: プライバシーポリシー
+    terms:
+      title: 利用規約
   header:
     title: 詐欺師の手帳
-  footer:
-    terms: ・利用規約
-    privacy: ・プライバシーポリシー
-    contact: ・お問い合わせ
+    profile: プロフィール
+    posts: 投稿一覧
+    scams: 詐欺追加
+    login: ログイン
+    logout: ログアウト
+    users: ユーザー登録
   fraud_reports:
     new:
       title: 情報入力
@@ -22,11 +34,11 @@ ja:
       title: 診断結果
   posts:
     edit:
-      title: 投稿編集
+      title: 編集ページ
     index:
       title: 投稿一覧
     new:
-      title: 新規投稿作成
+      title: 新規投稿
   markdown:
     comment: |
             ここではマークダウン記法が少しだけ使用できます!
@@ -45,6 +57,7 @@ ja:
   user_sessions:
     new:
       title: ログイン画面
+      login: ログイン
   users:
     new:
       title: ユーザー登録画面
@@ -54,3 +67,10 @@ ja:
       last: "最後"
       previous: "前へ"
       next: "次へ"
+  admin:
+    user_sessions:
+      new:
+        title: ログイン画面
+    scams:
+      index:
+        title: 詐欺情報一覧

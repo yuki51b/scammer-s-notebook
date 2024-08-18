@@ -34,6 +34,8 @@ class Admin::ScamsController < Admin::BaseController
   end
 
   def destroy
+    # 関連するfraud_reportsのscam_idをnullに設定
+    FraudReport.where(scam_id: @scam.id).update_all(scam_id: nil)
     @scam.destroy!
     redirect_to admin_scams_path, notice: "削除しました", status: :see_other
   end

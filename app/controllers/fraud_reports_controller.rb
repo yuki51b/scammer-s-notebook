@@ -12,7 +12,7 @@ class FraudReportsController < ApplicationController
         prompt = scam_name_general_prompt(params[:fraud_report]) # promptには受け取ったカラムの値を入れたプロンプトが入る
             response = ChatgptService.call(prompt)
         # 保存先をrespondカラムに指定
-            @fraud_report.respond = response
+            @fraud_report.respond = response.strip
             # 詐欺診断処理を行って詐欺情報を確定させる
                 judgmented_scam = handle_scam_diagnosis(response)
             # FraudReport関連するscamレコードを取得
@@ -119,7 +119,7 @@ class FraudReportsController < ApplicationController
         <<~PROMPT
             詐欺名: #{response_name}
             上記の詐欺についての詳細を一言で教えてください。
-            対話型の返答は省き、日本語で詐欺の詳細の1行だけを返答してください。
+            対話型の返答は省き、日本語で詐欺の詳細の1行だけを30文字以内で返答してください。
         PROMPT
     end
 
