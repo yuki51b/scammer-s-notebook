@@ -4,7 +4,7 @@
 		<p class="font-mono"><%= t('.title') %></p>
 	</div>
 	<div class="text-slate-950 w-4/5">
-		<%= render 'shared/search', q: @q, url: scams_path, search_target: @search_target %>
+		<%= render 'shared/search', q: @q, url: scams_path, html: { data: { turbo_frame: "scams-search-list" } }, search_target: @search_target %>
 	</div>
 	<div class="w-full">
 	<%= turbo_frame_tag "scams-list" do %>
