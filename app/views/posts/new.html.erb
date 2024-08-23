@@ -3,6 +3,7 @@
 	<div class="card bg-gray-50 shadow-xl w-full">
 		<div class="card-body">
 			<p class="flex justify-center border-dashed border-b font-mono text-4xl"><%= t('.title') %></p>
+				<%= render "shared/errors", object:@post %>
 				<%= render "form", post: @post, url: posts_path %>
 		</div>
 	</div>

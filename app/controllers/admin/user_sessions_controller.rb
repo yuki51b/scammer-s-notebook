@@ -14,8 +14,8 @@ class Admin::UserSessionsController < Admin::BaseController
     if @user
       redirect_to admin_root_path, notice: "管理画面にログインしました"
     else
-      flash.now[:danger] = "ログインに失敗しました"
-      render :new
+      flash.now[:alert] = "ログインに失敗しました"
+      render :new, status: :unprocessable_entity
     end
   end
 

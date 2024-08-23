@@ -20,7 +20,8 @@ class PostsController < ApplicationController
       if @post.save
         redirect_to posts_path, notice: '投稿に成功したぞ！'
       else
-        redirect_to new_post_path, alert: '投稿に失敗しました'
+        flash.now[:alert] = "投稿に失敗しました"
+        render :new, status: :unprocessable_entity
       end
   end
 
@@ -36,7 +37,7 @@ class PostsController < ApplicationController
       redirect_to post_path(@post), notice: '更新しました'
     else
       flash.now[:alert] = "編集に失敗しました"
-      render :edit
+      render :edit, status: :unprocessable_entity
     end
   end
 
