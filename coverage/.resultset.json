@@ -1,15 +1,13 @@
 {
   "RSpec": {
     "coverage": {
-      "/myapp/spec/models/user_spec.rb": {
+      "/myapp/spec/models/post_spec.rb": {
         "lines": [
           1,
           null,
           1,
-          null,
           1,
-          null,
-          10,
+          7,
           null,
           null,
           1,
@@ -35,22 +33,6 @@
           1,
           1,
           1,
-          null,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null,
-          1,
-          1,
           1,
           null,
           null,
@@ -60,7 +42,6 @@
           1,
           null,
           null,
-          1,
           1,
           1,
           1,
@@ -1055,14 +1036,26 @@
           null
         ]
       },
+      "/myapp/spec/factories/post.rb": {
+        "lines": [
+          1,
+          1,
+          8,
+          8,
+          8,
+          1,
+          null,
+          null
+        ]
+      },
       "/myapp/spec/factories/user.rb": {
         "lines": [
           1,
           1,
-          12,
-          12,
-          12,
-          12,
+          19,
+          19,
+          19,
+          19,
           null,
           null
         ]
@@ -1172,6 +1165,111 @@
           null
         ]
       },
+      "/myapp/app/models/post.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null
+        ]
+      },
+      "/myapp/app/models/application_record.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          null
+        ]
+      },
+      "/myapp/spec/models/user_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          10,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
       "/myapp/app/models/user.rb": {
         "lines": [
           1,
@@ -1194,15 +1292,6 @@
           null
         ]
       },
-      "/myapp/app/models/application_record.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          1,
-          null
-        ]
-      },
       "/myapp/app/models/authentication.rb": {
         "lines": [
           1,
@@ -1211,6 +1300,6 @@
         ]
       }
     },
-    "timestamp": 1724426094
+    "timestamp": 1724432156
   }
 }
