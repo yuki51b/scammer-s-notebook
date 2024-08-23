@@ -12,16 +12,19 @@ RSpec.describe User, type: :model do
       it "nameがない場合に、バリデーションが機能する" do
         @user.name = ""
         @user.valid?
+        expect(@user.errors.full_messages).to include("名前を入力してください")
       end
 
       it "nameは255文字以下" do
         @user.name = "a" * 256
         @user.valid?
+        expect(@user.errors.full_messages).to include("名前は255文字以内で入力してください")
       end
 
       it "emailがない場合に、バリデーションが機能する" do
         @user.email = ""
         @user.valid?
+        expect(@user.errors.full_messages).to include("メールアドレスを入力してください")
       end
 
       it "@マークがemailの登録にない場合に、バリデーションが機能する" do
@@ -49,12 +52,14 @@ RSpec.describe User, type: :model do
       it "確認用のパスワードがない場合に、バリデーションが機能する" do
         @user.password_confirmation = ""
         @user.valid?
+        expect(@user.errors.full_messages).to include("パスワード(もう一度)とパスワードの入力が一致しません", "パスワード(もう一度)を入力してください")
       end
 
       it "確認用のパスワードは、入力されたパスワードと同じでないといけない。" do
         @user.password = "password"
         @user.password_confirmation = "12345678"
         @user.valid?
+        expect(@user.errors.full_messages).to include("パスワード(もう一度)とパスワードの入力が一致しません")
       end
     end
 
