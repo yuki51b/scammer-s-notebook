@@ -206,7 +206,7 @@
                     <%= f.radio_button :payment_method, "その他", id: "payment_method_other", class: "js-check-payment"%>
                     <%= f.label :payment_method_other, "その他", for: "payment_method_other", class: "ml-2 w-full" %>
                   </div>
-                    <span id="payment"><%= f.text_area :information, id: "payment_text", disabled: true, required: true, placeholder: "具体的に入力してください", class:"w-full h-24 border-b border-dashed textarea textarea-bordered" %></span>
+                    <span id="payment"><%= f.text_area :payment_method, id: "payment_text", disabled: true, required: true, placeholder: "具体的に入力してください", class:"w-full h-24 border-b border-dashed textarea textarea-bordered" %></span>
                   <div class="flex flex-row justify-between">
                     <button type="button" data-action="step-form#prevStep" class="btn btn-success mt-10 w-1/4 md:text-xl">戻る</button>
                     <button type="button" data-action="step-form#nextStep" class="btn btn-warning mt-10 w-1/4 md:text-xl">次へ</button>
