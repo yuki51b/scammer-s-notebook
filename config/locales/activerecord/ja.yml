@@ -23,4 +23,11 @@ ja:
         title: タイトル
         users_scam_name: 詐欺名
         body: 詐欺被害の詳しい内容
+      scam:
+        name: 詐欺名
+        content: 詐欺名についての一言
+        point_1: "詐欺対策ポイント1"
+        point_2: "詐欺対策ポイント2"
+        point_3: "詐欺対策ポイント3"
+        scam_strategy: "詐欺師の手口"
 
