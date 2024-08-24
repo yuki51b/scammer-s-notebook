@@ -8,7 +8,7 @@
 						<%= f.text_field :users_scam_name,  class: "text-gray-600 input input-bordered w-full", placeholder: "詐欺名"%>
 					</div>
 					<!-- Open the modal using ID.showModal() method -->
-						<button type="button" class=" btn btn-warning rounded-full flex ml-auto mr-2 mt-8" onclick="markdown_explain.showModal()">
+						<button type="button" class=" btn btn-warning rounded-full flex ml-auto mr-2 mt-8 animate-heartbeat" onclick="markdown_explain.showModal()">
 						<i class="fa-solid fa-wrench fa-xl"></i>
 						</button>
 						<dialog id="markdown_explain" class="modal">
@@ -25,7 +25,7 @@
 					<div class="flex flex-col m-2" data-controller="textarea">
 						<%= f.label :body ,class:"m-2"%>
 						<%= f.text_area :body,  class: "text-gray-600 textarea textarea-bordered resize-none min-h-64 w-full", data: { action: "input->textarea#resize", textarea_target: "textarea", preview_target: "textarea" }, placeholder: t('markdown.comment') %>
-						<button type="button" id="preview-button" data-action="click->preview#preview" data-preview-target="previewButton" class="btn btn-success mt-10">プレビュー</button>
+						<button type="button" id="preview-button" data-action="click->preview#preview" data-preview-target="previewButton" class="btn btn-success mt-10 animate-heartbeat">プレビュー</button>
 						<div id="preview-area" data-preview-target="previewArea" class=" markdown-body text-gray-600 whitespace-pre-line border border-dashed border-gray-500 py-2 px-4 rounded h-full min-h-64"></div>
 						<button type="button" id="edit-button" data-action="click->preview#edit" data-preview-target="editButton" class="btn btn-secondary mt-10" style="display: none;">記述する</button>
 					</div>

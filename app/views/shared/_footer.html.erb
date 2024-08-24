@@ -1,12 +1,12 @@
 <footer class="bg-base-200 rounded pb-10 mb-6 w-full">
     <div class="flex flex-col flex-grow">
-      <div class="chat chat-start" data-controller="view-chat">
+      <div class="chat chat-start animate-shake-vertical" data-controller="view-chat">
         <div class="chat-image avatar" data-action="click->view-chat#preview">
         <%= button_tag(type: "button")  do %>
           <%= image_tag "characttor.png"%>
         <% end %>
         </div>
-        <div class="chat-bubble chat-bubble-info mt-4 text-xs md:text-xl md:mt-10" data-view-chat-target="viewChat">
+        <div class="chat-bubble chat-bubble-info mt-4 text-sm md:text-xl md:mt-10" data-view-chat-target="viewChat">
           僕の手帳を見るかい？
         </div>
       </div>

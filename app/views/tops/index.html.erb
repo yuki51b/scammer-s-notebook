@@ -1,13 +1,13 @@
 <div class="flex flex-col items-center text-orange text-base md:text-xl lg:text-2xl">
-    <p class="text-2xl py-4 font-semibold md:text-4xl md:py-8 lg:text-5xl lg:py-10">「これって詐欺？」</p>
-    <p class="m-2">「何かの詐欺かもしれない、でもわからない。。」</p>
-		<p class="m-2">そんな時は「詐欺師の手帳」を使って</p>
-    <p class="m-2">調べてみよう!</p>
+    <p class="text-2xl py-4 font-semibold md:text-4xl md:py-8 lg:text-5xl lg:py-10 animate-tracking-in-expand-fwd-top">「これって詐欺？」</p>
+    <p class="m-2 animate-tracking-in-expand-fwd-top">「何かの詐欺かもしれない、でもわからない。。」</p>
+		<p class="m-2 animate-tracking-in-expand-fwd-top">そんな時は「詐欺師の手帳」を使って</p>
+    <p class="m-2 animate-tracking-in-expand-fwd-top">調べてみよう!</p>
 
       <%= video_tag "scammers_note.mp4", autoplay: true, playsinline: true, class: "py-4 w-32 md:w-48 md:py-8" %>
-		<p class="m-2">7つの質問に答えると</p>
-    <p class="mx-2">AIのマドフくんが教えてくれるよ!</p>
-    <%= link_to new_fraud_report_path, class: " btn btn-warning w-64 rounded-full text-center mt-2 md:mt-6 md:w-80 md:text-2xl" do %>
+		<p class="m-2 animate-text-focus-in">7つの質問に答えると</p>
+    <p class="mx-2 animate-text-focus-in">AIのマドフくんが教えてくれるよ!</p>
+    <%= link_to new_fraud_report_path, class: " btn btn-warning w-64 rounded-full text-center mt-2 md:mt-6 md:w-80 md:text-2xl animate-bounce-top" do %>
         診断スタート
     <% end %>
 </div>

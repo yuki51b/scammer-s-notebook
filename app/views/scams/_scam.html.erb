@@ -1,4 +1,4 @@
-<div class="card bg-gray-50 shadow-xl m-4">
+<div class="card bg-gray-50 shadow-xl m-4 animate-slide-in-right">
   <div class="card-body">
     <div class="overflow-x-auto">
       <table class="table">
@@ -15,7 +15,7 @@
               <td><%= scam.name %></td>
               <td>
                 <%= link_to scam_path(scam), class: "md:flex md:items-center md:bg-blue-200 md:rounded md:shadow md:text-center", data: { turbo_frame: "_top" } do %>
-                <i class="fa-solid fa-book-open pl-4 text-yellow-900 text-2xl md:text-sm"></i>
+                <i class="fa-solid fa-book-open pl-4 text-yellow-900 text-2xl md:text-sm animate-wobble-hor-top"></i>
                 <p class="hidden md:block md:text-xl md:px-2 md:text-slate-950">詳細へ<p>
                 <% end %>
               </td>

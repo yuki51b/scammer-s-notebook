@@ -6,10 +6,10 @@
   <div class="text-slate-950 w-4/5">
     <%= render 'shared/search', q: @q, url: posts_path, html: { data: { turbo_frame: "posts-search-list" } }, search_target: @search_target %>
   </div>
-  <div class="w-full mt-10">
+  <div class="w-full mt-10 overflow-hidden">
   <%= turbo_frame_tag "posts-list" do %>
     <% if @posts.present? %>
-      <div class="">
+      <div class="animate-slide-in-right">
         <%= render partial: 'posts/post', locals: { posts: @posts } %>
       </div>
     <% else %>
