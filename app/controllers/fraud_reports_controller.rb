@@ -105,7 +105,7 @@ class FraudReportsController < ApplicationController
             Rails.logger.info "ChatGPT API response: #{scam_strategy}"
 
         # scamオブジェクトを生成かつcreate_scamに保存
-            create_scam = Scam.new(name: response_name, content: scam_content, point_1: scam_point_1, point_2: scam_point_2, point_3: scam_point_3, scam_strategy: scam_strategy)
+            create_scam = Scam.new(name: response_name.strip, content: scam_content, point_1: scam_point_1, point_2: scam_point_2, point_3: scam_point_3, scam_strategy: scam_strategy)
                 if create_scam.save
                     Rails.logger.info "ChatGPT API response: #{scam_content}"
                     return create_scam
