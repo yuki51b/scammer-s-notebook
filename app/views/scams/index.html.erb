@@ -6,7 +6,7 @@
 	<div class="text-slate-950 w-4/5">
 		<%= render 'shared/search', q: @q, url: scams_path, html: { data: { turbo_frame: "scams-search-list" } }, search_target: @search_target %>
 	</div>
-	<div class="w-full">
+	<div class="w-full overflow-hidden">
 	<%= turbo_frame_tag "scams-list" do %>
 		<% if @scams.present? %>
 			<%= render partial: 'scams/scam', locals: { scams: @scams }  %>
