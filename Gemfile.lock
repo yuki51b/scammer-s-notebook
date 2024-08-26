@@ -335,6 +335,8 @@ GEM
       rack (>= 1.1)
       rubocop (>= 1.33.0, < 2.0)
       rubocop-ast (>= 1.31.1, < 2.0)
+    rubocop-rspec (3.0.4)
+      rubocop (~> 1.61)
     ruby-progressbar (1.13.0)
     rubyzip (2.3.2)
     rufus-scheduler (3.9.1)
@@ -439,6 +441,7 @@ DEPENDENCIES
   rubocop (~> 1.64)
   rubocop-performance
   rubocop-rails
+  rubocop-rspec
   selenium-webdriver
   sidekiq
   sidekiq-scheduler

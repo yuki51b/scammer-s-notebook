@@ -1,0 +1,92 @@
+inherit_from: .rubocop_todo.yml
+Style/AsciiComments:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false # クラスやモジュールにドキュメントコメントを追加することを必須にしません。
+
+AllCops:
+  NewCops: enable
+  Exclude:
+  - 'vendor/**/*'
+  - 'db/**/*'
+  - 'bin/**/*'
+  - 'spec/**/*'
+  - 'node_modules/**/*'
+  - 'config/**/*'
+  - 'config.ru'
+  - 'Gemfile'
+  - 'app/helpers/markdown_helper.rb'
+
+Naming/VariableNumber:
+  AllowedIdentifiers:
+    - point_1
+    - point_2
+    - point_3
+    - scam_point_1
+    - scam_point_2
+    - scam_point_3
+
+Metrics/MethodLength:
+  Exclude:
+    - 'app/controllers/fraud_reports_controller.rb'
+    - 'app/controllers/oauths_controller.rb'
+    - 'app/controllers/posts_controller.rb'
+    - 'app/helpers/markdown_helper.rb'
+    - 'app/service/notification_service.rb'
+
+Metrics/ClassLength:
+  Exclude:
+    - 'app/controllers/fraud_reports_controller.rb'
+
+Metrics/AbcSize:
+  Exclude:
+    - 'app/controllers/fraud_reports_controller.rb'
+
+
+Style/MutableConstant:
+  Exclude:
+    - 'app/controllers/concerns/ogp_creator.rb'
+
+Rails/HelperInstanceVariable:
+  Exclude:
+    - 'app/helpers/markdown_helper.rb'
+
+Rails/OutputSafety:
+  Exclude:
+    - 'app/helpers/markdown_helper.rb'
+
+
+RSpec/ContextWording:
+  Enabled: false  # RSpecの`context`ブロックで使用する言葉に関するルールを無効にします。
+
+RSpec/DescribedClass:
+  Enabled: false  # RSpecの`describe`ブロックでクラス名が正しく記述されているかをチェックするルールを無効にします。
+
+RSpec/ExampleLength:
+  Enabled: false  # RSpecのテストが長すぎないかをチェックするルールを無効にします。
+
+RSpec/ExpectInHook:
+  Enabled: false  # RSpecの`before`フック内での`expect`メソッドの使用を許可します。
+
+# インスタンス変数を使用することを許可します。ただし、`let`を使うことが推奨されますが、この設定ではインスタンス変数を許可しています。
+RSpec/InstanceVariable:
+  Enabled: false
+
+RSpec/MultipleExpectations:
+  Enabled: false  # 一つのテストに複数の`expect`文を持つことを許可します。
+
+Rails/I18nLocaleTexts:
+  Enabled: false  # I18nLocaleTextsのルールを無効にします
+
+Style/FrozenStringLiteralComment:
+  Enabled: false  # FrozenStringLiteralCommentのルールを無効にします
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+require:
+  - rubocop-ast
+  - rubocop-rails
+  - rubocop-rspec
+  - rubocop-performance

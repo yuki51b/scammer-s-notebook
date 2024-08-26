@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2024-08-24T03:35:11+09:00">2024-08-24T03:35:11+09:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2024-08-26T23:40:16+09:00">2024-08-26T23:40:16+09:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -128,7 +128,7 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#87e51961816494254d82199591422e4a0941f78e" class="src_link" title="app/models/scam.rb">app/models/scam.rb</a></td>
             <td class="green strong cell--number t-file__coverage">90.91 %</td>
-            <td class="cell--number">16</td>
+            <td class="cell--number">15</td>
             <td class="cell--number">11</td>
             <td class="cell--number">10</td>
             <td class="cell--number">1</td>
@@ -282,7 +282,7 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#e8908172baf743d26ee344e7319763bda18f46bb" class="src_link" title="config/initializers/sidekiq.rb">config/initializers/sidekiq.rb</a></td>
             <td class="red strong cell--number t-file__coverage">75.00 %</td>
-            <td class="cell--number">9</td>
+            <td class="cell--number">7</td>
             <td class="cell--number">4</td>
             <td class="cell--number">3</td>
             <td class="cell--number">1</td>
@@ -293,7 +293,7 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#56d1f062a7d4d0eddbda32fe6f7e3129c4c373cc" class="src_link" title="config/initializers/sorcery.rb">config/initializers/sorcery.rb</a></td>
             <td class="yellow strong cell--number t-file__coverage">86.67 %</td>
-            <td class="cell--number">571</td>
+            <td class="cell--number">570</td>
             <td class="cell--number">15</td>
             <td class="cell--number">13</td>
             <td class="cell--number">2</td>
@@ -304,7 +304,7 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#39aa335e5db0629c80848b903110f06a45e22e73" class="src_link" title="config/routes.rb">config/routes.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">48</td>
+            <td class="cell--number">47</td>
             <td class="cell--number">30</td>
             <td class="cell--number">30</td>
             <td class="cell--number">0</td>
@@ -359,7 +359,7 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#96814c68243cf0c0861fe145f1006fb1e3c1c43f" class="src_link" title="spec/models/scam_spec.rb">spec/models/scam_spec.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">90</td>
+            <td class="cell--number">89</td>
             <td class="cell--number">57</td>
             <td class="cell--number">57</td>
             <td class="cell--number">0</td>
@@ -370,7 +370,7 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#cd8f3c03af725bc245a28a356e9f8927dacd680b" class="src_link" title="spec/models/user_spec.rb">spec/models/user_spec.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">72</td>
+            <td class="cell--number">71</td>
             <td class="cell--number">44</td>
             <td class="cell--number">44</td>
             <td class="cell--number">0</td>
@@ -494,7 +494,7 @@
 
             
 
-            <code class="ruby">    def flash_background_color(type)</code>
+            <code class="ruby">  def flash_background_color(type)</code>
           </li>
         </div>
       
@@ -505,7 +505,7 @@
 
             
 
-            <code class="ruby">      case type.to_sym</code>
+            <code class="ruby">    case type.to_sym</code>
           </li>
         </div>
       
@@ -516,7 +516,7 @@
 
             
 
-            <code class="ruby">        when :notice then &quot;bg-green-500&quot;</code>
+            <code class="ruby">    when :notice then &#39;bg-green-500&#39;</code>
           </li>
         </div>
       
@@ -527,7 +527,7 @@
 
             
 
-            <code class="ruby">        when :alert  then &quot;bg-red-500&quot;</code>
+            <code class="ruby">    when :alert  then &#39;bg-red-500&#39;</code>
           </li>
         </div>
       
@@ -538,7 +538,7 @@
 
             
 
-            <code class="ruby">        when :error  then &quot;bg-yellow-500&quot;</code>
+            <code class="ruby">    when :error  then &#39;bg-yellow-500&#39;</code>
           </li>
         </div>
       
@@ -549,7 +549,7 @@
 
             
 
-            <code class="ruby">        else &quot;bg-gray-500&quot;</code>
+            <code class="ruby">    else &#39;bg-gray-500&#39;</code>
           </li>
         </div>
       
@@ -560,7 +560,7 @@
 
             
 
-            <code class="ruby">      end</code>
+            <code class="ruby">    end</code>
           </li>
         </div>
       
@@ -571,7 +571,7 @@
 
             
 
-            <code class="ruby">    end</code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
@@ -593,7 +593,7 @@
 
             
 
-            <code class="ruby">    def page_title(title = &#39;&#39;, admin: false)</code>
+            <code class="ruby">  def page_title(title = &#39;&#39;, admin: false)</code>
           </li>
         </div>
       
@@ -604,7 +604,7 @@
 
             
 
-            <code class="ruby">      base_title = admin ? &#39;詐欺師の手帳(管理者)&#39; : &#39;詐欺師の手帳&#39;</code>
+            <code class="ruby">    base_title = admin ? &#39;詐欺師の手帳(管理者)&#39; : &#39;詐欺師の手帳&#39;</code>
           </li>
         </div>
       
@@ -615,7 +615,7 @@
 
             
 
-            <code class="ruby">      title.present? ? &quot;#{title} | #{base_title}&quot; : base_title</code>
+            <code class="ruby">    title.present? ? &quot;#{title} | #{base_title}&quot; : base_title</code>
           </li>
         </div>
       
@@ -626,7 +626,7 @@
 
             
 
-            <code class="ruby">    end</code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
@@ -723,7 +723,7 @@
 
             
 
-            <code class="ruby">      filter_html:     true,</code>
+            <code class="ruby">        filter_html: true,</code>
           </li>
         </div>
       
@@ -734,7 +734,7 @@
 
             
 
-            <code class="ruby">      hard_wrap:       true,</code>
+            <code class="ruby">        hard_wrap: true,</code>
           </li>
         </div>
       
@@ -745,7 +745,7 @@
 
             
 
-            <code class="ruby">      space_after_headers: true,</code>
+            <code class="ruby">        space_after_headers: true,</code>
           </li>
         </div>
       
@@ -756,7 +756,7 @@
 
             
 
-            <code class="ruby">      safe_links_only: true,</code>
+            <code class="ruby">        safe_links_only: true</code>
           </li>
         </div>
       
@@ -767,7 +767,7 @@
 
             
 
-            <code class="ruby">    }</code>
+            <code class="ruby">      }</code>
           </li>
         </div>
       
@@ -789,7 +789,7 @@
 
             
 
-            <code class="ruby">    extensions = {</code>
+            <code class="ruby">      extensions = {</code>
           </li>
         </div>
       
@@ -800,7 +800,7 @@
 
             
 
-            <code class="ruby">      autolink:           true,</code>
+            <code class="ruby">        autolink: true,</code>
           </li>
         </div>
       
@@ -811,7 +811,7 @@
 
             
 
-            <code class="ruby">      no_intra_emphasis:  true,</code>
+            <code class="ruby">        no_intra_emphasis: true,</code>
           </li>
         </div>
       
@@ -822,7 +822,7 @@
 
             
 
-            <code class="ruby">      quote:              true,</code>
+            <code class="ruby">        quote: true,</code>
           </li>
         </div>
       
@@ -833,7 +833,7 @@
 
             
 
-            <code class="ruby">      strikethrough:      true,</code>
+            <code class="ruby">        strikethrough: true,</code>
           </li>
         </div>
       
@@ -844,7 +844,7 @@
 
             
 
-            <code class="ruby">      codespan:           true,</code>
+            <code class="ruby">        codespan: true,</code>
           </li>
         </div>
       
@@ -855,7 +855,7 @@
 
             
 
-            <code class="ruby">      superscript:        true,</code>
+            <code class="ruby">        superscript: true,</code>
           </li>
         </div>
       
@@ -866,7 +866,7 @@
 
             
 
-            <code class="ruby">      fenced_code_blocks: true,</code>
+            <code class="ruby">        fenced_code_blocks: true</code>
           </li>
         </div>
       
@@ -877,7 +877,7 @@
 
             
 
-            <code class="ruby">    }</code>
+            <code class="ruby">      }</code>
           </li>
         </div>
       
@@ -1157,7 +1157,7 @@
 
             
 
-            <code class="ruby">    validates :title, presence: true, length: { maximum: 255 }</code>
+            <code class="ruby">  validates :title, presence: true, length: { maximum: 255 }</code>
           </li>
         </div>
       
@@ -1168,7 +1168,7 @@
 
             
 
-            <code class="ruby">    validates :body, presence: true, length: { maximum: 65_535 }</code>
+            <code class="ruby">  validates :body, presence: true, length: { maximum: 65_535 }</code>
           </li>
         </div>
       
@@ -1179,7 +1179,7 @@
 
             
 
-            <code class="ruby">    validates :users_scam_name, presence: true, length: { maximum: 255 }</code>
+            <code class="ruby">  validates :users_scam_name, presence: true, length: { maximum: 255 }</code>
           </li>
         </div>
       
@@ -1201,7 +1201,7 @@
 
             
 
-            <code class="ruby">    belongs_to :user</code>
+            <code class="ruby">  belongs_to :user</code>
           </li>
         </div>
       
@@ -1212,7 +1212,7 @@
 
             
 
-            <code class="ruby">    belongs_to :scam, optional: true</code>
+            <code class="ruby">  belongs_to :scam, optional: true</code>
           </li>
         </div>
       
@@ -1234,7 +1234,7 @@
 
             
 
-            <code class="ruby">    def self.ransackable_attributes(auth_object = nil)</code>
+            <code class="ruby">  def self.ransackable_attributes(_auth_object = nil)</code>
           </li>
         </div>
       
@@ -1245,7 +1245,7 @@
 
             
 
-            <code class="ruby">		[&quot;title&quot;, &quot;users_scam_name&quot;]</code>
+            <code class="ruby">    %w[title users_scam_name]</code>
           </li>
         </div>
       
@@ -1256,7 +1256,7 @@
 
             
 
-            <code class="ruby">	end</code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
@@ -1278,7 +1278,7 @@
 
             
 
-            <code class="ruby">    def self.ransackable_associations(auth_object = nil)</code>
+            <code class="ruby">  def self.ransackable_associations(_auth_object = nil)</code>
           </li>
         </div>
       
@@ -1289,7 +1289,7 @@
 
             
 
-            <code class="ruby">        [&quot;user&quot;, &quot;scam&quot;]</code>
+            <code class="ruby">    %w[user scam]</code>
           </li>
         </div>
       
@@ -1300,7 +1300,7 @@
 
             
 
-            <code class="ruby">    end</code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
@@ -1364,7 +1364,7 @@
 
             
 
-            <code class="ruby">	has_many :fraud_report</code>
+            <code class="ruby">  has_many :fraud_report, dependent: :destroy</code>
           </li>
         </div>
       
@@ -1375,7 +1375,7 @@
 
             
 
-            <code class="ruby">	has_many :posts</code>
+            <code class="ruby">  has_many :posts, dependent: :destroy</code>
           </li>
         </div>
       
@@ -1397,7 +1397,7 @@
 
             
 
-            <code class="ruby">	validates :name, presence: true, length: { maximum: 255 }</code>
+            <code class="ruby">  validates :name, presence: true, length: { maximum: 255 }</code>
           </li>
         </div>
       
@@ -1408,7 +1408,7 @@
 
             
 
-            <code class="ruby">	validates :content, presence: true, length: { maximum: 255 }</code>
+            <code class="ruby">  validates :content, presence: true, length: { maximum: 255 }</code>
           </li>
         </div>
       
@@ -1419,7 +1419,7 @@
 
             
 
-            <code class="ruby">	validates :point_1, presence: true, length: { maximum: 255 }</code>
+            <code class="ruby">  validates :point_1, presence: true, length: { maximum: 255 }</code>
           </li>
         </div>
       
@@ -1430,7 +1430,7 @@
 
             
 
-            <code class="ruby">	validates :point_2, presence: true, length: { maximum: 255 }</code>
+            <code class="ruby">  validates :point_2, presence: true, length: { maximum: 255 }</code>
           </li>
         </div>
       
@@ -1441,7 +1441,7 @@
 
             
 
-            <code class="ruby">	validates :point_3, presence: true, length: { maximum: 255 }</code>
+            <code class="ruby">  validates :point_3, presence: true, length: { maximum: 255 }</code>
           </li>
         </div>
       
@@ -1452,7 +1452,7 @@
 
             
 
-            <code class="ruby">	validates :scam_strategy, presence: true, length: { maximum: 1000 }</code>
+            <code class="ruby">  validates :scam_strategy, presence: true, length: { maximum: 1000 }</code>
           </li>
         </div>
       
@@ -1468,51 +1468,40 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="12">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="13">
+          <li class="covered" data-hits="1" data-linenumber="12">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">	def self.ransackable_attributes(auth_object = nil)</code>
+            <code class="ruby">  def self.ransackable_attributes(_auth_object = nil)</code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="14">
+          <li class="missed" data-hits="0" data-linenumber="13">
             
             
 
             
 
-            <code class="ruby">		[&quot;name&quot;]</code>
+            <code class="ruby">    [&#39;name&#39;]</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="14">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
           </li>
         </div>
       
         <div>
           <li class="never" data-hits="" data-linenumber="15">
-            
-            
-
-            
-
-            <code class="ruby">	end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="16">
             
             
 
@@ -1593,7 +1582,7 @@
 
             
 
-            <code class="ruby">  has_many :authentications, :dependent =&gt; :destroy</code>
+            <code class="ruby">  has_many :authentications, dependent: :destroy</code>
           </li>
         </div>
       
@@ -2086,7 +2075,7 @@
 
             
 
-            <code class="ruby">    config.assets.paths &lt;&lt; Rails.root.join(&quot;app&quot;, &quot;assets&quot;, &quot;videos&quot;)</code>
+            <code class="ruby">    config.assets.paths &lt;&lt; Rails.root.join(&#39;app/assets/videos&#39;)</code>
           </li>
         </div>
       
@@ -4323,7 +4312,7 @@
 
             
 
-            <code class="ruby">LINE_NOTIFY_CLIENT = Line::Bot::Client.new { |config|</code>
+            <code class="ruby">LINE_NOTIFY_CLIENT = Line::Bot::Client.new do |config|</code>
           </li>
         </div>
       
@@ -4367,7 +4356,7 @@
 
             
 
-            <code class="ruby">}</code>
+            <code class="ruby">end</code>
           </li>
         </div>
       
@@ -5169,18 +5158,7 @@
     <ol>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="1">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="2">
+          <li class="covered" data-hits="1" data-linenumber="1">
             <span class="hits">1</span>
             
 
@@ -5191,13 +5169,24 @@
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="3">
+          <li class="missed" data-hits="0" data-linenumber="2">
             
             
 
             
 
-            <code class="ruby">  config.redis = { url: Rails.env.production? ? ENV[&#39;REDIS_URL_PRODUCTION&#39;] : Rails.application.credentials.redis[:development] }</code>
+            <code class="ruby">  config.redis = { url: Rails.env.production? ? ENV.fetch(&#39;REDIS_URL_PRODUCTION&#39;, nil) : Rails.application.credentials.redis[:development] }</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="3">
+            
+            
+
+            
+
+            <code class="ruby">end</code>
           </li>
         </div>
       
@@ -5208,23 +5197,12 @@
 
             
 
-            <code class="ruby">end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="5">
-            
-            
-
-            
-
             <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="6">
+          <li class="covered" data-hits="1" data-linenumber="5">
             <span class="hits">1</span>
             
 
@@ -5235,35 +5213,24 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="7">
+          <li class="covered" data-hits="1" data-linenumber="6">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">  config.redis = { url: Rails.env.production? ? ENV[&#39;REDIS_URL_PRODUCTION&#39;] : Rails.application.credentials.redis[:development] }</code>
+            <code class="ruby">  config.redis = { url: Rails.env.production? ? ENV.fetch(&#39;REDIS_URL_PRODUCTION&#39;, nil) : Rails.application.credentials.redis[:development] }</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="8">
+          <li class="never" data-hits="" data-linenumber="7">
             
             
 
             
 
             <code class="ruby">end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="9">
-            
-            
-
-            
-
-            <code class="ruby"></code>
           </li>
         </div>
       
@@ -7769,7 +7736,7 @@
 
             
 
-            <code class="ruby">  config.line.callback_url = &quot;https://901d-58-190-15-35.ngrok-free.app/oauth/callback?provider=line&quot;</code>
+            <code class="ruby">    config.line.callback_url = &#39;https://901d-58-190-15-35.ngrok-free.app/oauth/callback?provider=line&#39;</code>
           </li>
         </div>
       
@@ -7791,7 +7758,7 @@
 
             
 
-            <code class="ruby">    config.line.callback_url = &quot;https://scammers-notebook.com/oauth/callback?provider=line&quot;</code>
+            <code class="ruby">    config.line.callback_url = &#39;https://scammers-notebook.com/oauth/callback?provider=line&#39;</code>
           </li>
         </div>
       
@@ -7813,7 +7780,7 @@
 
             
 
-            <code class="ruby">  config.line.scope = &quot;profile&quot;</code>
+            <code class="ruby">  config.line.scope = &#39;profile&#39;</code>
           </li>
         </div>
       
@@ -7835,7 +7802,7 @@
 
             
 
-            <code class="ruby">  config.line.user_info_mapping = {name: &#39;displayName&#39;, email: &#39;userId&#39;}</code>
+            <code class="ruby">  config.line.user_info_mapping = { name: &#39;displayName&#39;, email: &#39;userId&#39; }</code>
           </li>
         </div>
       
@@ -7857,7 +7824,7 @@
 
             
 
-            <code class="ruby">  </code>
+            <code class="ruby">  # For information about Discord API</code>
           </li>
         </div>
       
@@ -7868,7 +7835,7 @@
 
             
 
-            <code class="ruby">  # For information about Discord API</code>
+            <code class="ruby">  # https://discordapp.com/developers/docs/topics/oauth2</code>
           </li>
         </div>
       
@@ -7879,7 +7846,7 @@
 
             
 
-            <code class="ruby">  # https://discordapp.com/developers/docs/topics/oauth2</code>
+            <code class="ruby">  # config.discord.key = &quot;xxxxxx&quot;</code>
           </li>
         </div>
       
@@ -7890,7 +7857,7 @@
 
             
 
-            <code class="ruby">  # config.discord.key = &quot;xxxxxx&quot;</code>
+            <code class="ruby">  # config.discord.secret = &quot;xxxxxx&quot;</code>
           </li>
         </div>
       
@@ -7901,7 +7868,7 @@
 
             
 
-            <code class="ruby">  # config.discord.secret = &quot;xxxxxx&quot;</code>
+            <code class="ruby">  # config.discord.callback_url = &quot;http://localhost:3000/oauth/callback?provider=discord&quot;</code>
           </li>
         </div>
       
@@ -7912,7 +7879,7 @@
 
             
 
-            <code class="ruby">  # config.discord.callback_url = &quot;http://localhost:3000/oauth/callback?provider=discord&quot;</code>
+            <code class="ruby">  # config.discord.scope = &quot;email guilds&quot;</code>
           </li>
         </div>
       
@@ -7923,7 +7890,7 @@
 
             
 
-            <code class="ruby">  # config.discord.scope = &quot;email guilds&quot;</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -7934,7 +7901,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  # For information about Battlenet API</code>
           </li>
         </div>
       
@@ -7945,7 +7912,7 @@
 
             
 
-            <code class="ruby">  # For information about Battlenet API</code>
+            <code class="ruby">  # https://develop.battle.net/documentation/guides/using-oauth</code>
           </li>
         </div>
       
@@ -7956,7 +7923,7 @@
 
             
 
-            <code class="ruby">  # https://develop.battle.net/documentation/guides/using-oauth</code>
+            <code class="ruby">  # config.battlenet.site = &quot;https://eu.battle.net/&quot; #See Website for other Regional Domains</code>
           </li>
         </div>
       
@@ -7967,7 +7934,7 @@
 
             
 
-            <code class="ruby">  # config.battlenet.site = &quot;https://eu.battle.net/&quot; #See Website for other Regional Domains</code>
+            <code class="ruby">  # config.battlenet.key = &quot;xxxxxx&quot;</code>
           </li>
         </div>
       
@@ -7978,7 +7945,7 @@
 
             
 
-            <code class="ruby">  # config.battlenet.key = &quot;xxxxxx&quot;</code>
+            <code class="ruby">  # config.battlenet.secret = &quot;xxxxxx&quot;</code>
           </li>
         </div>
       
@@ -7989,7 +7956,7 @@
 
             
 
-            <code class="ruby">  # config.battlenet.secret = &quot;xxxxxx&quot;</code>
+            <code class="ruby">  # config.battlenet.callback_url = &quot;http://localhost:3000/oauth/callback?provider=battlenet&quot;</code>
           </li>
         </div>
       
@@ -8000,7 +7967,7 @@
 
             
 
-            <code class="ruby">  # config.battlenet.callback_url = &quot;http://localhost:3000/oauth/callback?provider=battlenet&quot;</code>
+            <code class="ruby">  # config.battlenet.scope = &quot;openid&quot;</code>
           </li>
         </div>
       
@@ -8011,23 +7978,12 @@
 
             
 
-            <code class="ruby">  # config.battlenet.scope = &quot;openid&quot;</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="248">
-            
-            
-
-            
-
             <code class="ruby">  # --- user config ---</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="249">
+          <li class="covered" data-hits="2" data-linenumber="248">
             <span class="hits">2</span>
             
 
@@ -8038,7 +7994,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="250">
+          <li class="never" data-hits="" data-linenumber="249">
             
             
 
@@ -8049,7 +8005,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="251">
+          <li class="never" data-hits="" data-linenumber="250">
             
             
 
@@ -8060,7 +8016,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="252">
+          <li class="never" data-hits="" data-linenumber="251">
             
             
 
@@ -8071,7 +8027,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="253">
+          <li class="never" data-hits="" data-linenumber="252">
             
             
 
@@ -8082,7 +8038,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="254">
+          <li class="never" data-hits="" data-linenumber="253">
             
             
 
@@ -8093,7 +8049,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="255">
+          <li class="never" data-hits="" data-linenumber="254">
             
             
 
@@ -8104,7 +8060,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="256">
+          <li class="never" data-hits="" data-linenumber="255">
             
             
 
@@ -8115,7 +8071,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="257">
+          <li class="never" data-hits="" data-linenumber="256">
             
             
 
@@ -8126,7 +8082,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="258">
+          <li class="never" data-hits="" data-linenumber="257">
             
             
 
@@ -8137,7 +8093,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="259">
+          <li class="never" data-hits="" data-linenumber="258">
             
             
 
@@ -8148,7 +8104,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="260">
+          <li class="never" data-hits="" data-linenumber="259">
             
             
 
@@ -8159,7 +8115,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="261">
+          <li class="never" data-hits="" data-linenumber="260">
             
             
 
@@ -8170,13 +8126,24 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="262">
+          <li class="never" data-hits="" data-linenumber="261">
             
             
 
             
 
             <code class="ruby">    # Default: `false`</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="262">
+            
+            
+
+            
+
+            <code class="ruby">    #</code>
           </li>
         </div>
       
@@ -8187,7 +8154,7 @@
 
             
 
-            <code class="ruby">    #</code>
+            <code class="ruby">    # user.downcase_username_before_authenticating =</code>
           </li>
         </div>
       
@@ -8198,7 +8165,7 @@
 
             
 
-            <code class="ruby">    # user.downcase_username_before_authenticating =</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -8209,7 +8176,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">    # Change default email attribute.</code>
           </li>
         </div>
       
@@ -8220,7 +8187,7 @@
 
             
 
-            <code class="ruby">    # Change default email attribute.</code>
+            <code class="ruby">    # Default: `:email`</code>
           </li>
         </div>
       
@@ -8231,7 +8198,7 @@
 
             
 
-            <code class="ruby">    # Default: `:email`</code>
+            <code class="ruby">    #</code>
           </li>
         </div>
       
@@ -8242,7 +8209,7 @@
 
             
 
-            <code class="ruby">    #</code>
+            <code class="ruby">    # user.email_attribute_name =</code>
           </li>
         </div>
       
@@ -8253,7 +8220,7 @@
 
             
 
-            <code class="ruby">    # user.email_attribute_name =</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -8264,7 +8231,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">    # Change default crypted_password attribute.</code>
           </li>
         </div>
       
@@ -8275,7 +8242,7 @@
 
             
 
-            <code class="ruby">    # Change default crypted_password attribute.</code>
+            <code class="ruby">    # Default: `:crypted_password`</code>
           </li>
         </div>
       
@@ -8286,7 +8253,7 @@
 
             
 
-            <code class="ruby">    # Default: `:crypted_password`</code>
+            <code class="ruby">    #</code>
           </li>
         </div>
       
@@ -8297,7 +8264,7 @@
 
             
 
-            <code class="ruby">    #</code>
+            <code class="ruby">    # user.crypted_password_attribute_name =</code>
           </li>
         </div>
       
@@ -8308,7 +8275,7 @@
 
             
 
-            <code class="ruby">    # user.crypted_password_attribute_name =</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -8319,7 +8286,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">    # What pattern to use to join the password with the salt</code>
           </li>
         </div>
       
@@ -8330,7 +8297,7 @@
 
             
 
-            <code class="ruby">    # What pattern to use to join the password with the salt</code>
+            <code class="ruby">    # Default: `&quot;&quot;`</code>
           </li>
         </div>
       
@@ -8341,7 +8308,7 @@
 
             
 
-            <code class="ruby">    # Default: `&quot;&quot;`</code>
+            <code class="ruby">    #</code>
           </li>
         </div>
       
@@ -8352,7 +8319,7 @@
 
             
 
-            <code class="ruby">    #</code>
+            <code class="ruby">    # user.salt_join_token =</code>
           </li>
         </div>
       
@@ -8363,7 +8330,7 @@
 
             
 
-            <code class="ruby">    # user.salt_join_token =</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -8374,7 +8341,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">    # Change default salt attribute.</code>
           </li>
         </div>
       
@@ -8385,7 +8352,7 @@
 
             
 
-            <code class="ruby">    # Change default salt attribute.</code>
+            <code class="ruby">    # Default: `:salt`</code>
           </li>
         </div>
       
@@ -8396,7 +8363,7 @@
 
             
 
-            <code class="ruby">    # Default: `:salt`</code>
+            <code class="ruby">    #</code>
           </li>
         </div>
       
@@ -8407,7 +8374,7 @@
 
             
 
-            <code class="ruby">    #</code>
+            <code class="ruby">    # user.salt_attribute_name =</code>
           </li>
         </div>
       
@@ -8418,7 +8385,7 @@
 
             
 
-            <code class="ruby">    # user.salt_attribute_name =</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -8429,7 +8396,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">    # How many times to apply encryption to the password.</code>
           </li>
         </div>
       
@@ -8440,7 +8407,7 @@
 
             
 
-            <code class="ruby">    # How many times to apply encryption to the password.</code>
+            <code class="ruby">    # Default: 1 in test env, `nil` otherwise</code>
           </li>
         </div>
       
@@ -8451,23 +8418,12 @@
 
             
 
-            <code class="ruby">    # Default: 1 in test env, `nil` otherwise</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="288">
-            
-            
-
-            
-
             <code class="ruby">    #</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="289">
+          <li class="covered" data-hits="1" data-linenumber="288">
             <span class="hits">1</span>
             
 
@@ -8478,7 +8434,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="290">
+          <li class="never" data-hits="" data-linenumber="289">
             
             
 
@@ -8489,7 +8445,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="291">
+          <li class="never" data-hits="" data-linenumber="290">
             
             
 
@@ -8500,7 +8456,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="292">
+          <li class="never" data-hits="" data-linenumber="291">
             
             
 
@@ -8511,13 +8467,24 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="293">
+          <li class="never" data-hits="" data-linenumber="292">
             
             
 
             
 
             <code class="ruby">    # Default: `nil`</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="293">
+            
+            
+
+            
+
+            <code class="ruby">    #</code>
           </li>
         </div>
       
@@ -8528,7 +8495,7 @@
 
             
 
-            <code class="ruby">    #</code>
+            <code class="ruby">    # user.encryption_key =</code>
           </li>
         </div>
       
@@ -8539,7 +8506,7 @@
 
             
 
-            <code class="ruby">    # user.encryption_key =</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -8550,7 +8517,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">    # Use an external encryption class.</code>
           </li>
         </div>
       
@@ -8561,7 +8528,7 @@
 
             
 
-            <code class="ruby">    # Use an external encryption class.</code>
+            <code class="ruby">    # Default: `nil`</code>
           </li>
         </div>
       
@@ -8572,7 +8539,7 @@
 
             
 
-            <code class="ruby">    # Default: `nil`</code>
+            <code class="ruby">    #</code>
           </li>
         </div>
       
@@ -8583,7 +8550,7 @@
 
             
 
-            <code class="ruby">    #</code>
+            <code class="ruby">    # user.custom_encryption_provider =</code>
           </li>
         </div>
       
@@ -8594,7 +8561,7 @@
 
             
 
-            <code class="ruby">    # user.custom_encryption_provider =</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -8605,7 +8572,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">    # Encryption algorithm name. See &#39;encryption_algorithm=&#39; for available options.</code>
           </li>
         </div>
       
@@ -8616,7 +8583,7 @@
 
             
 
-            <code class="ruby">    # Encryption algorithm name. See &#39;encryption_algorithm=&#39; for available options.</code>
+            <code class="ruby">    # Default: `:bcrypt`</code>
           </li>
         </div>
       
@@ -8627,7 +8594,7 @@
 
             
 
-            <code class="ruby">    # Default: `:bcrypt`</code>
+            <code class="ruby">    #</code>
           </li>
         </div>
       
@@ -8638,7 +8605,7 @@
 
             
 
-            <code class="ruby">    #</code>
+            <code class="ruby">    # user.encryption_algorithm =</code>
           </li>
         </div>
       
@@ -8649,7 +8616,7 @@
 
             
 
-            <code class="ruby">    # user.encryption_algorithm =</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -8660,7 +8627,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">    # Make this configuration inheritable for subclasses. Useful for ActiveRecord&#39;s STI.</code>
           </li>
         </div>
       
@@ -8671,7 +8638,7 @@
 
             
 
-            <code class="ruby">    # Make this configuration inheritable for subclasses. Useful for ActiveRecord&#39;s STI.</code>
+            <code class="ruby">    # Default: `false`</code>
           </li>
         </div>
       
@@ -8682,7 +8649,7 @@
 
             
 
-            <code class="ruby">    # Default: `false`</code>
+            <code class="ruby">    #</code>
           </li>
         </div>
       
@@ -8693,7 +8660,7 @@
 
             
 
-            <code class="ruby">    #</code>
+            <code class="ruby">    # user.subclasses_inherit_config =</code>
           </li>
         </div>
       
@@ -8704,7 +8671,7 @@
 
             
 
-            <code class="ruby">    # user.subclasses_inherit_config =</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -8715,7 +8682,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">    # -- remember_me --</code>
           </li>
         </div>
       
@@ -8726,7 +8693,7 @@
 
             
 
-            <code class="ruby">    # -- remember_me --</code>
+            <code class="ruby">    # change default remember_me_token attribute.</code>
           </li>
         </div>
       
@@ -8737,7 +8704,7 @@
 
             
 
-            <code class="ruby">    # change default remember_me_token attribute.</code>
+            <code class="ruby">    # Default: `:remember_me_token`</code>
           </li>
         </div>
       
@@ -8748,7 +8715,7 @@
 
             
 
-            <code class="ruby">    # Default: `:remember_me_token`</code>
+            <code class="ruby">    #</code>
           </li>
         </div>
       
@@ -8759,7 +8726,7 @@
 
             
 
-            <code class="ruby">    #</code>
+            <code class="ruby">    # user.remember_me_token_attribute_name =</code>
           </li>
         </div>
       
@@ -8770,7 +8737,7 @@
 
             
 
-            <code class="ruby">    # user.remember_me_token_attribute_name =</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -8781,7 +8748,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">    # change default remember_me_token_expires_at attribute.</code>
           </li>
         </div>
       
@@ -8792,7 +8759,7 @@
 
             
 
-            <code class="ruby">    # change default remember_me_token_expires_at attribute.</code>
+            <code class="ruby">    # Default: `:remember_me_token_expires_at`</code>
           </li>
         </div>
       
@@ -8803,7 +8770,7 @@
 
             
 
-            <code class="ruby">    # Default: `:remember_me_token_expires_at`</code>
+            <code class="ruby">    #</code>
           </li>
         </div>
       
@@ -8814,7 +8781,7 @@
 
             
 
-            <code class="ruby">    #</code>
+            <code class="ruby">    # user.remember_me_token_expires_at_attribute_name =</code>
           </li>
         </div>
       
@@ -8825,7 +8792,7 @@
 
             
 
-            <code class="ruby">    # user.remember_me_token_expires_at_attribute_name =</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -8836,7 +8803,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">    # How long in seconds the session length will be</code>
           </li>
         </div>
       
@@ -8847,7 +8814,7 @@
 
             
 
-            <code class="ruby">    # How long in seconds the session length will be</code>
+            <code class="ruby">    # Default: `60 * 60 * 24 * 7`</code>
           </li>
         </div>
       
@@ -8858,7 +8825,7 @@
 
             
 
-            <code class="ruby">    # Default: `60 * 60 * 24 * 7`</code>
+            <code class="ruby">    #</code>
           </li>
         </div>
       
@@ -8869,7 +8836,7 @@
 
             
 
-            <code class="ruby">    #</code>
+            <code class="ruby">    # user.remember_me_for =</code>
           </li>
         </div>
       
@@ -8880,7 +8847,7 @@
 
             
 
-            <code class="ruby">    # user.remember_me_for =</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -8891,7 +8858,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">    # When true, sorcery will persist a single remember me token for all</code>
           </li>
         </div>
       
@@ -8902,7 +8869,7 @@
 
             
 
-            <code class="ruby">    # When true, sorcery will persist a single remember me token for all</code>
+            <code class="ruby">    # logins/logouts (to support remembering on multiple browsers simultaneously).</code>
           </li>
         </div>
       
@@ -8913,7 +8880,7 @@
 
             
 
-            <code class="ruby">    # logins/logouts (to support remembering on multiple browsers simultaneously).</code>
+            <code class="ruby">    # Default: false</code>
           </li>
         </div>
       
@@ -8924,7 +8891,7 @@
 
             
 
-            <code class="ruby">    # Default: false</code>
+            <code class="ruby">    #</code>
           </li>
         </div>
       
@@ -8935,7 +8902,7 @@
 
             
 
-            <code class="ruby">    #</code>
+            <code class="ruby">    # user.remember_me_token_persist_globally =</code>
           </li>
         </div>
       
@@ -8946,7 +8913,7 @@
 
             
 
-            <code class="ruby">    # user.remember_me_token_persist_globally =</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -8957,7 +8924,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">    # -- user_activation --</code>
           </li>
         </div>
       
@@ -8968,7 +8935,7 @@
 
             
 
-            <code class="ruby">    # -- user_activation --</code>
+            <code class="ruby">    # The attribute name to hold activation state (active/pending).</code>
           </li>
         </div>
       
@@ -8979,7 +8946,7 @@
 
             
 
-            <code class="ruby">    # The attribute name to hold activation state (active/pending).</code>
+            <code class="ruby">    # Default: `:activation_state`</code>
           </li>
         </div>
       
@@ -8990,7 +8957,7 @@
 
             
 
-            <code class="ruby">    # Default: `:activation_state`</code>
+            <code class="ruby">    #</code>
           </li>
         </div>
       
@@ -9001,7 +8968,7 @@
 
             
 
-            <code class="ruby">    #</code>
+            <code class="ruby">    # user.activation_state_attribute_name =</code>
           </li>
         </div>
       
@@ -9012,7 +8979,7 @@
 
             
 
-            <code class="ruby">    # user.activation_state_attribute_name =</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -9023,7 +8990,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">    # The attribute name to hold activation code (sent by email).</code>
           </li>
         </div>
       
@@ -9034,7 +9001,7 @@
 
             
 
-            <code class="ruby">    # The attribute name to hold activation code (sent by email).</code>
+            <code class="ruby">    # Default: `:activation_token`</code>
           </li>
         </div>
       
@@ -9045,7 +9012,7 @@
 
             
 
-            <code class="ruby">    # Default: `:activation_token`</code>
+            <code class="ruby">    #</code>
           </li>
         </div>
       
@@ -9056,7 +9023,7 @@
 
             
 
-            <code class="ruby">    #</code>
+            <code class="ruby">    # user.activation_token_attribute_name =</code>
           </li>
         </div>
       
@@ -9067,7 +9034,7 @@
 
             
 
-            <code class="ruby">    # user.activation_token_attribute_name =</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -9078,7 +9045,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">    # The attribute name to hold activation code expiration date.</code>
           </li>
         </div>
       
@@ -9089,7 +9056,7 @@
 
             
 
-            <code class="ruby">    # The attribute name to hold activation code expiration date.</code>
+            <code class="ruby">    # Default: `:activation_token_expires_at`</code>
           </li>
         </div>
       
@@ -9100,7 +9067,7 @@
 
             
 
-            <code class="ruby">    # Default: `:activation_token_expires_at`</code>
+            <code class="ruby">    #</code>
           </li>
         </div>
       
@@ -9111,7 +9078,7 @@
 
             
 
-            <code class="ruby">    #</code>
+            <code class="ruby">    # user.activation_token_expires_at_attribute_name =</code>
           </li>
         </div>
       
@@ -9122,7 +9089,7 @@
 
             
 
-            <code class="ruby">    # user.activation_token_expires_at_attribute_name =</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -9133,7 +9100,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">    # How many seconds before the activation code expires. nil for never expires.</code>
           </li>
         </div>
       
@@ -9144,7 +9111,7 @@
 
             
 
-            <code class="ruby">    # How many seconds before the activation code expires. nil for never expires.</code>
+            <code class="ruby">    # Default: `nil`</code>
           </li>
         </div>
       
@@ -9155,7 +9122,7 @@
 
             
 
-            <code class="ruby">    # Default: `nil`</code>
+            <code class="ruby">    #</code>
           </li>
         </div>
       
@@ -9166,7 +9133,7 @@
 
             
 
-            <code class="ruby">    #</code>
+            <code class="ruby">    # user.activation_token_expiration_period =</code>
           </li>
         </div>
       
@@ -9177,7 +9144,7 @@
 
             
 
-            <code class="ruby">    # user.activation_token_expiration_period =</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -9188,7 +9155,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">    # REQUIRED:</code>
           </li>
         </div>
       
@@ -9199,7 +9166,7 @@
 
             
 
-            <code class="ruby">    # REQUIRED:</code>
+            <code class="ruby">    # User activation mailer class.</code>
           </li>
         </div>
       
@@ -9210,7 +9177,7 @@
 
             
 
-            <code class="ruby">    # User activation mailer class.</code>
+            <code class="ruby">    # Default: `nil`</code>
           </li>
         </div>
       
@@ -9221,7 +9188,7 @@
 
             
 
-            <code class="ruby">    # Default: `nil`</code>
+            <code class="ruby">    #</code>
           </li>
         </div>
       
@@ -9232,7 +9199,7 @@
 
             
 
-            <code class="ruby">    #</code>
+            <code class="ruby">    # user.user_activation_mailer =</code>
           </li>
         </div>
       
@@ -9243,7 +9210,7 @@
 
             
 
-            <code class="ruby">    # user.user_activation_mailer =</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -9254,7 +9221,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">    # When true, sorcery will not automatically</code>
           </li>
         </div>
       
@@ -9265,7 +9232,7 @@
 
             
 
-            <code class="ruby">    # When true, sorcery will not automatically</code>
+            <code class="ruby">    # send the activation details email, and allow you to</code>
           </li>
         </div>
       
@@ -9276,7 +9243,7 @@
 
             
 
-            <code class="ruby">    # send the activation details email, and allow you to</code>
+            <code class="ruby">    # manually handle how and when the email is sent.</code>
           </li>
         </div>
       
@@ -9287,7 +9254,7 @@
 
             
 
-            <code class="ruby">    # manually handle how and when the email is sent.</code>
+            <code class="ruby">    # Default: `false`</code>
           </li>
         </div>
       
@@ -9298,7 +9265,7 @@
 
             
 
-            <code class="ruby">    # Default: `false`</code>
+            <code class="ruby">    #</code>
           </li>
         </div>
       
@@ -9309,7 +9276,7 @@
 
             
 
-            <code class="ruby">    #</code>
+            <code class="ruby">    # user.activation_mailer_disabled =</code>
           </li>
         </div>
       
@@ -9320,7 +9287,7 @@
 
             
 
-            <code class="ruby">    # user.activation_mailer_disabled =</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -9331,7 +9298,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">    # Method to send email related</code>
           </li>
         </div>
       
@@ -9342,7 +9309,7 @@
 
             
 
-            <code class="ruby">    # Method to send email related</code>
+            <code class="ruby">    # options: `:deliver_later`, `:deliver_now`, `:deliver`</code>
           </li>
         </div>
       
@@ -9353,7 +9320,7 @@
 
             
 
-            <code class="ruby">    # options: `:deliver_later`, `:deliver_now`, `:deliver`</code>
+            <code class="ruby">    # Default: :deliver (Rails version &lt; 4.2) or :deliver_now (Rails version 4.2+)</code>
           </li>
         </div>
       
@@ -9364,7 +9331,7 @@
 
             
 
-            <code class="ruby">    # Default: :deliver (Rails version &lt; 4.2) or :deliver_now (Rails version 4.2+)</code>
+            <code class="ruby">    #</code>
           </li>
         </div>
       
@@ -9375,7 +9342,7 @@
 
             
 
-            <code class="ruby">    #</code>
+            <code class="ruby">    # user.email_delivery_method =</code>
           </li>
         </div>
       
@@ -9386,7 +9353,7 @@
 
             
 
-            <code class="ruby">    # user.email_delivery_method =</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -9397,7 +9364,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">    # Activation needed email method on your mailer class.</code>
           </li>
         </div>
       
@@ -9408,7 +9375,7 @@
 
             
 
-            <code class="ruby">    # Activation needed email method on your mailer class.</code>
+            <code class="ruby">    # Default: `:activation_needed_email`</code>
           </li>
         </div>
       
@@ -9419,7 +9386,7 @@
 
             
 
-            <code class="ruby">    # Default: `:activation_needed_email`</code>
+            <code class="ruby">    #</code>
           </li>
         </div>
       
@@ -9430,7 +9397,7 @@
 
             
 
-            <code class="ruby">    #</code>
+            <code class="ruby">    # user.activation_needed_email_method_name =</code>
           </li>
         </div>
       
@@ -9441,7 +9408,7 @@
 
             
 
-            <code class="ruby">    # user.activation_needed_email_method_name =</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -9452,7 +9419,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">    # Activation success email method on your mailer class.</code>
           </li>
         </div>
       
@@ -9463,7 +9430,7 @@
 
             
 
-            <code class="ruby">    # Activation success email method on your mailer class.</code>
+            <code class="ruby">    # Default: `:activation_success_email`</code>
           </li>
         </div>
       
@@ -9474,7 +9441,7 @@
 
             
 
-            <code class="ruby">    # Default: `:activation_success_email`</code>
+            <code class="ruby">    #</code>
           </li>
         </div>
       
@@ -9485,7 +9452,7 @@
 
             
 
-            <code class="ruby">    #</code>
+            <code class="ruby">    # user.activation_success_email_method_name =</code>
           </li>
         </div>
       
@@ -9496,7 +9463,7 @@
 
             
 
-            <code class="ruby">    # user.activation_success_email_method_name =</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -9507,7 +9474,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">    # Do you want to prevent users who did not activate by email from logging in?</code>
           </li>
         </div>
       
@@ -9518,7 +9485,7 @@
 
             
 
-            <code class="ruby">    # Do you want to prevent users who did not activate by email from logging in?</code>
+            <code class="ruby">    # Default: `true`</code>
           </li>
         </div>
       
@@ -9529,7 +9496,7 @@
 
             
 
-            <code class="ruby">    # Default: `true`</code>
+            <code class="ruby">    #</code>
           </li>
         </div>
       
@@ -9540,7 +9507,7 @@
 
             
 
-            <code class="ruby">    #</code>
+            <code class="ruby">    # user.prevent_non_active_users_to_login =</code>
           </li>
         </div>
       
@@ -9551,7 +9518,7 @@
 
             
 
-            <code class="ruby">    # user.prevent_non_active_users_to_login =</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -9562,7 +9529,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">    # -- reset_password --</code>
           </li>
         </div>
       
@@ -9573,7 +9540,7 @@
 
             
 
-            <code class="ruby">    # -- reset_password --</code>
+            <code class="ruby">    # Password reset token attribute name.</code>
           </li>
         </div>
       
@@ -9584,7 +9551,7 @@
 
             
 
-            <code class="ruby">    # Password reset token attribute name.</code>
+            <code class="ruby">    # Default: `:reset_password_token`</code>
           </li>
         </div>
       
@@ -9595,7 +9562,7 @@
 
             
 
-            <code class="ruby">    # Default: `:reset_password_token`</code>
+            <code class="ruby">    #</code>
           </li>
         </div>
       
@@ -9606,7 +9573,7 @@
 
             
 
-            <code class="ruby">    #</code>
+            <code class="ruby">    # user.reset_password_token_attribute_name =</code>
           </li>
         </div>
       
@@ -9617,7 +9584,7 @@
 
             
 
-            <code class="ruby">    # user.reset_password_token_attribute_name =</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -9628,7 +9595,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">    # Password token expiry attribute name.</code>
           </li>
         </div>
       
@@ -9639,7 +9606,7 @@
 
             
 
-            <code class="ruby">    # Password token expiry attribute name.</code>
+            <code class="ruby">    # Default: `:reset_password_token_expires_at`</code>
           </li>
         </div>
       
@@ -9650,7 +9617,7 @@
 
             
 
-            <code class="ruby">    # Default: `:reset_password_token_expires_at`</code>
+            <code class="ruby">    #</code>
           </li>
         </div>
       
@@ -9661,7 +9628,7 @@
 
             
 
-            <code class="ruby">    #</code>
+            <code class="ruby">    # user.reset_password_token_expires_at_attribute_name =</code>
           </li>
         </div>
       
@@ -9672,7 +9639,7 @@
 
             
 
-            <code class="ruby">    # user.reset_password_token_expires_at_attribute_name =</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -9683,7 +9650,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">    # When was password reset email sent. Used for hammering protection.</code>
           </li>
         </div>
       
@@ -9694,7 +9661,7 @@
 
             
 
-            <code class="ruby">    # When was password reset email sent. Used for hammering protection.</code>
+            <code class="ruby">    # Default: `:reset_password_email_sent_at`</code>
           </li>
         </div>
       
@@ -9705,7 +9672,7 @@
 
             
 
-            <code class="ruby">    # Default: `:reset_password_email_sent_at`</code>
+            <code class="ruby">    #</code>
           </li>
         </div>
       
@@ -9716,7 +9683,7 @@
 
             
 
-            <code class="ruby">    #</code>
+            <code class="ruby">    # user.reset_password_email_sent_at_attribute_name =</code>
           </li>
         </div>
       
@@ -9727,7 +9694,7 @@
 
             
 
-            <code class="ruby">    # user.reset_password_email_sent_at_attribute_name =</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -9738,7 +9705,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">    # REQUIRED:</code>
           </li>
         </div>
       
@@ -9749,7 +9716,7 @@
 
             
 
-            <code class="ruby">    # REQUIRED:</code>
+            <code class="ruby">    # Password reset mailer class.</code>
           </li>
         </div>
       
@@ -9760,7 +9727,7 @@
 
             
 
-            <code class="ruby">    # Password reset mailer class.</code>
+            <code class="ruby">    # Default: `nil`</code>
           </li>
         </div>
       
@@ -9771,7 +9738,7 @@
 
             
 
-            <code class="ruby">    # Default: `nil`</code>
+            <code class="ruby">    #</code>
           </li>
         </div>
       
@@ -9782,7 +9749,7 @@
 
             
 
-            <code class="ruby">    #</code>
+            <code class="ruby">    # user.reset_password_mailer =</code>
           </li>
         </div>
       
@@ -9793,7 +9760,7 @@
 
             
 
-            <code class="ruby">    # user.reset_password_mailer =</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -9804,7 +9771,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">    # Reset password email method on your mailer class.</code>
           </li>
         </div>
       
@@ -9815,7 +9782,7 @@
 
             
 
-            <code class="ruby">    # Reset password email method on your mailer class.</code>
+            <code class="ruby">    # Default: `:reset_password_email`</code>
           </li>
         </div>
       
@@ -9826,7 +9793,7 @@
 
             
 
-            <code class="ruby">    # Default: `:reset_password_email`</code>
+            <code class="ruby">    #</code>
           </li>
         </div>
       
@@ -9837,7 +9804,7 @@
 
             
 
-            <code class="ruby">    #</code>
+            <code class="ruby">    # user.reset_password_email_method_name =</code>
           </li>
         </div>
       
@@ -9848,7 +9815,7 @@
 
             
 
-            <code class="ruby">    # user.reset_password_email_method_name =</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -9859,7 +9826,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">    # When true, sorcery will not automatically</code>
           </li>
         </div>
       
@@ -9870,7 +9837,7 @@
 
             
 
-            <code class="ruby">    # When true, sorcery will not automatically</code>
+            <code class="ruby">    # send the password reset details email, and allow you to</code>
           </li>
         </div>
       
@@ -9881,7 +9848,7 @@
 
             
 
-            <code class="ruby">    # send the password reset details email, and allow you to</code>
+            <code class="ruby">    # manually handle how and when the email is sent</code>
           </li>
         </div>
       
@@ -9892,7 +9859,7 @@
 
             
 
-            <code class="ruby">    # manually handle how and when the email is sent</code>
+            <code class="ruby">    # Default: `false`</code>
           </li>
         </div>
       
@@ -9903,7 +9870,7 @@
 
             
 
-            <code class="ruby">    # Default: `false`</code>
+            <code class="ruby">    #</code>
           </li>
         </div>
       
@@ -9914,7 +9881,7 @@
 
             
 
-            <code class="ruby">    #</code>
+            <code class="ruby">    # user.reset_password_mailer_disabled =</code>
           </li>
         </div>
       
@@ -9925,7 +9892,7 @@
 
             
 
-            <code class="ruby">    # user.reset_password_mailer_disabled =</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -9936,7 +9903,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">    # How many seconds before the reset request expires. nil for never expires.</code>
           </li>
         </div>
       
@@ -9947,7 +9914,7 @@
 
             
 
-            <code class="ruby">    # How many seconds before the reset request expires. nil for never expires.</code>
+            <code class="ruby">    # Default: `nil`</code>
           </li>
         </div>
       
@@ -9958,7 +9925,7 @@
 
             
 
-            <code class="ruby">    # Default: `nil`</code>
+            <code class="ruby">    #</code>
           </li>
         </div>
       
@@ -9969,7 +9936,7 @@
 
             
 
-            <code class="ruby">    #</code>
+            <code class="ruby">    # user.reset_password_expiration_period =</code>
           </li>
         </div>
       
@@ -9980,7 +9947,7 @@
 
             
 
-            <code class="ruby">    # user.reset_password_expiration_period =</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -9991,7 +9958,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">    # Hammering protection: how long in seconds to wait before allowing another email to be sent.</code>
           </li>
         </div>
       
@@ -10002,7 +9969,7 @@
 
             
 
-            <code class="ruby">    # Hammering protection: how long in seconds to wait before allowing another email to be sent.</code>
+            <code class="ruby">    # Default: `5 * 60`</code>
           </li>
         </div>
       
@@ -10013,7 +9980,7 @@
 
             
 
-            <code class="ruby">    # Default: `5 * 60`</code>
+            <code class="ruby">    #</code>
           </li>
         </div>
       
@@ -10024,7 +9991,7 @@
 
             
 
-            <code class="ruby">    #</code>
+            <code class="ruby">    # user.reset_password_time_between_emails =</code>
           </li>
         </div>
       
@@ -10035,7 +10002,7 @@
 
             
 
-            <code class="ruby">    # user.reset_password_time_between_emails =</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -10046,7 +10013,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">    # Access counter to a reset password page attribute name</code>
           </li>
         </div>
       
@@ -10057,7 +10024,7 @@
 
             
 
-            <code class="ruby">    # Access counter to a reset password page attribute name</code>
+            <code class="ruby">    # Default: `:access_count_to_reset_password_page`</code>
           </li>
         </div>
       
@@ -10068,7 +10035,7 @@
 
             
 
-            <code class="ruby">    # Default: `:access_count_to_reset_password_page`</code>
+            <code class="ruby">    #</code>
           </li>
         </div>
       
@@ -10079,7 +10046,7 @@
 
             
 
-            <code class="ruby">    #</code>
+            <code class="ruby">    # user.reset_password_page_access_count_attribute_name =</code>
           </li>
         </div>
       
@@ -10090,7 +10057,7 @@
 
             
 
-            <code class="ruby">    # user.reset_password_page_access_count_attribute_name =</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -10101,7 +10068,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">    # -- magic_login --</code>
           </li>
         </div>
       
@@ -10112,7 +10079,7 @@
 
             
 
-            <code class="ruby">    # -- magic_login --</code>
+            <code class="ruby">    # Magic login code attribute name.</code>
           </li>
         </div>
       
@@ -10123,7 +10090,7 @@
 
             
 
-            <code class="ruby">    # Magic login code attribute name.</code>
+            <code class="ruby">    # Default: `:magic_login_token`</code>
           </li>
         </div>
       
@@ -10134,7 +10101,7 @@
 
             
 
-            <code class="ruby">    # Default: `:magic_login_token`</code>
+            <code class="ruby">    #</code>
           </li>
         </div>
       
@@ -10145,7 +10112,7 @@
 
             
 
-            <code class="ruby">    #</code>
+            <code class="ruby">    # user.magic_login_token_attribute_name =</code>
           </li>
         </div>
       
@@ -10156,7 +10123,7 @@
 
             
 
-            <code class="ruby">    # user.magic_login_token_attribute_name =</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -10167,7 +10134,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">    # Magic login expiry attribute name.</code>
           </li>
         </div>
       
@@ -10178,7 +10145,7 @@
 
             
 
-            <code class="ruby">    # Magic login expiry attribute name.</code>
+            <code class="ruby">    # Default: `:magic_login_token_expires_at`</code>
           </li>
         </div>
       
@@ -10189,7 +10156,7 @@
 
             
 
-            <code class="ruby">    # Default: `:magic_login_token_expires_at`</code>
+            <code class="ruby">    #</code>
           </li>
         </div>
       
@@ -10200,7 +10167,7 @@
 
             
 
-            <code class="ruby">    #</code>
+            <code class="ruby">    # user.magic_login_token_expires_at_attribute_name =</code>
           </li>
         </div>
       
@@ -10211,7 +10178,7 @@
 
             
 
-            <code class="ruby">    # user.magic_login_token_expires_at_attribute_name =</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -10222,7 +10189,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">    # When was magic login email sent — used for hammering protection.</code>
           </li>
         </div>
       
@@ -10233,7 +10200,7 @@
 
             
 
-            <code class="ruby">    # When was magic login email sent — used for hammering protection.</code>
+            <code class="ruby">    # Default: `:magic_login_email_sent_at`</code>
           </li>
         </div>
       
@@ -10244,7 +10211,7 @@
 
             
 
-            <code class="ruby">    # Default: `:magic_login_email_sent_at`</code>
+            <code class="ruby">    #</code>
           </li>
         </div>
       
@@ -10255,7 +10222,7 @@
 
             
 
-            <code class="ruby">    #</code>
+            <code class="ruby">    # user.magic_login_email_sent_at_attribute_name =</code>
           </li>
         </div>
       
@@ -10266,7 +10233,7 @@
 
             
 
-            <code class="ruby">    # user.magic_login_email_sent_at_attribute_name =</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -10277,7 +10244,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">    # REQUIRED:</code>
           </li>
         </div>
       
@@ -10288,7 +10255,7 @@
 
             
 
-            <code class="ruby">    # REQUIRED:</code>
+            <code class="ruby">    # Magic login mailer class.</code>
           </li>
         </div>
       
@@ -10299,7 +10266,7 @@
 
             
 
-            <code class="ruby">    # Magic login mailer class.</code>
+            <code class="ruby">    # Default: `nil`</code>
           </li>
         </div>
       
@@ -10310,7 +10277,7 @@
 
             
 
-            <code class="ruby">    # Default: `nil`</code>
+            <code class="ruby">    #</code>
           </li>
         </div>
       
@@ -10321,7 +10288,7 @@
 
             
 
-            <code class="ruby">    #</code>
+            <code class="ruby">    # user.magic_login_mailer_class =</code>
           </li>
         </div>
       
@@ -10332,7 +10299,7 @@
 
             
 
-            <code class="ruby">    # user.magic_login_mailer_class =</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -10343,7 +10310,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">    # Magic login email method on your mailer class.</code>
           </li>
         </div>
       
@@ -10354,7 +10321,7 @@
 
             
 
-            <code class="ruby">    # Magic login email method on your mailer class.</code>
+            <code class="ruby">    # Default: `:magic_login_email`</code>
           </li>
         </div>
       
@@ -10365,7 +10332,7 @@
 
             
 
-            <code class="ruby">    # Default: `:magic_login_email`</code>
+            <code class="ruby">    #</code>
           </li>
         </div>
       
@@ -10376,7 +10343,7 @@
 
             
 
-            <code class="ruby">    #</code>
+            <code class="ruby">    # user.magic_login_email_method_name =</code>
           </li>
         </div>
       
@@ -10387,7 +10354,7 @@
 
             
 
-            <code class="ruby">    # user.magic_login_email_method_name =</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -10398,7 +10365,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">    # When true, sorcery will not automatically</code>
           </li>
         </div>
       
@@ -10409,7 +10376,7 @@
 
             
 
-            <code class="ruby">    # When true, sorcery will not automatically</code>
+            <code class="ruby">    # send magic login details email, and allow you to</code>
           </li>
         </div>
       
@@ -10420,7 +10387,7 @@
 
             
 
-            <code class="ruby">    # send magic login details email, and allow you to</code>
+            <code class="ruby">    # manually handle how and when the email is sent</code>
           </li>
         </div>
       
@@ -10431,7 +10398,7 @@
 
             
 
-            <code class="ruby">    # manually handle how and when the email is sent</code>
+            <code class="ruby">    # Default: `true`</code>
           </li>
         </div>
       
@@ -10442,7 +10409,7 @@
 
             
 
-            <code class="ruby">    # Default: `true`</code>
+            <code class="ruby">    #</code>
           </li>
         </div>
       
@@ -10453,7 +10420,7 @@
 
             
 
-            <code class="ruby">    #</code>
+            <code class="ruby">    # user.magic_login_mailer_disabled =</code>
           </li>
         </div>
       
@@ -10464,7 +10431,7 @@
 
             
 
-            <code class="ruby">    # user.magic_login_mailer_disabled =</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -10475,7 +10442,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">    # How many seconds before the request expires. nil for never expires.</code>
           </li>
         </div>
       
@@ -10486,7 +10453,7 @@
 
             
 
-            <code class="ruby">    # How many seconds before the request expires. nil for never expires.</code>
+            <code class="ruby">    # Default: `nil`</code>
           </li>
         </div>
       
@@ -10497,7 +10464,7 @@
 
             
 
-            <code class="ruby">    # Default: `nil`</code>
+            <code class="ruby">    #</code>
           </li>
         </div>
       
@@ -10508,7 +10475,7 @@
 
             
 
-            <code class="ruby">    #</code>
+            <code class="ruby">    # user.magic_login_expiration_period =</code>
           </li>
         </div>
       
@@ -10519,7 +10486,7 @@
 
             
 
-            <code class="ruby">    # user.magic_login_expiration_period =</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -10530,7 +10497,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">    # Hammering protection: how long in seconds to wait before allowing another email to be sent.</code>
           </li>
         </div>
       
@@ -10541,7 +10508,7 @@
 
             
 
-            <code class="ruby">    # Hammering protection: how long in seconds to wait before allowing another email to be sent.</code>
+            <code class="ruby">    # Default: `5 * 60`</code>
           </li>
         </div>
       
@@ -10552,7 +10519,7 @@
 
             
 
-            <code class="ruby">    # Default: `5 * 60`</code>
+            <code class="ruby">    #</code>
           </li>
         </div>
       
@@ -10563,7 +10530,7 @@
 
             
 
-            <code class="ruby">    #</code>
+            <code class="ruby">    # user.magic_login_time_between_emails =</code>
           </li>
         </div>
       
@@ -10574,7 +10541,7 @@
 
             
 
-            <code class="ruby">    # user.magic_login_time_between_emails =</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -10585,7 +10552,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">    # -- brute_force_protection --</code>
           </li>
         </div>
       
@@ -10596,7 +10563,7 @@
 
             
 
-            <code class="ruby">    # -- brute_force_protection --</code>
+            <code class="ruby">    # Failed logins attribute name.</code>
           </li>
         </div>
       
@@ -10607,7 +10574,7 @@
 
             
 
-            <code class="ruby">    # Failed logins attribute name.</code>
+            <code class="ruby">    # Default: `:failed_logins_count`</code>
           </li>
         </div>
       
@@ -10618,7 +10585,7 @@
 
             
 
-            <code class="ruby">    # Default: `:failed_logins_count`</code>
+            <code class="ruby">    #</code>
           </li>
         </div>
       
@@ -10629,7 +10596,7 @@
 
             
 
-            <code class="ruby">    #</code>
+            <code class="ruby">    # user.failed_logins_count_attribute_name =</code>
           </li>
         </div>
       
@@ -10640,7 +10607,7 @@
 
             
 
-            <code class="ruby">    # user.failed_logins_count_attribute_name =</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -10651,7 +10618,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">    # This field indicates whether user is banned and when it will be active again.</code>
           </li>
         </div>
       
@@ -10662,7 +10629,7 @@
 
             
 
-            <code class="ruby">    # This field indicates whether user is banned and when it will be active again.</code>
+            <code class="ruby">    # Default: `:lock_expires_at`</code>
           </li>
         </div>
       
@@ -10673,7 +10640,7 @@
 
             
 
-            <code class="ruby">    # Default: `:lock_expires_at`</code>
+            <code class="ruby">    #</code>
           </li>
         </div>
       
@@ -10684,7 +10651,7 @@
 
             
 
-            <code class="ruby">    #</code>
+            <code class="ruby">    # user.lock_expires_at_attribute_name =</code>
           </li>
         </div>
       
@@ -10695,7 +10662,7 @@
 
             
 
-            <code class="ruby">    # user.lock_expires_at_attribute_name =</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -10706,7 +10673,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">    # How many failed logins are allowed.</code>
           </li>
         </div>
       
@@ -10717,7 +10684,7 @@
 
             
 
-            <code class="ruby">    # How many failed logins are allowed.</code>
+            <code class="ruby">    # Default: `50`</code>
           </li>
         </div>
       
@@ -10728,7 +10695,7 @@
 
             
 
-            <code class="ruby">    # Default: `50`</code>
+            <code class="ruby">    #</code>
           </li>
         </div>
       
@@ -10739,7 +10706,7 @@
 
             
 
-            <code class="ruby">    #</code>
+            <code class="ruby">    # user.consecutive_login_retries_amount_limit =</code>
           </li>
         </div>
       
@@ -10750,7 +10717,7 @@
 
             
 
-            <code class="ruby">    # user.consecutive_login_retries_amount_limit =</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -10761,7 +10728,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">    # How long the user should be banned, in seconds. 0 for permanent.</code>
           </li>
         </div>
       
@@ -10772,7 +10739,7 @@
 
             
 
-            <code class="ruby">    # How long the user should be banned, in seconds. 0 for permanent.</code>
+            <code class="ruby">    # Default: `60 * 60`</code>
           </li>
         </div>
       
@@ -10783,7 +10750,7 @@
 
             
 
-            <code class="ruby">    # Default: `60 * 60`</code>
+            <code class="ruby">    #</code>
           </li>
         </div>
       
@@ -10794,7 +10761,7 @@
 
             
 
-            <code class="ruby">    #</code>
+            <code class="ruby">    # user.login_lock_time_period =</code>
           </li>
         </div>
       
@@ -10805,7 +10772,7 @@
 
             
 
-            <code class="ruby">    # user.login_lock_time_period =</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -10816,7 +10783,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">    # Unlock token attribute name</code>
           </li>
         </div>
       
@@ -10827,7 +10794,7 @@
 
             
 
-            <code class="ruby">    # Unlock token attribute name</code>
+            <code class="ruby">    # Default: `:unlock_token`</code>
           </li>
         </div>
       
@@ -10838,7 +10805,7 @@
 
             
 
-            <code class="ruby">    # Default: `:unlock_token`</code>
+            <code class="ruby">    #</code>
           </li>
         </div>
       
@@ -10849,7 +10816,7 @@
 
             
 
-            <code class="ruby">    #</code>
+            <code class="ruby">    # user.unlock_token_attribute_name =</code>
           </li>
         </div>
       
@@ -10860,7 +10827,7 @@
 
             
 
-            <code class="ruby">    # user.unlock_token_attribute_name =</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -10871,7 +10838,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">    # Unlock token mailer method</code>
           </li>
         </div>
       
@@ -10882,7 +10849,7 @@
 
             
 
-            <code class="ruby">    # Unlock token mailer method</code>
+            <code class="ruby">    # Default: `:send_unlock_token_email`</code>
           </li>
         </div>
       
@@ -10893,7 +10860,7 @@
 
             
 
-            <code class="ruby">    # Default: `:send_unlock_token_email`</code>
+            <code class="ruby">    #</code>
           </li>
         </div>
       
@@ -10904,7 +10871,7 @@
 
             
 
-            <code class="ruby">    #</code>
+            <code class="ruby">    # user.unlock_token_email_method_name =</code>
           </li>
         </div>
       
@@ -10915,7 +10882,7 @@
 
             
 
-            <code class="ruby">    # user.unlock_token_email_method_name =</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -10926,7 +10893,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">    # When true, sorcery will not automatically</code>
           </li>
         </div>
       
@@ -10937,7 +10904,7 @@
 
             
 
-            <code class="ruby">    # When true, sorcery will not automatically</code>
+            <code class="ruby">    # send email with the unlock token</code>
           </li>
         </div>
       
@@ -10948,7 +10915,7 @@
 
             
 
-            <code class="ruby">    # send email with the unlock token</code>
+            <code class="ruby">    # Default: `false`</code>
           </li>
         </div>
       
@@ -10959,7 +10926,7 @@
 
             
 
-            <code class="ruby">    # Default: `false`</code>
+            <code class="ruby">    #</code>
           </li>
         </div>
       
@@ -10970,7 +10937,7 @@
 
             
 
-            <code class="ruby">    #</code>
+            <code class="ruby">    # user.unlock_token_mailer_disabled = true</code>
           </li>
         </div>
       
@@ -10981,7 +10948,7 @@
 
             
 
-            <code class="ruby">    # user.unlock_token_mailer_disabled = true</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -10992,7 +10959,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">    # REQUIRED:</code>
           </li>
         </div>
       
@@ -11003,7 +10970,7 @@
 
             
 
-            <code class="ruby">    # REQUIRED:</code>
+            <code class="ruby">    # Unlock token mailer class.</code>
           </li>
         </div>
       
@@ -11014,7 +10981,7 @@
 
             
 
-            <code class="ruby">    # Unlock token mailer class.</code>
+            <code class="ruby">    # Default: `nil`</code>
           </li>
         </div>
       
@@ -11025,7 +10992,7 @@
 
             
 
-            <code class="ruby">    # Default: `nil`</code>
+            <code class="ruby">    #</code>
           </li>
         </div>
       
@@ -11036,7 +11003,7 @@
 
             
 
-            <code class="ruby">    #</code>
+            <code class="ruby">    # user.unlock_token_mailer =</code>
           </li>
         </div>
       
@@ -11047,7 +11014,7 @@
 
             
 
-            <code class="ruby">    # user.unlock_token_mailer =</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -11058,7 +11025,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">    # -- activity logging --</code>
           </li>
         </div>
       
@@ -11069,7 +11036,7 @@
 
             
 
-            <code class="ruby">    # -- activity logging --</code>
+            <code class="ruby">    # Last login attribute name.</code>
           </li>
         </div>
       
@@ -11080,7 +11047,7 @@
 
             
 
-            <code class="ruby">    # Last login attribute name.</code>
+            <code class="ruby">    # Default: `:last_login_at`</code>
           </li>
         </div>
       
@@ -11091,7 +11058,7 @@
 
             
 
-            <code class="ruby">    # Default: `:last_login_at`</code>
+            <code class="ruby">    #</code>
           </li>
         </div>
       
@@ -11102,7 +11069,7 @@
 
             
 
-            <code class="ruby">    #</code>
+            <code class="ruby">    # user.last_login_at_attribute_name =</code>
           </li>
         </div>
       
@@ -11113,7 +11080,7 @@
 
             
 
-            <code class="ruby">    # user.last_login_at_attribute_name =</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -11124,7 +11091,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">    # Last logout attribute name.</code>
           </li>
         </div>
       
@@ -11135,7 +11102,7 @@
 
             
 
-            <code class="ruby">    # Last logout attribute name.</code>
+            <code class="ruby">    # Default: `:last_logout_at`</code>
           </li>
         </div>
       
@@ -11146,7 +11113,7 @@
 
             
 
-            <code class="ruby">    # Default: `:last_logout_at`</code>
+            <code class="ruby">    #</code>
           </li>
         </div>
       
@@ -11157,7 +11124,7 @@
 
             
 
-            <code class="ruby">    #</code>
+            <code class="ruby">    # user.last_logout_at_attribute_name =</code>
           </li>
         </div>
       
@@ -11168,7 +11135,7 @@
 
             
 
-            <code class="ruby">    # user.last_logout_at_attribute_name =</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -11179,7 +11146,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">    # Last activity attribute name.</code>
           </li>
         </div>
       
@@ -11190,7 +11157,7 @@
 
             
 
-            <code class="ruby">    # Last activity attribute name.</code>
+            <code class="ruby">    # Default: `:last_activity_at`</code>
           </li>
         </div>
       
@@ -11201,7 +11168,7 @@
 
             
 
-            <code class="ruby">    # Default: `:last_activity_at`</code>
+            <code class="ruby">    #</code>
           </li>
         </div>
       
@@ -11212,7 +11179,7 @@
 
             
 
-            <code class="ruby">    #</code>
+            <code class="ruby">    # user.last_activity_at_attribute_name =</code>
           </li>
         </div>
       
@@ -11223,7 +11190,7 @@
 
             
 
-            <code class="ruby">    # user.last_activity_at_attribute_name =</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -11234,7 +11201,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">    # How long since user&#39;s last activity will they be considered logged out?</code>
           </li>
         </div>
       
@@ -11245,7 +11212,7 @@
 
             
 
-            <code class="ruby">    # How long since user&#39;s last activity will they be considered logged out?</code>
+            <code class="ruby">    # Default: `10 * 60`</code>
           </li>
         </div>
       
@@ -11256,7 +11223,7 @@
 
             
 
-            <code class="ruby">    # Default: `10 * 60`</code>
+            <code class="ruby">    #</code>
           </li>
         </div>
       
@@ -11267,7 +11234,7 @@
 
             
 
-            <code class="ruby">    #</code>
+            <code class="ruby">    # user.activity_timeout =</code>
           </li>
         </div>
       
@@ -11278,7 +11245,7 @@
 
             
 
-            <code class="ruby">    # user.activity_timeout =</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -11289,7 +11256,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">    # -- external --</code>
           </li>
         </div>
       
@@ -11300,7 +11267,7 @@
 
             
 
-            <code class="ruby">    # -- external --</code>
+            <code class="ruby">    # Class which holds the various external provider data for this user.</code>
           </li>
         </div>
       
@@ -11311,7 +11278,7 @@
 
             
 
-            <code class="ruby">    # Class which holds the various external provider data for this user.</code>
+            <code class="ruby">    # Default: `nil`</code>
           </li>
         </div>
       
@@ -11322,23 +11289,12 @@
 
             
 
-            <code class="ruby">    # Default: `nil`</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="549">
-            
-            
-
-            
-
             <code class="ruby">    #</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="550">
+          <li class="covered" data-hits="1" data-linenumber="549">
             <span class="hits">1</span>
             
 
@@ -11349,7 +11305,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="551">
+          <li class="never" data-hits="" data-linenumber="550">
             
             
 
@@ -11360,7 +11316,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="552">
+          <li class="never" data-hits="" data-linenumber="551">
             
             
 
@@ -11371,7 +11327,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="553">
+          <li class="never" data-hits="" data-linenumber="552">
             
             
 
@@ -11382,7 +11338,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="554">
+          <li class="never" data-hits="" data-linenumber="553">
             
             
 
@@ -11393,7 +11349,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="555">
+          <li class="never" data-hits="" data-linenumber="554">
             
             
 
@@ -11404,7 +11360,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="556">
+          <li class="never" data-hits="" data-linenumber="555">
             
             
 
@@ -11415,7 +11371,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="557">
+          <li class="never" data-hits="" data-linenumber="556">
             
             
 
@@ -11426,7 +11382,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="558">
+          <li class="never" data-hits="" data-linenumber="557">
             
             
 
@@ -11437,7 +11393,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="559">
+          <li class="never" data-hits="" data-linenumber="558">
             
             
 
@@ -11448,7 +11404,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="560">
+          <li class="never" data-hits="" data-linenumber="559">
             
             
 
@@ -11459,7 +11415,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="561">
+          <li class="never" data-hits="" data-linenumber="560">
             
             
 
@@ -11470,7 +11426,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="562">
+          <li class="never" data-hits="" data-linenumber="561">
             
             
 
@@ -11481,7 +11437,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="563">
+          <li class="never" data-hits="" data-linenumber="562">
             
             
 
@@ -11492,7 +11448,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="564">
+          <li class="never" data-hits="" data-linenumber="563">
             
             
 
@@ -11503,7 +11459,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="565">
+          <li class="never" data-hits="" data-linenumber="564">
             
             
 
@@ -11514,7 +11470,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="566">
+          <li class="never" data-hits="" data-linenumber="565">
             
             
 
@@ -11525,7 +11481,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="567">
+          <li class="never" data-hits="" data-linenumber="566">
             
             
 
@@ -11536,7 +11492,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="568">
+          <li class="never" data-hits="" data-linenumber="567">
             
             
 
@@ -11547,7 +11503,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="569">
+          <li class="never" data-hits="" data-linenumber="568">
             
             
 
@@ -11558,18 +11514,18 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="570">
+          <li class="covered" data-hits="2" data-linenumber="569">
             <span class="hits">2</span>
             
 
             
 
-            <code class="ruby">  config.user_class = &quot;User&quot;</code>
+            <code class="ruby">  config.user_class = &#39;User&#39;</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="571">
+          <li class="never" data-hits="" data-linenumber="570">
             
             
 
@@ -11644,18 +11600,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="4">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="5">
+          <li class="covered" data-hits="1" data-linenumber="4">
             <span class="hits">1</span>
             
 
@@ -11666,7 +11611,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="6">
+          <li class="covered" data-hits="1" data-linenumber="5">
             <span class="hits">1</span>
             
 
@@ -11677,7 +11622,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="7">
+          <li class="covered" data-hits="1" data-linenumber="6">
             <span class="hits">1</span>
             
 
@@ -11688,7 +11633,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="8">
+          <li class="covered" data-hits="1" data-linenumber="7">
             <span class="hits">1</span>
             
 
@@ -11699,7 +11644,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="9">
+          <li class="covered" data-hits="1" data-linenumber="8">
             <span class="hits">1</span>
             
 
@@ -11710,7 +11655,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="10">
+          <li class="never" data-hits="" data-linenumber="9">
             
             
 
@@ -11721,18 +11666,18 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="11">
+          <li class="covered" data-hits="1" data-linenumber="10">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">  resource :profile, only: [:edit, :show, :update]</code>
+            <code class="ruby">  resource :profile, only: %i[edit show update]</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="12">
+          <li class="never" data-hits="" data-linenumber="11">
             
             
 
@@ -11743,24 +11688,35 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="13">
+          <li class="covered" data-hits="1" data-linenumber="12">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">  resources :fraud_reports, only: [:new, :create, :show]</code>
+            <code class="ruby">  resources :fraud_reports, only: %i[new create show]</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="14">
+          <li class="never" data-hits="" data-linenumber="13">
             
             
 
             
 
             <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="14">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  resources :scams, only: %i[index show] do</code>
           </li>
         </div>
       
@@ -11771,7 +11727,7 @@
 
             
 
-            <code class="ruby">  resources :scams, only: [:index, :show] do</code>
+            <code class="ruby">    collection do</code>
           </li>
         </div>
       
@@ -11782,18 +11738,18 @@
 
             
 
-            <code class="ruby">    collection do</code>
+            <code class="ruby">      get &#39;autocomplete&#39;</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="17">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="17">
+            
             
 
             
 
-            <code class="ruby">      get &#39;autocomplete&#39;</code>
+            <code class="ruby">    end</code>
           </li>
         </div>
       
@@ -11804,7 +11760,7 @@
 
             
 
-            <code class="ruby">    end</code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
@@ -11815,18 +11771,18 @@
 
             
 
-            <code class="ruby">  end</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="20">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="20">
+            <span class="hits">1</span>
             
 
-            <code class="ruby"></code>
+            
+
+            <code class="ruby">  resources :users, only: %i[new create]</code>
           </li>
         </div>
       
@@ -11837,7 +11793,7 @@
 
             
 
-            <code class="ruby">  resources :users, only: [:new, :create]</code>
+            <code class="ruby">  get &#39;login&#39;, to: &#39;user_sessions#new&#39;</code>
           </li>
         </div>
       
@@ -11848,7 +11804,7 @@
 
             
 
-            <code class="ruby">  get &#39;login&#39;, to: &#39;user_sessions#new&#39;</code>
+            <code class="ruby">  post &#39;login&#39;, to: &#39;user_sessions#create&#39;</code>
           </li>
         </div>
       
@@ -11859,29 +11815,29 @@
 
             
 
-            <code class="ruby">  post &#39;login&#39;, to: &#39;user_sessions#create&#39;</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="24">
-            <span class="hits">1</span>
-            
-
-            
-
             <code class="ruby">  delete &#39;logout&#39;, to: &#39;user_sessions#destroy&#39;</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="25">
+          <li class="never" data-hits="" data-linenumber="24">
             
             
 
             
 
             <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="25">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  post &#39;oauth/callback&#39; =&gt; &#39;oauths#callback&#39;</code>
           </li>
         </div>
       
@@ -11892,7 +11848,7 @@
 
             
 
-            <code class="ruby">  post &quot;oauth/callback&quot; =&gt; &quot;oauths#callback&quot;</code>
+            <code class="ruby">  get &#39;oauth/callback&#39; =&gt; &#39;oauths#callback&#39; # for use with Github, Facebook</code>
           </li>
         </div>
       
@@ -11903,23 +11859,12 @@
 
             
 
-            <code class="ruby">  get &quot;oauth/callback&quot; =&gt; &quot;oauths#callback&quot; # for use with Github, Facebook</code>
+            <code class="ruby">  get &#39;oauth/:provider&#39; =&gt; &#39;oauths#oauth&#39;, :as =&gt; :auth_at_provider</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="28">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  get &quot;oauth/:provider&quot; =&gt; &quot;oauths#oauth&quot;, :as =&gt; :auth_at_provider</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="29">
+          <li class="never" data-hits="" data-linenumber="28">
             
             
 
@@ -11930,7 +11875,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="30">
+          <li class="covered" data-hits="1" data-linenumber="29">
             <span class="hits">1</span>
             
 
@@ -11941,7 +11886,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="31">
+          <li class="covered" data-hits="1" data-linenumber="30">
             <span class="hits">1</span>
             
 
@@ -11952,7 +11897,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="32">
+          <li class="covered" data-hits="1" data-linenumber="31">
             <span class="hits">1</span>
             
 
@@ -11963,7 +11908,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="33">
+          <li class="never" data-hits="" data-linenumber="32">
             
             
 
@@ -11974,7 +11919,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="34">
+          <li class="never" data-hits="" data-linenumber="33">
             
             
 
@@ -11985,7 +11930,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="35">
+          <li class="never" data-hits="" data-linenumber="34">
             
             
 
@@ -11996,7 +11941,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="36">
+          <li class="covered" data-hits="1" data-linenumber="35">
             <span class="hits">1</span>
             
 
@@ -12007,18 +11952,18 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="37">
+          <li class="covered" data-hits="1" data-linenumber="36">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">    root &quot;scams#index&quot;</code>
+            <code class="ruby">    root &#39;scams#index&#39;</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="38">
+          <li class="covered" data-hits="1" data-linenumber="37">
             <span class="hits">1</span>
             
 
@@ -12029,7 +11974,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="39">
+          <li class="covered" data-hits="1" data-linenumber="38">
             <span class="hits">1</span>
             
 
@@ -12040,18 +11985,18 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="40">
+          <li class="covered" data-hits="1" data-linenumber="39">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">    post &#39;login&#39; =&gt; &quot;user_sessions#create&quot;</code>
+            <code class="ruby">    post &#39;login&#39; =&gt; &#39;user_sessions#create&#39;</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="41">
+          <li class="covered" data-hits="1" data-linenumber="40">
             <span class="hits">1</span>
             
 
@@ -12062,7 +12007,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="42">
+          <li class="never" data-hits="" data-linenumber="41">
             
             
 
@@ -12073,7 +12018,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="43">
+          <li class="never" data-hits="" data-linenumber="42">
             
             
 
@@ -12084,7 +12029,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="44">
+          <li class="covered" data-hits="1" data-linenumber="43">
             <span class="hits">1</span>
             
 
@@ -12095,7 +12040,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="45">
+          <li class="never" data-hits="" data-linenumber="44">
             
             
 
@@ -12106,7 +12051,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="46">
+          <li class="covered" data-hits="1" data-linenumber="45">
             <span class="hits">1</span>
             
 
@@ -12117,7 +12062,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="47">
+          <li class="covered" data-hits="1" data-linenumber="46">
             <span class="hits">1</span>
             
 
@@ -12128,7 +12073,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="48">
+          <li class="never" data-hits="" data-linenumber="47">
             
             
 
@@ -12209,7 +12154,7 @@
 
             
 
-            <code class="ruby">    sequence(:users_scam_name) { |n| &quot;詐欺名#{n}&quot;}</code>
+            <code class="ruby">    sequence(:users_scam_name) { |n| &quot;詐欺名#{n}&quot; }</code>
           </li>
         </div>
       
@@ -12339,7 +12284,7 @@
 
             
 
-            <code class="ruby">    sequence(:point_1) { |n| &quot;1の対策ポイント#{n}&quot;}</code>
+            <code class="ruby">    sequence(:point_1) { |n| &quot;1の対策ポイント#{n}&quot; }</code>
           </li>
         </div>
       
@@ -12350,7 +12295,7 @@
 
             
 
-            <code class="ruby">    sequence(:point_2) { |n| &quot;2の対策ポイント#{n}&quot;}</code>
+            <code class="ruby">    sequence(:point_2) { |n| &quot;2の対策ポイント#{n}&quot; }</code>
           </li>
         </div>
       
@@ -12361,7 +12306,7 @@
 
             
 
-            <code class="ruby">    sequence(:point_3) { |n| &quot;3の対策ポイント#{n}&quot;}</code>
+            <code class="ruby">    sequence(:point_3) { |n| &quot;3の対策ポイント#{n}&quot; }</code>
           </li>
         </div>
       
@@ -12372,7 +12317,7 @@
 
             
 
-            <code class="ruby">    sequence(:scam_strategy) { |n| &quot;詐欺師の手口#{n}&quot;}</code>
+            <code class="ruby">    sequence(:scam_strategy) { |n| &quot;詐欺師の手口#{n}&quot; }</code>
           </li>
         </div>
       
@@ -12458,7 +12403,7 @@
 
             
 
-            <code class="ruby">    name { &quot;マドフくん&quot; }</code>
+            <code class="ruby">    name { &#39;マドフくん&#39; }</code>
           </li>
         </div>
       
@@ -12480,7 +12425,7 @@
 
             
 
-            <code class="ruby">    password { &quot;password&quot; }</code>
+            <code class="ruby">    password { &#39;password&#39; }</code>
           </li>
         </div>
       
@@ -12491,7 +12436,7 @@
 
             
 
-            <code class="ruby">    password_confirmation { &quot;password&quot; }</code>
+            <code class="ruby">    password_confirmation { &#39;password&#39; }</code>
           </li>
         </div>
       
@@ -12599,7 +12544,7 @@
 
             
 
-            <code class="ruby">    @post= build(:post)</code>
+            <code class="ruby">    @post = build(:post)</code>
           </li>
         </div>
       
@@ -12632,7 +12577,7 @@
 
             
 
-            <code class="ruby">  describe &quot;バリデーションチェック&quot; do</code>
+            <code class="ruby">  describe &#39;バリデーションチェック&#39; do</code>
           </li>
         </div>
       
@@ -12643,7 +12588,7 @@
 
             
 
-            <code class="ruby">    context &quot;失敗パターン&quot; do</code>
+            <code class="ruby">    context &#39;失敗パターン&#39; do</code>
           </li>
         </div>
       
@@ -12654,7 +12599,7 @@
 
             
 
-            <code class="ruby">      it &quot;titleがない場合に、バリデーションが機能する&quot; do</code>
+            <code class="ruby">      it &#39;titleがない場合に、バリデーションが機能する&#39; do</code>
           </li>
         </div>
       
@@ -12665,7 +12610,7 @@
 
             
 
-            <code class="ruby">        @post.title = &quot;&quot;</code>
+            <code class="ruby">        @post.title = &#39;&#39;</code>
           </li>
         </div>
       
@@ -12687,7 +12632,7 @@
 
             
 
-            <code class="ruby">        expect(@post.errors.full_messages).to include(&quot;タイトルを入力してください&quot;)</code>
+            <code class="ruby">        expect(@post.errors.full_messages).to include(&#39;タイトルを入力してください&#39;)</code>
           </li>
         </div>
       
@@ -12720,7 +12665,7 @@
 
             
 
-            <code class="ruby">      it &quot;titleは255文字以内&quot; do</code>
+            <code class="ruby">      it &#39;titleは255文字以内&#39; do</code>
           </li>
         </div>
       
@@ -12731,7 +12676,7 @@
 
             
 
-            <code class="ruby">        @post.title = &quot;a&quot; * 256</code>
+            <code class="ruby">        @post.title = &#39;a&#39; * 256</code>
           </li>
         </div>
       
@@ -12753,7 +12698,7 @@
 
             
 
-            <code class="ruby">        expect(@post.errors.full_messages).to include(&quot;タイトルは255文字以内で入力してください&quot;)</code>
+            <code class="ruby">        expect(@post.errors.full_messages).to include(&#39;タイトルは255文字以内で入力してください&#39;)</code>
           </li>
         </div>
       
@@ -12786,7 +12731,7 @@
 
             
 
-            <code class="ruby">      it &quot;users_scam_nameがない場合に、バリデーションが機能する&quot; do</code>
+            <code class="ruby">      it &#39;users_scam_nameがない場合に、バリデーションが機能する&#39; do</code>
           </li>
         </div>
       
@@ -12797,7 +12742,7 @@
 
             
 
-            <code class="ruby">        @post.users_scam_name = &quot;&quot;</code>
+            <code class="ruby">        @post.users_scam_name = &#39;&#39;</code>
           </li>
         </div>
       
@@ -12819,7 +12764,7 @@
 
             
 
-            <code class="ruby">        expect(@post.errors.full_messages).to include(&quot;詐欺名を入力してください&quot;)</code>
+            <code class="ruby">        expect(@post.errors.full_messages).to include(&#39;詐欺名を入力してください&#39;)</code>
           </li>
         </div>
       
@@ -12852,7 +12797,7 @@
 
             
 
-            <code class="ruby">      it &quot;users_scam_nameは255文字以内&quot; do</code>
+            <code class="ruby">      it &#39;users_scam_nameは255文字以内&#39; do</code>
           </li>
         </div>
       
@@ -12863,7 +12808,7 @@
 
             
 
-            <code class="ruby">        @post.users_scam_name = &quot;a&quot; * 256</code>
+            <code class="ruby">        @post.users_scam_name = &#39;a&#39; * 256</code>
           </li>
         </div>
       
@@ -12885,7 +12830,7 @@
 
             
 
-            <code class="ruby">        expect(@post.errors.full_messages).to include(&quot;詐欺名は255文字以内で入力してください&quot;)</code>
+            <code class="ruby">        expect(@post.errors.full_messages).to include(&#39;詐欺名は255文字以内で入力してください&#39;)</code>
           </li>
         </div>
       
@@ -12918,7 +12863,7 @@
 
             
 
-            <code class="ruby">      it &quot;bodyがない場合に、バリデーションが機能する&quot; do</code>
+            <code class="ruby">      it &#39;bodyがない場合に、バリデーションが機能する&#39; do</code>
           </li>
         </div>
       
@@ -12929,7 +12874,7 @@
 
             
 
-            <code class="ruby">        @post.body = &quot;&quot;</code>
+            <code class="ruby">        @post.body = &#39;&#39;</code>
           </li>
         </div>
       
@@ -12951,7 +12896,7 @@
 
             
 
-            <code class="ruby">        expect(@post.errors.full_messages).to include(&quot;詐欺被害の詳しい内容を入力してください&quot;)</code>
+            <code class="ruby">        expect(@post.errors.full_messages).to include(&#39;詐欺被害の詳しい内容を入力してください&#39;)</code>
           </li>
         </div>
       
@@ -12984,7 +12929,7 @@
 
             
 
-            <code class="ruby">      it &quot;bodyは65535文字以内&quot; do</code>
+            <code class="ruby">      it &#39;bodyは65535文字以内&#39; do</code>
           </li>
         </div>
       
@@ -12995,7 +12940,7 @@
 
             
 
-            <code class="ruby">        @post.body = &quot;a&quot; * 65536</code>
+            <code class="ruby">        @post.body = &#39;a&#39; * 65_536</code>
           </li>
         </div>
       
@@ -13017,7 +12962,7 @@
 
             
 
-            <code class="ruby">        expect(@post.errors.full_messages).to include(&quot;詐欺被害の詳しい内容は65535文字以内で入力してください&quot;)</code>
+            <code class="ruby">        expect(@post.errors.full_messages).to include(&#39;詐欺被害の詳しい内容は65535文字以内で入力してください&#39;)</code>
           </li>
         </div>
       
@@ -13061,7 +13006,7 @@
 
             
 
-            <code class="ruby">    context &quot;成功パターン&quot; do</code>
+            <code class="ruby">    context &#39;成功パターン&#39; do</code>
           </li>
         </div>
       
@@ -13072,7 +13017,7 @@
 
             
 
-            <code class="ruby">      it &quot;全ての項目を満たされてバリデーションを通過できる&quot; do</code>
+            <code class="ruby">      it &#39;全ての項目を満たされてバリデーションを通過できる&#39; do</code>
           </li>
         </div>
       
@@ -13213,7 +13158,7 @@
 
             
 
-            <code class="ruby">    @scam= build(:scam)</code>
+            <code class="ruby">    @scam = build(:scam)</code>
           </li>
         </div>
       
@@ -13246,7 +13191,7 @@
 
             
 
-            <code class="ruby">  describe &quot;バリデーションチェック&quot; do</code>
+            <code class="ruby">  describe &#39;バリデーションチェック&#39; do</code>
           </li>
         </div>
       
@@ -13257,7 +13202,7 @@
 
             
 
-            <code class="ruby">    context &quot;失敗パターン&quot; do</code>
+            <code class="ruby">    context &#39;失敗パターン&#39; do</code>
           </li>
         </div>
       
@@ -13268,7 +13213,7 @@
 
             
 
-            <code class="ruby">      it &quot;nameがない場合に、バリデーションが機能する&quot; do</code>
+            <code class="ruby">      it &#39;nameがない場合に、バリデーションが機能する&#39; do</code>
           </li>
         </div>
       
@@ -13279,7 +13224,7 @@
 
             
 
-            <code class="ruby">        @scam.name = &quot;&quot;</code>
+            <code class="ruby">        @scam.name = &#39;&#39;</code>
           </li>
         </div>
       
@@ -13301,7 +13246,7 @@
 
             
 
-            <code class="ruby">        expect(@scam.errors.full_messages).to include(&quot;詐欺名を入力してください&quot;)</code>
+            <code class="ruby">        expect(@scam.errors.full_messages).to include(&#39;詐欺名を入力してください&#39;)</code>
           </li>
         </div>
       
@@ -13334,7 +13279,7 @@
 
             
 
-            <code class="ruby">      it &quot;nameは255文字以内&quot; do</code>
+            <code class="ruby">      it &#39;nameは255文字以内&#39; do</code>
           </li>
         </div>
       
@@ -13345,7 +13290,7 @@
 
             
 
-            <code class="ruby">        @scam.name = &quot;a&quot; * 256</code>
+            <code class="ruby">        @scam.name = &#39;a&#39; * 256</code>
           </li>
         </div>
       
@@ -13367,7 +13312,7 @@
 
             
 
-            <code class="ruby">        expect(@scam.errors.full_messages).to include(&quot;詐欺名は255文字以内で入力してください&quot;)</code>
+            <code class="ruby">        expect(@scam.errors.full_messages).to include(&#39;詐欺名は255文字以内で入力してください&#39;)</code>
           </li>
         </div>
       
@@ -13400,7 +13345,7 @@
 
             
 
-            <code class="ruby">      it &quot;contentがない場合に、バリデーションが機能する&quot; do</code>
+            <code class="ruby">      it &#39;contentがない場合に、バリデーションが機能する&#39; do</code>
           </li>
         </div>
       
@@ -13411,7 +13356,7 @@
 
             
 
-            <code class="ruby">        @scam.content = &quot;&quot;</code>
+            <code class="ruby">        @scam.content = &#39;&#39;</code>
           </li>
         </div>
       
@@ -13433,7 +13378,7 @@
 
             
 
-            <code class="ruby">        expect(@scam.errors.full_messages).to include(&quot;詐欺名についての一言を入力してください&quot;)</code>
+            <code class="ruby">        expect(@scam.errors.full_messages).to include(&#39;詐欺名についての一言を入力してください&#39;)</code>
           </li>
         </div>
       
@@ -13466,7 +13411,7 @@
 
             
 
-            <code class="ruby">      it &quot;contentは255文字以内&quot; do</code>
+            <code class="ruby">      it &#39;contentは255文字以内&#39; do</code>
           </li>
         </div>
       
@@ -13477,7 +13422,7 @@
 
             
 
-            <code class="ruby">        @scam.content = &quot;a&quot; * 256</code>
+            <code class="ruby">        @scam.content = &#39;a&#39; * 256</code>
           </li>
         </div>
       
@@ -13499,7 +13444,7 @@
 
             
 
-            <code class="ruby">        expect(@scam.errors.full_messages).to include(&quot;詐欺名についての一言は255文字以内で入力してください&quot;)</code>
+            <code class="ruby">        expect(@scam.errors.full_messages).to include(&#39;詐欺名についての一言は255文字以内で入力してください&#39;)</code>
           </li>
         </div>
       
@@ -13532,7 +13477,7 @@
 
             
 
-            <code class="ruby">      it &quot;point_1がない場合に、バリデーションが機能する&quot; do</code>
+            <code class="ruby">      it &#39;point_1がない場合に、バリデーションが機能する&#39; do</code>
           </li>
         </div>
       
@@ -13543,7 +13488,7 @@
 
             
 
-            <code class="ruby">        @scam.point_1 = &quot;&quot;</code>
+            <code class="ruby">        @scam.point_1 = &#39;&#39;</code>
           </li>
         </div>
       
@@ -13565,7 +13510,7 @@
 
             
 
-            <code class="ruby">        expect(@scam.errors.full_messages).to include(&quot;詐欺対策ポイント1を入力してください&quot;)</code>
+            <code class="ruby">        expect(@scam.errors.full_messages).to include(&#39;詐欺対策ポイント1を入力してください&#39;)</code>
           </li>
         </div>
       
@@ -13598,7 +13543,7 @@
 
             
 
-            <code class="ruby">      it &quot;point_1は255文字以内&quot; do</code>
+            <code class="ruby">      it &#39;point_1は255文字以内&#39; do</code>
           </li>
         </div>
       
@@ -13609,7 +13554,7 @@
 
             
 
-            <code class="ruby">        @scam.point_1 = &quot;a&quot; * 256</code>
+            <code class="ruby">        @scam.point_1 = &#39;a&#39; * 256</code>
           </li>
         </div>
       
@@ -13631,7 +13576,7 @@
 
             
 
-            <code class="ruby">        expect(@scam.errors.full_messages).to include(&quot;詐欺対策ポイント1は255文字以内で入力してください&quot;)</code>
+            <code class="ruby">        expect(@scam.errors.full_messages).to include(&#39;詐欺対策ポイント1は255文字以内で入力してください&#39;)</code>
           </li>
         </div>
       
@@ -13664,7 +13609,7 @@
 
             
 
-            <code class="ruby">      it &quot;point_2がない場合に、バリデーションが機能する&quot; do</code>
+            <code class="ruby">      it &#39;point_2がない場合に、バリデーションが機能する&#39; do</code>
           </li>
         </div>
       
@@ -13675,7 +13620,7 @@
 
             
 
-            <code class="ruby">        @scam.point_2 = &quot;&quot;</code>
+            <code class="ruby">        @scam.point_2 = &#39;&#39;</code>
           </li>
         </div>
       
@@ -13697,7 +13642,7 @@
 
             
 
-            <code class="ruby">        expect(@scam.errors.full_messages).to include(&quot;詐欺対策ポイント2を入力してください&quot;)</code>
+            <code class="ruby">        expect(@scam.errors.full_messages).to include(&#39;詐欺対策ポイント2を入力してください&#39;)</code>
           </li>
         </div>
       
@@ -13730,7 +13675,7 @@
 
             
 
-            <code class="ruby">      it &quot;point_2は255文字以内&quot; do</code>
+            <code class="ruby">      it &#39;point_2は255文字以内&#39; do</code>
           </li>
         </div>
       
@@ -13741,7 +13686,7 @@
 
             
 
-            <code class="ruby">        @scam.point_2 = &quot;a&quot; * 256</code>
+            <code class="ruby">        @scam.point_2 = &#39;a&#39; * 256</code>
           </li>
         </div>
       
@@ -13763,7 +13708,7 @@
 
             
 
-            <code class="ruby">        expect(@scam.errors.full_messages).to include(&quot;詐欺対策ポイント2は255文字以内で入力してください&quot;)</code>
+            <code class="ruby">        expect(@scam.errors.full_messages).to include(&#39;詐欺対策ポイント2は255文字以内で入力してください&#39;)</code>
           </li>
         </div>
       
@@ -13796,7 +13741,7 @@
 
             
 
-            <code class="ruby">      it &quot;point_3がない場合に、バリデーションが機能する&quot; do</code>
+            <code class="ruby">      it &#39;point_3がない場合に、バリデーションが機能する&#39; do</code>
           </li>
         </div>
       
@@ -13807,7 +13752,7 @@
 
             
 
-            <code class="ruby">        @scam.point_3 = &quot;&quot;</code>
+            <code class="ruby">        @scam.point_3 = &#39;&#39;</code>
           </li>
         </div>
       
@@ -13829,7 +13774,7 @@
 
             
 
-            <code class="ruby">        expect(@scam.errors.full_messages).to include(&quot;詐欺対策ポイント3を入力してください&quot;)</code>
+            <code class="ruby">        expect(@scam.errors.full_messages).to include(&#39;詐欺対策ポイント3を入力してください&#39;)</code>
           </li>
         </div>
       
@@ -13862,7 +13807,7 @@
 
             
 
-            <code class="ruby">      it &quot;point_3は255文字以内&quot; do</code>
+            <code class="ruby">      it &#39;point_3は255文字以内&#39; do</code>
           </li>
         </div>
       
@@ -13873,7 +13818,7 @@
 
             
 
-            <code class="ruby">        @scam.point_3 = &quot;a&quot; * 256</code>
+            <code class="ruby">        @scam.point_3 = &#39;a&#39; * 256</code>
           </li>
         </div>
       
@@ -13895,7 +13840,7 @@
 
             
 
-            <code class="ruby">        expect(@scam.errors.full_messages).to include(&quot;詐欺対策ポイント3は255文字以内で入力してください&quot;)</code>
+            <code class="ruby">        expect(@scam.errors.full_messages).to include(&#39;詐欺対策ポイント3は255文字以内で入力してください&#39;)</code>
           </li>
         </div>
       
@@ -13928,7 +13873,7 @@
 
             
 
-            <code class="ruby">      it &quot;詐欺師の手口がない場合に、バリデーションが機能する&quot; do</code>
+            <code class="ruby">      it &#39;詐欺師の手口がない場合に、バリデーションが機能する&#39; do</code>
           </li>
         </div>
       
@@ -13939,7 +13884,7 @@
 
             
 
-            <code class="ruby">        @scam.scam_strategy = &quot;&quot;</code>
+            <code class="ruby">        @scam.scam_strategy = &#39;&#39;</code>
           </li>
         </div>
       
@@ -13961,7 +13906,7 @@
 
             
 
-            <code class="ruby">        expect(@scam.errors.full_messages).to include(&quot;詐欺師の手口を入力してください&quot;)</code>
+            <code class="ruby">        expect(@scam.errors.full_messages).to include(&#39;詐欺師の手口を入力してください&#39;)</code>
           </li>
         </div>
       
@@ -13994,7 +13939,7 @@
 
             
 
-            <code class="ruby">      it &quot;詐欺師の手口&quot; do</code>
+            <code class="ruby">      it &#39;詐欺師の手口&#39; do</code>
           </li>
         </div>
       
@@ -14005,7 +13950,7 @@
 
             
 
-            <code class="ruby">        @scam.scam_strategy = &quot;a&quot; * 1001</code>
+            <code class="ruby">        @scam.scam_strategy = &#39;a&#39; * 1001</code>
           </li>
         </div>
       
@@ -14027,7 +13972,7 @@
 
             
 
-            <code class="ruby">        expect(@scam.errors.full_messages).to include(&quot;詐欺師の手口は1000文字以内で入力してください&quot;)</code>
+            <code class="ruby">        expect(@scam.errors.full_messages).to include(&#39;詐欺師の手口は1000文字以内で入力してください&#39;)</code>
           </li>
         </div>
       
@@ -14071,7 +14016,7 @@
 
             
 
-            <code class="ruby">    context &quot;成功パターン&quot; do</code>
+            <code class="ruby">    context &#39;成功パターン&#39; do</code>
           </li>
         </div>
       
@@ -14082,7 +14027,7 @@
 
             
 
-            <code class="ruby">      it &quot;全ての項目を満たされてバリデーションを通過できる&quot; do</code>
+            <code class="ruby">      it &#39;全ての項目を満たされてバリデーションを通過できる&#39; do</code>
           </li>
         </div>
       
@@ -14132,17 +14077,6 @@
       
         <div>
           <li class="never" data-hits="" data-linenumber="89">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="90">
             
             
 
@@ -14217,18 +14151,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="4">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="5">
+          <li class="covered" data-hits="1" data-linenumber="4">
             <span class="hits">1</span>
             
 
@@ -14239,7 +14162,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="6">
+          <li class="never" data-hits="" data-linenumber="5">
             
             
 
@@ -14250,7 +14173,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="10" data-linenumber="7">
+          <li class="covered" data-hits="10" data-linenumber="6">
             <span class="hits">10</span>
             
 
@@ -14261,7 +14184,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="8">
+          <li class="never" data-hits="" data-linenumber="7">
             
             
 
@@ -14272,13 +14195,24 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="9">
+          <li class="never" data-hits="" data-linenumber="8">
             
             
 
             
 
             <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="9">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  describe &#39;バリデーションチェック&#39; do</code>
           </li>
         </div>
       
@@ -14289,7 +14223,7 @@
 
             
 
-            <code class="ruby">  describe &quot;バリデーションチェック&quot; do</code>
+            <code class="ruby">    context &#39;失敗パターン&#39; do</code>
           </li>
         </div>
       
@@ -14300,7 +14234,7 @@
 
             
 
-            <code class="ruby">    context &quot;失敗パターン&quot; do</code>
+            <code class="ruby">      it &#39;nameがない場合に、バリデーションが機能する&#39; do</code>
           </li>
         </div>
       
@@ -14311,7 +14245,7 @@
 
             
 
-            <code class="ruby">      it &quot;nameがない場合に、バリデーションが機能する&quot; do</code>
+            <code class="ruby">        @user.name = &#39;&#39;</code>
           </li>
         </div>
       
@@ -14322,7 +14256,7 @@
 
             
 
-            <code class="ruby">        @user.name = &quot;&quot;</code>
+            <code class="ruby">        @user.valid?</code>
           </li>
         </div>
       
@@ -14333,18 +14267,18 @@
 
             
 
-            <code class="ruby">        @user.valid?</code>
+            <code class="ruby">        expect(@user.errors.full_messages).to include(&#39;名前を入力してください&#39;)</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="15">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="15">
+            
             
 
             
 
-            <code class="ruby">        expect(@user.errors.full_messages).to include(&quot;名前を入力してください&quot;)</code>
+            <code class="ruby">      end</code>
           </li>
         </div>
       
@@ -14355,18 +14289,18 @@
 
             
 
-            <code class="ruby">      end</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="17">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="17">
+            <span class="hits">1</span>
             
 
-            <code class="ruby"></code>
+            
+
+            <code class="ruby">      it &#39;nameは255文字以下&#39; do</code>
           </li>
         </div>
       
@@ -14377,7 +14311,7 @@
 
             
 
-            <code class="ruby">      it &quot;nameは255文字以下&quot; do</code>
+            <code class="ruby">        @user.name = &#39;a&#39; * 256</code>
           </li>
         </div>
       
@@ -14388,7 +14322,7 @@
 
             
 
-            <code class="ruby">        @user.name = &quot;a&quot; * 256</code>
+            <code class="ruby">        @user.valid?</code>
           </li>
         </div>
       
@@ -14399,18 +14333,18 @@
 
             
 
-            <code class="ruby">        @user.valid?</code>
+            <code class="ruby">        expect(@user.errors.full_messages).to include(&#39;名前は255文字以内で入力してください&#39;)</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="21">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="21">
+            
             
 
             
 
-            <code class="ruby">        expect(@user.errors.full_messages).to include(&quot;名前は255文字以内で入力してください&quot;)</code>
+            <code class="ruby">      end</code>
           </li>
         </div>
       
@@ -14421,18 +14355,18 @@
 
             
 
-            <code class="ruby">      end</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="23">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="23">
+            <span class="hits">1</span>
             
 
-            <code class="ruby"></code>
+            
+
+            <code class="ruby">      it &#39;emailがない場合に、バリデーションが機能する&#39; do</code>
           </li>
         </div>
       
@@ -14443,7 +14377,7 @@
 
             
 
-            <code class="ruby">      it &quot;emailがない場合に、バリデーションが機能する&quot; do</code>
+            <code class="ruby">        @user.email = &#39;&#39;</code>
           </li>
         </div>
       
@@ -14454,7 +14388,7 @@
 
             
 
-            <code class="ruby">        @user.email = &quot;&quot;</code>
+            <code class="ruby">        @user.valid?</code>
           </li>
         </div>
       
@@ -14465,18 +14399,18 @@
 
             
 
-            <code class="ruby">        @user.valid?</code>
+            <code class="ruby">        expect(@user.errors.full_messages).to include(&#39;メールアドレスを入力してください&#39;)</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="27">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="27">
+            
             
 
             
 
-            <code class="ruby">        expect(@user.errors.full_messages).to include(&quot;メールアドレスを入力してください&quot;)</code>
+            <code class="ruby">      end</code>
           </li>
         </div>
       
@@ -14487,18 +14421,18 @@
 
             
 
-            <code class="ruby">      end</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="29">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="29">
+            <span class="hits">1</span>
             
 
-            <code class="ruby"></code>
+            
+
+            <code class="ruby">      it &#39;@マークがemailの登録にない場合に、バリデーションが機能する&#39; do</code>
           </li>
         </div>
       
@@ -14509,7 +14443,7 @@
 
             
 
-            <code class="ruby">      it &quot;@マークがemailの登録にない場合に、バリデーションが機能する&quot; do</code>
+            <code class="ruby">        @user.email.slice!(&#39;@&#39;)</code>
           </li>
         </div>
       
@@ -14520,18 +14454,18 @@
 
             
 
-            <code class="ruby">        @user.email.slice!(&quot;@&quot;)</code>
+            <code class="ruby">        @user.valid?</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="32">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="32">
+            
             
 
             
 
-            <code class="ruby">        @user.valid?</code>
+            <code class="ruby">      end</code>
           </li>
         </div>
       
@@ -14542,18 +14476,18 @@
 
             
 
-            <code class="ruby">      end</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="34">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="34">
+            <span class="hits">1</span>
             
 
-            <code class="ruby"></code>
+            
+
+            <code class="ruby">      it &#39;同じemailは登録ができない&#39; do</code>
           </li>
         </div>
       
@@ -14564,7 +14498,7 @@
 
             
 
-            <code class="ruby">      it &quot;同じemailは登録ができない&quot; do</code>
+            <code class="ruby">        @user.save</code>
           </li>
         </div>
       
@@ -14575,7 +14509,7 @@
 
             
 
-            <code class="ruby">        @user.save</code>
+            <code class="ruby">        another_user = build(:user)</code>
           </li>
         </div>
       
@@ -14586,7 +14520,7 @@
 
             
 
-            <code class="ruby">        another_user = build(:user)</code>
+            <code class="ruby">        another_user.email = @user.email</code>
           </li>
         </div>
       
@@ -14597,18 +14531,18 @@
 
             
 
-            <code class="ruby">        another_user.email = @user.email</code>
+            <code class="ruby">        another_user.valid?</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="39">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="39">
+            
             
 
             
 
-            <code class="ruby">        another_user.valid?</code>
+            <code class="ruby">      end</code>
           </li>
         </div>
       
@@ -14619,18 +14553,18 @@
 
             
 
-            <code class="ruby">      end</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="41">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="41">
+            <span class="hits">1</span>
             
 
-            <code class="ruby"></code>
+            
+
+            <code class="ruby">      it &#39;パスワードがない場合にバリデーションが機能する&#39; do</code>
           </li>
         </div>
       
@@ -14641,7 +14575,7 @@
 
             
 
-            <code class="ruby">      it &quot;パスワードがない場合にバリデーションが機能する&quot; do</code>
+            <code class="ruby">        @user.password = &#39;&#39;</code>
           </li>
         </div>
       
@@ -14652,18 +14586,18 @@
 
             
 
-            <code class="ruby">        @user.password = &quot;&quot;</code>
+            <code class="ruby">        @user.valid?</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="44">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="44">
+            
             
 
             
 
-            <code class="ruby">        @user.valid?</code>
+            <code class="ruby">      end</code>
           </li>
         </div>
       
@@ -14674,18 +14608,18 @@
 
             
 
-            <code class="ruby">      end</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="46">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="46">
+            <span class="hits">1</span>
             
 
-            <code class="ruby"></code>
+            
+
+            <code class="ruby">      it &#39;パスワードは６文字以上でないといけない&#39; do</code>
           </li>
         </div>
       
@@ -14696,7 +14630,7 @@
 
             
 
-            <code class="ruby">      it &quot;パスワードは６文字以上でないといけない&quot; do</code>
+            <code class="ruby">        @user.password = &#39;a&#39; * 5</code>
           </li>
         </div>
       
@@ -14707,18 +14641,18 @@
 
             
 
-            <code class="ruby">        @user.password = &quot;a&quot; * 5</code>
+            <code class="ruby">        @user.valid?</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="49">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="49">
+            
             
 
             
 
-            <code class="ruby">        @user.valid?</code>
+            <code class="ruby">      end</code>
           </li>
         </div>
       
@@ -14729,18 +14663,18 @@
 
             
 
-            <code class="ruby">      end</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="51">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="51">
+            <span class="hits">1</span>
             
 
-            <code class="ruby"></code>
+            
+
+            <code class="ruby">      it &#39;確認用のパスワードがない場合に、バリデーションが機能する&#39; do</code>
           </li>
         </div>
       
@@ -14751,7 +14685,7 @@
 
             
 
-            <code class="ruby">      it &quot;確認用のパスワードがない場合に、バリデーションが機能する&quot; do</code>
+            <code class="ruby">        @user.password_confirmation = &#39;&#39;</code>
           </li>
         </div>
       
@@ -14762,7 +14696,7 @@
 
             
 
-            <code class="ruby">        @user.password_confirmation = &quot;&quot;</code>
+            <code class="ruby">        @user.valid?</code>
           </li>
         </div>
       
@@ -14773,18 +14707,18 @@
 
             
 
-            <code class="ruby">        @user.valid?</code>
+            <code class="ruby">        expect(@user.errors.full_messages).to include(&#39;パスワード(もう一度)とパスワードの入力が一致しません&#39;, &#39;パスワード(もう一度)を入力してください&#39;)</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="55">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="55">
+            
             
 
             
 
-            <code class="ruby">        expect(@user.errors.full_messages).to include(&quot;パスワード(もう一度)とパスワードの入力が一致しません&quot;, &quot;パスワード(もう一度)を入力してください&quot;)</code>
+            <code class="ruby">      end</code>
           </li>
         </div>
       
@@ -14795,18 +14729,18 @@
 
             
 
-            <code class="ruby">      end</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="57">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="57">
+            <span class="hits">1</span>
             
 
-            <code class="ruby"></code>
+            
+
+            <code class="ruby">      it &#39;確認用のパスワードは、入力されたパスワードと同じでないといけない。&#39; do</code>
           </li>
         </div>
       
@@ -14817,7 +14751,7 @@
 
             
 
-            <code class="ruby">      it &quot;確認用のパスワードは、入力されたパスワードと同じでないといけない。&quot; do</code>
+            <code class="ruby">        @user.password = &#39;password&#39;</code>
           </li>
         </div>
       
@@ -14828,7 +14762,7 @@
 
             
 
-            <code class="ruby">        @user.password = &quot;password&quot;</code>
+            <code class="ruby">        @user.password_confirmation = &#39;12345678&#39;</code>
           </li>
         </div>
       
@@ -14839,7 +14773,7 @@
 
             
 
-            <code class="ruby">        @user.password_confirmation = &quot;12345678&quot;</code>
+            <code class="ruby">        @user.valid?</code>
           </li>
         </div>
       
@@ -14850,18 +14784,18 @@
 
             
 
-            <code class="ruby">        @user.valid?</code>
+            <code class="ruby">        expect(@user.errors.full_messages).to include(&#39;パスワード(もう一度)とパスワードの入力が一致しません&#39;)</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="62">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="62">
+            
             
 
             
 
-            <code class="ruby">        expect(@user.errors.full_messages).to include(&quot;パスワード(もう一度)とパスワードの入力が一致しません&quot;)</code>
+            <code class="ruby">      end</code>
           </li>
         </div>
       
@@ -14872,7 +14806,7 @@
 
             
 
-            <code class="ruby">      end</code>
+            <code class="ruby">    end</code>
           </li>
         </div>
       
@@ -14883,18 +14817,18 @@
 
             
 
-            <code class="ruby">    end</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="65">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="65">
+            <span class="hits">1</span>
             
 
-            <code class="ruby"></code>
+            
+
+            <code class="ruby">    context &#39;成功パターン&#39; do</code>
           </li>
         </div>
       
@@ -14905,7 +14839,7 @@
 
             
 
-            <code class="ruby">    context &quot;成功パターン&quot; do</code>
+            <code class="ruby">      it &#39;条件が満たされてバリデーションに通過できる&#39; do</code>
           </li>
         </div>
       
@@ -14916,23 +14850,12 @@
 
             
 
-            <code class="ruby">      it &quot;条件が満たされてバリデーションに通過できる&quot; do</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="68">
-            <span class="hits">1</span>
-            
-
-            
-
             <code class="ruby">        expect(@user).to be_valid</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="69">
+          <li class="never" data-hits="" data-linenumber="68">
             
             
 
@@ -14943,7 +14866,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="70">
+          <li class="never" data-hits="" data-linenumber="69">
             
             
 
@@ -14954,7 +14877,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="71">
+          <li class="never" data-hits="" data-linenumber="70">
             
             
 
@@ -14965,7 +14888,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="72">
+          <li class="never" data-hits="" data-linenumber="71">
             
             
 
@@ -15398,7 +15321,7 @@
 
             
 
-            <code class="ruby">  config.fixture_path = &quot;#{::Rails.root}/spec/fixtures&quot;</code>
+            <code class="ruby">  config.fixture_path = &quot;#{Rails.root.join(&#39;spec/fixtures&#39;)}&quot;</code>
           </li>
         </div>
       

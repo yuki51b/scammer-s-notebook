@@ -11,17 +11,16 @@ class OgpCreator
   def self.build(text)
     text = prepare_text(text)
     image = MiniMagick::Image.open(BASE_IMAGE_PATH)
-      image.combine_options do |config|
-        config.font FONT
-        config.fill '#0f172a'
-        config.gravity GRAVITY
-        config.pointsize FONT_SIZE
-        config.draw "text #{TEXT_POSITION} '#{text}'"
-      end
+    image.combine_options do |config|
+      config.font FONT
+      config.fill '#0f172a'
+      config.gravity GRAVITY
+      config.pointsize FONT_SIZE
+      config.draw "text #{TEXT_POSITION} '#{text}'"
+    end
   end
 
-  private
   def self.prepare_text(text)
-    text.to_s.scan(/.{1,#{INDENTION_COUNT}}/)[0...ROW_LIMIT].join("\n")
+    text.to_s.scan(/.{1,#{INDENTION_COUNT}}/o)[0...ROW_LIMIT].join("\n")
   end
 end

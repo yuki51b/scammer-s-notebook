@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
 
   private
 
-    def not_authenticated
-      redirect_to login_path, alert: 'ここから先はログインをしてくれよな！'
-    end
+  def not_authenticated
+    redirect_to login_path, alert: 'ここから先はログインをしてくれよな！'
+  end
 end

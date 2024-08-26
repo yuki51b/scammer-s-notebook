@@ -1,8 +1,7 @@
 # frozen_string_literal: true
 
 class TopsController < ApplicationController
-  skip_before_action :require_login, only: [ :index, :privacy_policy, :terms, :list_of_support]
-
+  skip_before_action :require_login, only: %i[index privacy_policy terms list_of_support]
 
   def index; end
 

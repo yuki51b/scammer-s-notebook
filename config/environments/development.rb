@@ -65,7 +65,7 @@ Rails.application.configure do
   config.assets.quiet = true
 
   # Add ngrok host for development
-  config.hosts << "901d-58-190-15-35.ngrok-free.app"
+  config.hosts << '901d-58-190-15-35.ngrok-free.app'
 
   # Raises error for missing translations.
   # config.i18n.raise_on_missing_translations = true

@@ -450,14 +450,12 @@
       },
       "/myapp/config/initializers/sidekiq.rb": {
         "lines": [
-          null,
           1,
           0,
           null,
           null,
           1,
           1,
-          null,
           null
         ]
       },
@@ -694,7 +692,6 @@
           2,
           null,
           2,
-          null,
           null,
           null,
           null,
@@ -1079,7 +1076,6 @@
           null,
           null,
           1,
-          null,
           1,
           1,
           1,
@@ -1298,7 +1294,6 @@
           null,
           null,
           null,
-          null,
           null
         ]
       },
@@ -1315,7 +1310,6 @@
           1,
           1,
           null,
-          null,
           1,
           0,
           null,
@@ -1327,7 +1321,6 @@
           1,
           null,
           1,
-          null,
           1,
           null,
           10,
@@ -1428,6 +1421,6 @@
         ]
       }
     },
-    "timestamp": 1724438111
+    "timestamp": 1724683216
   }
 }
