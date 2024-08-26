@@ -5,7 +5,7 @@ ja:
         create: 投稿する
         update: 更新する
       fraud_reports:
-        create: 診断する!!
+        create: 診断する
       users:
         create: 登録する
   tops:

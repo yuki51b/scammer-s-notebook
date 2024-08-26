@@ -14,7 +14,7 @@ module.exports = {
         "text-focus-in": "text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530)   both",
         "bounce-top": "bounce-top 0.9s ease   both",
         "slide-in-right": "slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940)   both",
-        "wobble-hor-top": "wobble-hor-top 0.8s ease   both",
+        "wobble-hor-top": "wobble-hor-top 1.5s ease   both",
         "shake-vertical": "shake-vertical 8s cubic-bezier(0.455, 0.030, 0.515, 0.955)  infinite both",
         heartbeat: "heartbeat 3s ease  infinite both"
       },
