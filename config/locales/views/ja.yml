@@ -5,7 +5,7 @@ ja:
         create: 投稿する
         update: 更新する
       fraud_reports:
-        create: 診断する!!
+        create: 診断する
       users:
         create: 登録する
   tops:
@@ -27,6 +27,7 @@ ja:
     login: ログイン
     logout: ログアウト
     users: ユーザー登録
+    support: 相談先一覧
   fraud_reports:
     new:
       title: 情報入力
