@@ -66,7 +66,7 @@
 |[![Image from Gyazo](https://i.gyazo.com/bec9f6dfb52a608c81a172ed2557e195.gif)](https://gyazo.com/bec9f6dfb52a608c81a172ed2557e195)|[![Image from Gyazo](https://i.gyazo.com/f7909c6d39704ceb6ffcdf3f5a4a890e.gif)](https://gyazo.com/f7909c6d39704ceb6ffcdf3f5a4a890e)|
 |タイトル、詐欺名、具体的な内容を入力すると投稿ができます|投稿の際はマークダウン記法が使え、すぐにプレビューで確認もできます。(使用できるマークダウン記法の説明もあります)|
 
-|詐欺の相談先の一覧ページ|Xシェア⭐️|
+|詐欺の相談先の一覧ページ⭐️|Xシェア⭐️|
 |-----------|-----------|
 |[![Image from Gyazo](https://i.gyazo.com/8f443da9484cb5346f5f174de7bc3b37.gif)](https://gyazo.com/8f443da9484cb5346f5f174de7bc3b37)|[![Image from Gyazo](https://i.gyazo.com/8561ed4fd28b252d7e281a6ccf7f6cd5.gif)](https://gyazo.com/8561ed4fd28b252d7e281a6ccf7f6cd5)|
 |詐欺についての相談先を一覧で見れます|詐欺診断結果と詐欺の投稿をXにシェアできます。(投稿では詐欺のタイトルが,詐欺診断では詐欺名がそれぞれ表示されます)|

@@ -27,6 +27,7 @@ ja:
     login: ログイン
     logout: ログアウト
     users: ユーザー登録
+    support: 相談先一覧
   fraud_reports:
     new:
       title: 情報入力
