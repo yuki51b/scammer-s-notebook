@@ -58,6 +58,7 @@ group :development, :test do
   gem 'rubocop', '~> 1.64', require: false
   gem 'rubocop-performance', require: false
   gem 'rubocop-rails', require: false
+  gem 'rubocop-rspec', require: false
 end
 
 group :development do
@@ -79,40 +80,40 @@ group :test do
 end
 
 # gem install httparty
-  gem "httparty"
+gem 'httparty'
 
 # gem 'rails-i18n', '~> 7.0.0' install
-  gem 'rails-i18n', '~> 7.0.0'
+gem 'rails-i18n', '~> 7.0.0'
 
 # gem 'sorcery' install
-  gem 'sorcery'
+gem 'sorcery'
 
 # gem 'ransack' install
 gem 'ransack', '~> 4.0.0'
 
 # gem 'kaminari' install
-  gem 'kaminari'
+gem 'kaminari'
 
 # gem 'omniauth' install
-  gem 'omniauth-auth0'
-  gem 'omniauth-line'
-  gem 'omniauth-rails_csrf_protection'
+gem 'omniauth-auth0'
+gem 'omniauth-line'
+gem 'omniauth-rails_csrf_protection'
 
 # gem'line-bot-api' install
-  gem 'line-bot-api'
+gem 'line-bot-api'
 
 # Background Job
-  gem 'sidekiq'
-  gem 'sidekiq-scheduler'
+gem 'sidekiq'
+gem 'sidekiq-scheduler'
 
 # gem 'dotenv-rails' install
-  gem 'dotenv-rails'
+gem 'dotenv-rails'
 
 # gem 'redcarpet' install
-  gem 'redcarpet'
+gem 'redcarpet'
 
 # gem 'mini_magick' install
-  gem 'mini_magick'
+gem 'mini_magick'
 
 # gem 'meta-tags' install
-  gem 'meta-tags', :require => 'meta_tags'
+gem 'meta-tags', require: 'meta_tags'

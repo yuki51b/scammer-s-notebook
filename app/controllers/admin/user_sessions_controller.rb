@@ -12,15 +12,15 @@ class Admin::UserSessionsController < Admin::BaseController
     @user = login(params[:email], params[:password])
 
     if @user
-      redirect_to admin_root_path, notice: "管理画面にログインしました"
+      redirect_to admin_root_path, notice: '管理画面にログインしました'
     else
-      flash.now[:alert] = "ログインに失敗しました"
+      flash.now[:alert] = 'ログインに失敗しました'
       render :new, status: :unprocessable_entity
     end
   end
 
   def destroy
     logout
-    redirect_to admin_login_path, notice: "ログアウトしました", status: :see_other
+    redirect_to admin_login_path, notice: 'ログアウトしました', status: :see_other
   end
 end

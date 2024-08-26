@@ -222,15 +222,14 @@ Rails.application.config.sorcery.configure do |config|
   config.line.key = Rails.application.credentials.dig(:line, :channel_id)
   config.line.secret = Rails.application.credentials.dig(:line, :channel_secret)
   if Rails.env.development?
-  config.line.callback_url = "https://901d-58-190-15-35.ngrok-free.app/oauth/callback?provider=line"
+    config.line.callback_url = 'https://901d-58-190-15-35.ngrok-free.app/oauth/callback?provider=line'
   elsif Rails.env.production?
-    config.line.callback_url = "https://scammers-notebook.com/oauth/callback?provider=line"
+    config.line.callback_url = 'https://scammers-notebook.com/oauth/callback?provider=line'
   end
-  config.line.scope = "profile"
+  config.line.scope = 'profile'
   # config.line.bot_prompt = "normal"
-  config.line.user_info_mapping = {name: 'displayName', email: 'userId'}
+  config.line.user_info_mapping = { name: 'displayName', email: 'userId' }
 
-  
   # For information about Discord API
   # https://discordapp.com/developers/docs/topics/oauth2
   # config.discord.key = "xxxxxx"
@@ -567,5 +566,5 @@ Rails.application.config.sorcery.configure do |config|
 
   # This line must come after the 'user config' block.
   # Define which model authenticates with sorcery.
-  config.user_class = "User"
+  config.user_class = 'User'
 end
