@@ -34,6 +34,7 @@ Metrics/MethodLength:
     - 'app/controllers/posts_controller.rb'
     - 'app/helpers/markdown_helper.rb'
     - 'app/service/notification_service.rb'
+    - 'app/helpers/application_helper.rb'
 
 Metrics/ClassLength:
   Exclude:
