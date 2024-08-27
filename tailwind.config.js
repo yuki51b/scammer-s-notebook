@@ -16,6 +16,8 @@ module.exports = {
         "slide-in-right": "slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940)   both",
         "wobble-hor-top": "wobble-hor-top 1.5s ease   both",
         "shake-vertical": "shake-vertical 8s cubic-bezier(0.455, 0.030, 0.515, 0.955)  infinite both",
+        "text-pop-up-top": "text-pop-up-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940)   both",
+        "shadow-drop-2-bottom": "shadow-drop-2-bottom 2s cubic-bezier(0.250, 0.460, 0.450, 0.940)   both",
         heartbeat: "heartbeat 3s ease  infinite both"
       },
       keyframes: {
@@ -155,6 +157,28 @@ module.exports = {
             "45%": {
                 transform: "scale(1)",
                 "animation-timing-function": "ease-out"
+            }
+        },
+          "text-pop-up-top": {
+            "0%": {
+                transform: "translateY(0)",
+                "transform-origin": "50% 50%",
+                "text-shadow": "none"
+            },
+            to: {
+                transform: "translateY(-8px)",
+                "transform-origin": "50% 50%",
+                "text-shadow": "0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 rgba(0, 0, 0, .3)"
+            }
+        },
+          "shadow-drop-2-bottom": {
+            "0%": {
+                transform: "translateZ(0) translateY(0)",
+                "box-shadow": "0 0 0 0 transparent"
+            },
+            to: {
+                transform: "translateZ(50px) translateY(-12px)",
+                "box-shadow": "0 12px 20px -12px rgba(0, 0, 0, .35)"
             }
         }
       },
