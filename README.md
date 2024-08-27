@@ -3,6 +3,7 @@
 ## ■サービス名
 ### 詐欺師の手帳
 アプリURL: https://scammers-notebook.com/
+[![Image from Gyazo](https://i.gyazo.com/7f2c2cfc4ad0b3f2699ed538ab8fc41a.png)](https://gyazo.com/7f2c2cfc4ad0b3f2699ed538ab8fc41a)
 
 ## ■サービス概要
 詐欺の可能性や対策の提示・被害体験のシェアで詐欺知識を向上し、被害を未然に防ぐ事ができるサービスです
