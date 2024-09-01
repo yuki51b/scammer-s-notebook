@@ -38,6 +38,8 @@ ja:
       title: 編集ページ
     index:
       title: 投稿一覧
+    show:
+      title: 投稿詳細
     new:
       title: 新規投稿
   markdown:
@@ -48,8 +50,6 @@ ja:
             文字が大きくなると思います。
             その他のマークダウン記法での書き方については、右上の「 🔧 」ボタンから参照をしてください!
             注：マークダウン記法の全てには対応していません!!
-    show:
-      title: 投稿詳細
   scams:
     index:
       title: 詐欺情報一覧
