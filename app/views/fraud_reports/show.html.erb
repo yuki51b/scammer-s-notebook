@@ -24,7 +24,7 @@
 				</div>
 			</div>
 			<div class="flex flex-row justify-between mt-10 md:m-10">
-				<%= link_to "詐欺詳細", scam_path(@scam), class: "btn btn-success w-24 md:w-48 md:text-xl rounded-full" %>
+				<%= link_to "詐欺手口", scam_path(@scam), class: "btn btn-success w-24 md:w-48 md:text-xl rounded-full" %>
 					<div class="text-gray-600">
 					<% prepare_meta_tags @scam %>
 					<% twitter_share_url = "https://twitter.com/share?url= #{CGI.escape(fraud_report_url(@fraud_report))}" %>
@@ -32,7 +32,7 @@
 						<i class="fa-brands fa-square-x-twitter fa-2xl"></i>
 						<% end %>
 				</div>
-				<%= link_to "投稿する", new_post_path, class: "btn btn-warning w-24 md:w-48 md:text-xl rounded-full" %>
+				<%= link_to "投稿一覧", posts_path, class: "btn btn-warning w-24 md:w-48 md:text-xl rounded-full" %>
 			</div>
 		</div>
 	</div>

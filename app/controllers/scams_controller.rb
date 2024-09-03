@@ -1,4 +1,5 @@
 class ScamsController < ApplicationController
+  skip_before_action :require_login, only: %i[show]
   def index
     @q = Scam.ransack(params[:q])
     @scams = @q.result(distinct: true).order('name').page(params[:page])
