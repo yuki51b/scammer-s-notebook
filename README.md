@@ -123,7 +123,7 @@ MVPリリース
 |カテゴリ|技術|
 |:-------|:---------|
 |フロントエンド|Rails 7.0.8.4 (stimulus), TailwindCSS, DaisyUI|
-|バックエンド|Rails 7.0.8.4 (Ruby 3.2.3), sidekiq|
+|バックエンド|Rails 7.0.8.4 (Ruby 3.2.3), Sidekiq|
 |db|PostqreSQL, Redis|
 |インフラ|Render.com|
 |開発環境|Docker|
