@@ -15,9 +15,9 @@ class FraudReportsController < ApplicationController
   def create
     @fraud_report = FraudReport.new(fraud_report_params)
     prompt = scam_name_general_prompt(params[:fraud_report]) # promptには受け取ったカラムの値を入れたプロンプトが入る
-    response = ChatgptService.call(prompt)
+    response = ChatgptService.call(prompt).strip
     # 保存先をrespondカラムに指定
-    @fraud_report.respond = response.strip
+    @fraud_report.respond = response
     # 詐欺診断処理を行って詐欺情報を確定させる
     judgmented_scam = handle_scam_diagnosis(response)
     # FraudReport関連するscamレコードを取得
