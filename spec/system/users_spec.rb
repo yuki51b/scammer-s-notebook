@@ -6,14 +6,6 @@ RSpec.describe "ユーザー登録", type: :system do
     driven_by(:rack_test)
   end
 
-  describe 'タイトルの動的表示' do
-    context 'ユーザー登録画面の場合' do
-      it '正しくタイトルが表示される' do
-        
-      end
-    end
-  end
-
   describe 'ユーザーの作成について' do
     context '入力が正常である' do
       it 'ユーザーの新規作成ができること' do
