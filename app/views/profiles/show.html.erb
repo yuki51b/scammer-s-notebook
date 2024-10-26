@@ -1,8 +1,8 @@
 <div class="flex flex-col text-center">
-  <div class="card bg-gray-50 shadow-xl w-auto mx-4 my-32">
-    <div class ="card_body mx-4 mt-8">
+  <div class="card bg-gray-50 shadow-xl w-auto mb-16">
+    <div class ="card_body mt-8">
       <p class="text-4xl border-dashed border-b border-gray-500 text-orange font-mono"> プロフィール </p>
-      <div class="flex flex-row justify-center p-24">
+      <div class="flex flex-row justify-center p-8">
         <div class="text-2xl border-dashed border-b border-gray-500">
           <%= current_user.name %>
         </div>
@@ -11,5 +11,26 @@
         <% end %>
       </div>
     </div>
+  </div>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-4">
+    <% current_user.posts.each do |post| %>
+      <%= link_to post_path(post) do %>
+        <div class="card bg-gray-50 shadow-xl w-auto m-4 min-h-32 text-slate-950 hover:animate-text-pop-up-top">
+          <div class="card-body text-xl">
+            <div class="text-center border-dashed border-b">
+              <%= post.title %>
+            </div>
+            <div class="flex justify-between text-sm pt-8">
+              <div class="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">
+                <%= post.users_scam_name %>
+              </div>
+              <div class="">
+                <%= post.created_at.strftime("%Y/%m/%d") %>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
   </div>
 </div>
