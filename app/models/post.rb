@@ -3,6 +3,8 @@ class Post < ApplicationRecord
   validates :body, presence: true, length: { maximum: 65_535 }
   validates :users_scam_name, presence: true, length: { maximum: 255 }
 
+  has_many :likes, dependent: :destroy
+
   belongs_to :user
   belongs_to :scam, optional: true
 

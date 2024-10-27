@@ -27,6 +27,7 @@ Rails.application.routes.draw do
   get 'oauth/:provider' => 'oauths#oauth', :as => :auth_at_provider
 
   resources :posts do
+    resource :like, only: %i[create destroy]
     collection do
       get 'autocomplete'
     end
