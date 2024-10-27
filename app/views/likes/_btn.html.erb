@@ -1,0 +1,7 @@
+<% if current_user && current_user.liked_posts.exists?(@post.id) %>
+  <!-- いいね解除ボタン -->
+  <%= button_to 'Unlike', post_like_path(@post), method: :delete, class: "btn btn-secondary" %>
+<% else %>
+  <!-- いいねボタン -->
+  <%= button_to 'Like', post_like_path(@post), method: :post, class: "btn btn-primary" %>
+<% end %>
