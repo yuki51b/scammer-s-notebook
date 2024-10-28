@@ -28,6 +28,10 @@
                 <%= post.created_at.strftime("%Y/%m/%d") %>
               </div>
             </div>
+              <div class="text-sm text-right mr-4">
+                <i class="fa-regular fa-heart text-2xl text-rose-300"></i>
+                <%= post.likes.count %>
+              </div>
           </div>
         </div>
       <% end %>

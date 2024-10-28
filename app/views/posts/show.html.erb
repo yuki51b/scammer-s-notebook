@@ -24,7 +24,7 @@
 						<i class="fa-solid fa-circle-left fa-2xl "></i>
 					<% end %>
 				</div>
-				<div class="text-gray-600">
+				<div class="text-gray-600 flex items-center space-x-4">
 					<% prepare_meta_tags @post %>
 					<% twitter_share_url = "https://twitter.com/share?url= #{CGI.escape(post_url(@post))}" %>
 					<%= link_to twitter_share_url, target: '_blank', data: { toggle: "tooltip", placement: "bottom" }, title: "Xでシェア" do %>

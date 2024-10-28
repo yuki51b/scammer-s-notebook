@@ -1,0 +1,4 @@
+  <%= button_to post_like_path(post), method: :post, data: { turbo: true } do %>
+    <i class="fa-regular fa-heart text-2xl text-rose-300"></i>
+    <%= post.likes.count %>
+  <% end %>

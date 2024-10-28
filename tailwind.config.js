@@ -18,7 +18,8 @@ module.exports = {
         "shake-vertical": "shake-vertical 8s cubic-bezier(0.455, 0.030, 0.515, 0.955)  infinite both",
         "text-pop-up-top": "text-pop-up-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940)   both",
         "shadow-drop-2-bottom": "shadow-drop-2-bottom 2s cubic-bezier(0.250, 0.460, 0.450, 0.940)   both",
-        heartbeat: "heartbeat 3s ease  infinite both"
+        heartbeat: "heartbeat 3s ease  infinite both",
+        "jello-horizontal": "jello-horizontal 0.8s ease   both"
       },
       keyframes: {
           "fade-out": {
@@ -43,6 +44,26 @@ module.exports = {
                 opacity: "1"
             }
         },
+          "jello-horizontal": {
+            "0%,to": {
+                transform: "scale3d(1, 1, 1)"
+            },
+            "30%": {
+                transform: "scale3d(1.25, .75, 1)"
+            },
+            "40%": {
+                transform: "scale3d(.75, 1.25, 1)"
+            },
+            "50%": {
+                transform: "scale3d(1.15, .85, 1)"
+            },
+            "65%": {
+                transform: "scale3d(.95, 1.05, 1)"
+            },
+            "75%": {
+                transform: "scale3d(1.05, .95, 1)"
+            }
+          },
           "text-focus-in": {
             "0%": {
                 filter: "blur(12px)",
