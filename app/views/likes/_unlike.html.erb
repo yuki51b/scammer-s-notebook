@@ -1,1 +1,4 @@
-  <%= button_to 'Unlike', post_like_path(post), method: :delete, class: "btn btn-secondary", data: { turbo: true } %>
+  <%= button_to post_like_path(post), method: :delete, data: { turbo: true } do %>
+    <i class="fa-solid fa-heart text-2xl text-rose-500 animate-jello-horizontal"></i>
+    <%= post.likes.count %>
+  <% end %>
