@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2024-09-29T16:37:13+09:00">2024-09-29T16:37:13+09:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2024-11-08T00:19:36+09:00">2024-11-08T00:19:36+09:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -23,7 +23,7 @@
     <span class="group_name">All Files</span>
     (<span class="covered_percent">
       <span class="green">
-  94.07%
+  94.15%
 </span>
 
      </span>
@@ -43,11 +43,11 @@
   </div>
 
   <div class="t-line-summary">
-    <b>388</b> relevant lines,
-    <span class="green"><b>365</b> lines covered</span> and
+    <b>393</b> relevant lines,
+    <span class="green"><b>370</b> lines covered</span> and
     <span class="red"><b>23</b> lines missed. </span>
     (<span class="green">
-  94.07%
+  94.15%
 </span>
 )
   </div>
@@ -149,12 +149,12 @@
         
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#211c06fa00224489a1d7ea9f91d98827f1626768" class="src_link" title="app/models/post.rb">app/models/post.rb</a></td>
-            <td class="red strong cell--number t-file__coverage">80.00 %</td>
-            <td class="cell--number">16</td>
-            <td class="cell--number">10</td>
-            <td class="cell--number">8</td>
+            <td class="yellow strong cell--number t-file__coverage">81.82 %</td>
+            <td class="cell--number">18</td>
+            <td class="cell--number">11</td>
+            <td class="cell--number">9</td>
             <td class="cell--number">2</td>
-            <td class="cell--number">0.80</td>
+            <td class="cell--number">0.82</td>
             
           </tr>
         
@@ -171,12 +171,12 @@
         
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#5e11ae7146fc4c1b12f92f46ec68e94df819ca02" class="src_link" title="app/models/user.rb">app/models/user.rb</a></td>
-            <td class="green strong cell--number t-file__coverage">92.31 %</td>
-            <td class="cell--number">18</td>
-            <td class="cell--number">13</td>
-            <td class="cell--number">12</td>
+            <td class="green strong cell--number t-file__coverage">93.33 %</td>
+            <td class="cell--number">21</td>
+            <td class="cell--number">15</td>
+            <td class="cell--number">14</td>
             <td class="cell--number">1</td>
-            <td class="cell--number">3.92</td>
+            <td class="cell--number">3.53</td>
             
           </tr>
         
@@ -272,8 +272,8 @@
             <td class="strong t-file__name"><a href="#58ba850789bbdb06000063fa20ff42505d4c5d32" class="src_link" title="config/initializers/kaminari_config.rb">config/initializers/kaminari_config.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
             <td class="cell--number">15</td>
-            <td class="cell--number">2</td>
-            <td class="cell--number">2</td>
+            <td class="cell--number">3</td>
+            <td class="cell--number">3</td>
             <td class="cell--number">0</td>
             <td class="cell--number">1.00</td>
             
@@ -337,9 +337,9 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#39aa335e5db0629c80848b903110f06a45e22e73" class="src_link" title="config/routes.rb">config/routes.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">47</td>
-            <td class="cell--number">30</td>
-            <td class="cell--number">30</td>
+            <td class="cell--number">48</td>
+            <td class="cell--number">31</td>
+            <td class="cell--number">31</td>
             <td class="cell--number">0</td>
             <td class="cell--number">1.00</td>
             
@@ -2079,8 +2079,8 @@
   <div class="header">
     <h3>app/models/post.rb</h3>
     <h4>
-      <span class="red">
-  80.0%
+      <span class="yellow">
+  81.82%
 </span>
 
       lines covered
@@ -2089,8 +2089,8 @@
     
 
     <div class="t-line-summary">
-      <b>10</b> relevant lines.
-      <span class="green"><b>8</b> lines covered</span> and
+      <b>11</b> relevant lines.
+      <span class="green"><b>9</b> lines covered</span> and
       <span class="red"><b>2</b> lines missed.</span>
     </div>
 
@@ -2163,29 +2163,29 @@
 
             
 
-            <code class="ruby">  belongs_to :user</code>
+            <code class="ruby">  has_many :likes, dependent: :destroy</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="7">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  belongs_to :scam, optional: true</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="8">
+          <li class="never" data-hits="" data-linenumber="7">
             
             
 
             
 
             <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="8">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  belongs_to :user</code>
           </li>
         </div>
       
@@ -2196,34 +2196,12 @@
 
             
 
-            <code class="ruby">  def self.ransackable_attributes(_auth_object = nil)</code>
+            <code class="ruby">  belongs_to :scam, optional: true</code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="10">
-            
-            
-
-            
-
-            <code class="ruby">    %w[title users_scam_name]</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="11">
-            
-            
-
-            
-
-            <code class="ruby">  end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="12">
+          <li class="never" data-hits="" data-linenumber="10">
             
             
 
@@ -2234,29 +2212,29 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="13">
+          <li class="covered" data-hits="1" data-linenumber="11">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">  def self.ransackable_associations(_auth_object = nil)</code>
+            <code class="ruby">  def self.ransackable_attributes(_auth_object = nil)</code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="14">
+          <li class="missed" data-hits="0" data-linenumber="12">
             
             
 
             
 
-            <code class="ruby">    %w[user scam]</code>
+            <code class="ruby">    %w[title users_scam_name]</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="15">
+          <li class="never" data-hits="" data-linenumber="13">
             
             
 
@@ -2267,7 +2245,51 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="16">
+          <li class="never" data-hits="" data-linenumber="14">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="15">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def self.ransackable_associations(_auth_object = nil)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="16">
+            
+            
+
+            
+
+            <code class="ruby">    %w[user scam]</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="17">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="18">
             
             
 
@@ -2483,7 +2505,7 @@
     <h3>app/models/user.rb</h3>
     <h4>
       <span class="green">
-  92.31%
+  93.33%
 </span>
 
       lines covered
@@ -2492,8 +2514,8 @@
     
 
     <div class="t-line-summary">
-      <b>13</b> relevant lines.
-      <span class="green"><b>12</b> lines covered</span> and
+      <b>15</b> relevant lines.
+      <span class="green"><b>14</b> lines covered</span> and
       <span class="red"><b>1</b> lines missed.</span>
     </div>
 
@@ -2555,12 +2577,23 @@
 
             
 
-            <code class="ruby">  accepts_nested_attributes_for :authentications</code>
+            <code class="ruby">  has_many :likes, dependent: :destroy</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="6">
+          <li class="covered" data-hits="1" data-linenumber="6">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  has_many :liked_posts, through: :likes, source: :post</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="7">
             
             
 
@@ -2571,7 +2604,29 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="14" data-linenumber="7">
+          <li class="covered" data-hits="1" data-linenumber="8">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  accepts_nested_attributes_for :authentications</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="9">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="14" data-linenumber="10">
             <span class="hits">14</span>
             
 
@@ -2582,7 +2637,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="14" data-linenumber="8">
+          <li class="covered" data-hits="14" data-linenumber="11">
             <span class="hits">14</span>
             
 
@@ -2593,7 +2648,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="14" data-linenumber="9">
+          <li class="covered" data-hits="14" data-linenumber="12">
             <span class="hits">14</span>
             
 
@@ -2604,7 +2659,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="10">
+          <li class="covered" data-hits="1" data-linenumber="13">
             <span class="hits">1</span>
             
 
@@ -2615,7 +2670,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="11">
+          <li class="covered" data-hits="1" data-linenumber="14">
             <span class="hits">1</span>
             
 
@@ -2626,7 +2681,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="12">
+          <li class="never" data-hits="" data-linenumber="15">
             
             
 
@@ -2637,7 +2692,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="13">
+          <li class="covered" data-hits="1" data-linenumber="16">
             <span class="hits">1</span>
             
 
@@ -2648,7 +2703,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="14">
+          <li class="never" data-hits="" data-linenumber="17">
             
             
 
@@ -2659,7 +2714,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="15">
+          <li class="covered" data-hits="1" data-linenumber="18">
             <span class="hits">1</span>
             
 
@@ -2670,7 +2725,7 @@
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="16">
+          <li class="missed" data-hits="0" data-linenumber="19">
             
             
 
@@ -2681,7 +2736,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="17">
+          <li class="never" data-hits="" data-linenumber="20">
             
             
 
@@ -2692,7 +2747,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="18">
+          <li class="never" data-hits="" data-linenumber="21">
             
             
 
@@ -5037,8 +5092,8 @@
     
 
     <div class="t-line-summary">
-      <b>2</b> relevant lines.
-      <span class="green"><b>2</b> lines covered</span> and
+      <b>3</b> relevant lines.
+      <span class="green"><b>3</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -5116,13 +5171,13 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="7">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="7">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">  # config.window = 4</code>
+            
+
+            <code class="ruby">  config.window = 1</code>
           </li>
         </div>
       
@@ -12516,8 +12571,8 @@
     
 
     <div class="t-line-summary">
-      <b>30</b> relevant lines.
-      <span class="green"><b>30</b> lines covered</span> and
+      <b>31</b> relevant lines.
+      <span class="green"><b>31</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -12854,7 +12909,7 @@
 
             
 
-            <code class="ruby">    collection do</code>
+            <code class="ruby">    resource :like, only: %i[create destroy]</code>
           </li>
         </div>
       
@@ -12865,18 +12920,18 @@
 
             
 
-            <code class="ruby">      get &#39;autocomplete&#39;</code>
+            <code class="ruby">    collection do</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="32">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="32">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">    end</code>
+            
+
+            <code class="ruby">      get &#39;autocomplete&#39;</code>
           </li>
         </div>
       
@@ -12887,7 +12942,7 @@
 
             
 
-            <code class="ruby">  end</code>
+            <code class="ruby">    end</code>
           </li>
         </div>
       
@@ -12898,18 +12953,18 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="35">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="35">
+            
             
 
             
 
-            <code class="ruby">  namespace :admin do</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -12920,7 +12975,7 @@
 
             
 
-            <code class="ruby">    root &#39;scams#index&#39;</code>
+            <code class="ruby">  namespace :admin do</code>
           </li>
         </div>
       
@@ -12931,7 +12986,7 @@
 
             
 
-            <code class="ruby">    resources :scams</code>
+            <code class="ruby">    root &#39;scams#index&#39;</code>
           </li>
         </div>
       
@@ -12942,7 +12997,7 @@
 
             
 
-            <code class="ruby">    get &#39;login&#39; =&gt; &#39;user_sessions#new&#39;, :as =&gt; :login</code>
+            <code class="ruby">    resources :scams</code>
           </li>
         </div>
       
@@ -12953,7 +13008,7 @@
 
             
 
-            <code class="ruby">    post &#39;login&#39; =&gt; &#39;user_sessions#create&#39;</code>
+            <code class="ruby">    get &#39;login&#39; =&gt; &#39;user_sessions#new&#39;, :as =&gt; :login</code>
           </li>
         </div>
       
@@ -12964,18 +13019,18 @@
 
             
 
-            <code class="ruby">    delete &#39;logout&#39; =&gt; &#39;user_sessions#destroy&#39;, :as =&gt; :logout</code>
+            <code class="ruby">    post &#39;login&#39; =&gt; &#39;user_sessions#create&#39;</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="41">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="41">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">  end</code>
+            
+
+            <code class="ruby">    delete &#39;logout&#39; =&gt; &#39;user_sessions#destroy&#39;, :as =&gt; :logout</code>
           </li>
         </div>
       
@@ -12986,12 +13041,23 @@
 
             
 
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="43">
+            
+            
+
+            
+
             <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="43">
+          <li class="covered" data-hits="1" data-linenumber="44">
             <span class="hits">1</span>
             
 
@@ -13002,7 +13068,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="44">
+          <li class="never" data-hits="" data-linenumber="45">
             
             
 
@@ -13013,7 +13079,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="45">
+          <li class="covered" data-hits="1" data-linenumber="46">
             <span class="hits">1</span>
             
 
@@ -13024,7 +13090,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="46">
+          <li class="covered" data-hits="1" data-linenumber="47">
             <span class="hits">1</span>
             
 
@@ -13035,7 +13101,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="47">
+          <li class="never" data-hits="" data-linenumber="48">
             
             
 
