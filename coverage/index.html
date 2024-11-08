@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2024-11-08T00:19:36+09:00">2024-11-08T00:19:36+09:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2024-11-08T23:12:50+09:00">2024-11-08T23:12:50+09:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -6192,7 +6192,7 @@
 
             
 
-            <code class="ruby">  config.redis = { url: Rails.env.production? ? ENV.fetch(&#39;REDIS_URL_PRODUCTION&#39;, nil) : Rails.application.credentials.redis[:development] }</code>
+            <code class="ruby">  config.redis = { url: Rails.env.production? ? ENV.fetch(&#39;REDIS_URL_PRODUCTION&#39;, nil) : ENV.fetch(&#39;REDIS_URL_DEVELOPMENT&#39;) }</code>
           </li>
         </div>
       
@@ -6236,7 +6236,7 @@
 
             
 
-            <code class="ruby">  config.redis = { url: Rails.env.production? ? ENV.fetch(&#39;REDIS_URL_PRODUCTION&#39;, nil) : Rails.application.credentials.redis[:development] }</code>
+            <code class="ruby">  config.redis = { url: Rails.env.production? ? ENV.fetch(&#39;REDIS_URL_PRODUCTION&#39;, nil) : ENV.fetch(&#39;REDIS_URL_DEVELOPMENT&#39;) }</code>
           </li>
         </div>
       
