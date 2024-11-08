@@ -21,8 +21,7 @@ jobs:
         image: redis:7.0-alpine
         ports:
           - 6379:6379
-
-            
+   
     steps:
       - name: ソースコードのチェックアウト
         uses: actions/checkout@v3
