@@ -6,46 +6,56 @@ on:
     branches: [ main ]
 jobs:
   rspec:
-      runs-on: ubuntu-latest
-      services:
-        postgres:
-          image: postgres:16
-          ports:
-            - 5432:5432
-          env:
-            POSTGRES_USER: postgres
-            POSTGRES_PASSWORD: postgres
-            POSTGRES_DB: myapp_test
-            
-      steps:
-        - name: ソースコードのチェックアウト
-          uses: actions/checkout@v3
-    
-        # Rubyのセットアップ
-        - name: Rubyをセットアップ
-          uses: ruby/setup-ruby@v1
-          with:
-            ruby-version: 3.2.3 # 使用しているRubyのバージョンに合わせる
-            bundler-cache: true
-    
-        #  BundlerでGemをインストール
-        - name: BundlerでGemをインストール
-          run: |
-            gem install bundler
-            bundle install
-        
-        - name: Setup database
-          run: |
-            bundle exec rails db:create RAILS_ENV=test
-            bundle exec rails db:migrate RAILS_ENV=test
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16
+        ports:
+          - 5432:5432
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: myapp_test
+          
+      redis:
+        image: redis:7.0-alpine
+        ports:
+          - 6379:6379
 
-        - name: Precompile assets
-          run: |
-            RAILS_ENV=test bundle exec rails assets:precompile
-        
-        #  Rspecの実行
-        - name: Rspecの実行
-          run: bundle exec rspec
+            
+    steps:
+      - name: ソースコードのチェックアウト
+        uses: actions/checkout@v3
+  
+      # Rubyのセットアップ
+      - name: Rubyをセットアップ
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.2.3 # 使用しているRubyのバージョンに合わせる
+          bundler-cache: true
+  
+      #  BundlerでGemをインストール
+      - name: BundlerでGemをインストール
+        run: |
+          gem install bundler
+          bundle install
+          
+      # 環境変数にRedisのURLを設定
+      - name: Set environment redis
+        run: echo "REDIS_URL=redis://localhost:6379" >> $GITHUB_ENV
+
+      - name: Setup database
+        run: |
+          bundle exec rails db:create RAILS_ENV=test
+          bundle exec rails db:migrate RAILS_ENV=test
+
+      - name: Precompile assets
+        run: |
+          RAILS_ENV=test bundle exec rails assets:precompile
+      
+      #  Rspecの実行
+      - name: Rspecの実行
+        run: bundle exec rspec
     
   rubocop:
     runs-on: ubuntu-latest
