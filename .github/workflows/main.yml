@@ -26,6 +26,15 @@ jobs:
     steps:
       - name: ソースコードのチェックアウト
         uses: actions/checkout@v3
+        
+    # credentialを使えるようにする
+      - name: Restore Rails credentials
+        env:
+          RAILS_CREDENTIALS: ${{ secrets.RAILS_CREDENTIALS }}
+          RAILS_MASTER_KEY: ${{ secrets.RAILS_MASTER_KEY }}
+        run: |
+          echo "$RAILS_CREDENTIALS" | base64 --decode > config/credentials.yml.enc
+          echo "$RAILS_MASTER_KEY" > config/master.key
   
       # Rubyのセットアップ
       - name: Rubyをセットアップ
