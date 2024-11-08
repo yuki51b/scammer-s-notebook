@@ -44,16 +44,6 @@ jobs:
       - name: Set environment redis
         run: echo "REDIS_URL=redis://redis:6379" >> $GITHUB_ENV
 
-      # credentialを使えるようにする
-      - name: Restore Rails credentials
-        env:
-          RAILS_CREDENTIALS: ${{ secrets.RAILS_CREDENTIALS }}
-          RAILS_MASTER_KEY: ${{ secrets.RAILS_MASTER_KEY }}
-        run: |
-          echo "$RAILS_CREDENTIALS" | base64 --decode > config/credentials.yml.enc
-          echo "$RAILS_MASTER_KEY" > config/master.key
-  
-
       - name: Setup database
         run: |
           bundle exec rails db:create RAILS_ENV=test
