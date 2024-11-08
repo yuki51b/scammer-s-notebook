@@ -42,7 +42,7 @@ jobs:
           
       # 環境変数にRedisのURLを設定
       - name: Set environment redis
-        run: echo "REDIS_URL=redis://redis:6379" >> $GITHUB_ENV
+        run: echo "REDIS_URL_DEVELOPMENT=redis://redis:6379" >> $GITHUB_ENV
 
       - name: Setup database
         run: |
