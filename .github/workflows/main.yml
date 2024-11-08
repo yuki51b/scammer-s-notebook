@@ -16,6 +16,8 @@ jobs:
           POSTGRES_USER: postgres
           POSTGRES_PASSWORD: postgres
           POSTGRES_DB: myapp_test
+        options: >-
+          --name db
           
       redis:
         image: redis:7.0-alpine
