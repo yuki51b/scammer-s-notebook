@@ -1,0 +1,68 @@
+name: rspec, rubocop
+
+on:
+  push:
+  pull_request:
+    branches: [ main ]
+jobs:
+  rspec:
+      runs-on: ubuntu-latest
+      services:
+        postgres:
+          image: postgres:16
+          ports:
+            - 5432:5432
+          env:
+            POSTGRES_USER: postgres
+            POSTGRES_PASSWORD: postgres
+            POSTGRES_DB: myapp_test
+            
+      steps:
+        - name: ソースコードのチェックアウト
+          uses: actions/checkout@v3
+    
+        # Rubyのセットアップ
+        - name: Rubyをセットアップ
+          uses: actions/setup-ruby@v1
+          with:
+            ruby-version: 3.2.3 # 使用しているRubyのバージョンに合わせる
+            bundler-cache: true
+    
+        #  BundlerでGemをインストール
+        - name: BundlerでGemをインストール
+          run: |
+            gem install bundler
+            bundle install
+        
+        - name: Setup database
+          run: |
+            bundle exec rails db:create RAILS_ENV=test
+            bundle exec rails db:migrate RAILS_ENV=test
+
+        - name: Precompile assets
+          run: |
+            RAILS_ENV=test bundle exec rails assets:precompile
+        
+        #  Rspecの実行
+        - name: Rspecの実行
+          run: bundle exec rspec
+    
+  rubocop:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.2.3
+          bundler-cache: true
+
+      - name: Install dependencies
+        run: |
+          gem install bundler
+          bundle install 
+
+      - name: Run rubocop
+        run: bundle exec rubocop
